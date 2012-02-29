@@ -1,0 +1,11 @@
+Parts:
+
+Name		Description			www.reichelt.de part no.
+------------------------------------------------------------------------
+C1       	4.7 uF tantalum capacitor      	TANTAL 4,7/10
+C2       	4.7 uF tantalum capacitor	TANTAL 4,7/10
+IC1      	MAX1811        			MAX 1811 ESA
+JP1		charge plug (of your choice)
+LED1            2 mA low current LED		LED 3MM 2MA RT
+R1       	1.5 kOhm resistor		1/4W 1,5K
+X2       	generic USB cable		AK 669-1,8
