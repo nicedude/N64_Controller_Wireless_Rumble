@@ -1,0 +1,10 @@
+# EESchema Netlist Version 1.1 created  01-03-2012 09:31:20
+(
+ ( /4F4F3355 con-usb-USB-MB-S X1 USB-MB-S
+  ( D+ ? )
+  ( D- ? )
+  ( GND ? )
+  ( VBUS ? )
+ )
+)
+*
