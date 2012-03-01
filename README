@@ -1,7 +1,7 @@
 Welcome!
 
 The goal of this project is to construct a Nintendo64 and Gamecube compatible device,
-which will enable us to connect a controller from either console to a PC via USB.
+which will enable us to connect a controller to either console or to a PC via USB.
 
 We rely heavily on the work already done by raph at http://raphnet.net
 and by Jakob Schaefer, who has posted a video (with a link to a pdf) here: http://www.youtube.com/watch?v=LlnmfaILCHw
