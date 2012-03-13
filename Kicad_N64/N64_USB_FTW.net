@@ -1,236 +1,183 @@
-# EESchema Netlist Version 1.1 created  29-02-2012 16:48:55
+# EESchema Netlist Version 1.1 created  Tue 13 Mar 2012 10:56:22 PM CET
 (
- ( /4F43F2A8 SM0805 C1 10uf
-  ( 1 to_regulator )
-  ( 2 GND )
+ ( /4F5FBE8F con-usb-USB-MB-S  X2 USB-MB-S {Lib=USB-MB-S}
+  (   D+ N-000033 )
+  (   D- N-000029 )
+  (  GND GND )
+  ( VBUS VCC )
  )
- ( /4F43FFC4 SM0805 C2 27pf
-  ( 1 GND )
-  ( 2 N-000006 )
+ ( /4F56954A $noname  C6 100n {Lib=C}
+  (    1 MCU_VCC )
+  (    2 GND )
  )
- ( /4F43FF72 SM0805 C3 27pf
-  ( 1 GND )
-  ( 2 N-000007 )
+ ( /4F569396 $noname  C1 100n {Lib=C}
+  (    1 VCC )
+  (    2 GND )
  )
- ( /4F452130 SM0805 C4 1uf
-  ( 1 to_regulator )
-  ( 2 GND )
+ ( /4F5646DC $noname  R5 10k {Lib=R}
+  (    1 GND )
+  (    2 WirelessVcc )
  )
- ( /4F452965 SM0805 C5 22uf
-  ( 1 N-000012 )
-  ( 2 GND )
+ ( /4F563B90 $noname  C16 100n {Lib=C}
+  (    1 VCC )
+  (    2 GND )
  )
- ( /4F4D326C SM0805 C6 100n
-  ( 1 to_regulator )
-  ( 2 GND )
+ ( /4F5637AB $noname  N1 CONN_3 {Lib=CONN_3}
+  (    1 ControllerVcc )
+  (    2 MCU_VCC )
+  (    3 WirelessVcc )
  )
- ( /4F43E1EE SOT23 D1 3.6v
-  ( 1 GND )
-  ( 2 N-000037 )
+ ( /4F4D326C $noname  C14 100n {Lib=C}
+  (    1 VCC )
+  (    2 GND )
  )
- ( /4F43E1FB SOT23 D2 3.6v
-  ( 1 GND )
-  ( 2 N-000038 )
+ ( /4F4D2552 $noname  P2 CONN_4X2 {Lib=CONN_4X2}
+  (    1 GND )
+  (    2 WirelessVcc )
+  (    3 CE )
+  (    4 CSN )
+  (    5 SCK )
+  (    6 MOSI )
+  (    7 MISO )
+  (    8 IRQ )
  )
- ( /4F452C08 SIL-4 GC1 CONN_7
-  ( 1 to_regulator )
-  ( 2 Controller_Data )
-  ( 3 GND )
-  ( 4 GND )
-  ( 5 ? )
-  ( 6 From_regulator )
-  ( 7 GND )
+ ( /4F4D1999 $noname  U1 LM317 {Lib=LM317}
+  (    1 VCC )
+  (    2 N-000032 )
+  (    3 MCU_VCC )
  )
- ( /4F43E08F TQFP32 IC1 ATMEGA8-AI
-  ( 1 IRQ )
-  ( 2 CSN )
-  ( 3 GND )
-  ( 4 to_regulator )
-  ( 5 GND )
-  ( 6 to_regulator )
-  ( 7 N-000007 )
-  ( 8 N-000006 )
-  ( 9 CE )
-  ( 10 ? )
-  ( 11 ? )
-  ( 12 N-000008 )
-  ( 13 N-000039 )
-  ( 14 N-000009 )
-  ( 15 MOSI )
-  ( 16 MISO )
-  ( 17 SCK )
-  ( 18 to_regulator )
-  ( 19 ? )
-  ( 20 ? )
-  ( 21 ? )
-  ( 22 ? )
-  ( 23 ? )
-  ( 24 ? )
-  ( 25 ? )
-  ( 26 ? )
-  ( 27 ? )
-  ( 28 Controller_Data )
-  ( 29 N-000024 )
-  ( 30 N-000017 )
-  ( 31 N-000017 )
-  ( 32 N-000035 )
+ ( /4F452F7E $noname  N64 CONN_3 {Lib=CONN_3}
+  (    1 ControllerVcc )
+  (    2 Controller_Data )
+  (    3 GND )
  )
- ( /4F4421DC SIL-2 JP1 JUMPER
-  ( 1 N-000039 )
-  ( 2 N-000008 )
+ ( /4F452C08 $noname  GC1 CONN_7 {Lib=CONN_7}
+  (    1 VCC )
+  (    2 Controller_Data )
+  (    3 GND )
+  (    4 GND )
+  (    5 ? )
+  (    6 ControllerVcc )
+  (    7 GND )
  )
- ( /4F4421CD SIL-2 JP2 JUMPER
-  ( 1 N-000009 )
-  ( 2 N-000008 )
+ ( /4F452965 $noname  C5 22uf {Lib=CP1}
+  (    1 MCU_VCC )
+  (    2 GND )
  )
- ( /4F452F7E SIL-3 N64 CONN_3
-  ( 1 From_regulator )
-  ( 2 Controller_Data )
-  ( 3 GND )
+ ( /4F452841 $noname  R7 240 {Lib=R}
+  (    1 MCU_VCC )
+  (    2 N-000032 )
  )
- ( /4F43E0D8 pin_array_3x2 P1 CONN_3X2
-  ( 1 MISO )
-  ( 2 to_regulator )
-  ( 3 SCK )
-  ( 4 MOSI )
-  ( 5 N-000024 )
-  ( 6 GND )
+ ( /4F4527DB $noname  R8 Adj {Lib=R}
+  (    1 N-000032 )
+  (    2 GND )
  )
- ( /4F4D2552 pin_array_4x2 P2 CONN_4X2
-  ( 1 GND )
-  ( 2 to_regulator )
-  ( 3 CE )
-  ( 4 CSN )
-  ( 5 SCK )
-  ( 6 MOSI )
-  ( 7 MISO )
-  ( 8 IRQ )
+ ( /4F452130 $noname  C4 1uf {Lib=CP1}
+  (    1 VCC )
+  (    2 GND )
  )
- ( /4F43E4F5 SM0805 R1 1.5k
-  ( 1 to_regulator )
-  ( 2 N-000034 )
+ ( /4F4421DC $noname  JP1 JUMPER {Lib=JUMPER}
+  (    1 N-000036 )
+  (    2 N-000006 )
  )
- ( /4F43EE71 SM0805 R2 68
-  ( 1 N-000038 )
-  ( 2 N-000035 )
+ ( /4F4421CD $noname  JP2 JUMPER {Lib=JUMPER}
+  (    1 N-000005 )
+  (    2 N-000006 )
  )
- ( /4F43E533 SM0805 R3 68
-  ( 1 N-000034 )
-  ( 2 N-000017 )
+ ( /4F44009A $noname  X1 12mhz {Lib=CRYSTAL}
+  (    1 N-000004 )
+  (    2 N-000009 )
  )
- ( /4F43FDBF SM0805 R4 1k
-  ( 1 Controller_Data )
-  ( 2 From_regulator )
+ ( /4F43FFC4 $noname  C2 27pf {Lib=C}
+  (    1 GND )
+  (    2 N-000009 )
  )
- ( /4F451CBA SM0805 R5 0
-  ( 1 to_regulator )
-  ( 2 MCU_VCC )
+ ( /4F43FF72 $noname  C3 27pf {Lib=C}
+  (    1 GND )
+  (    2 N-000004 )
  )
- ( /4F451D0B SM0805 R6 0
-  ( 1 to_regulator )
-  ( 2 VCC_OUT )
+ ( /4F43FDBF $noname  R4 1k {Lib=R}
+  (    1 Controller_Data )
+  (    2 MCU_VCC )
  )
- ( /4F452841 SM0805 R7 240
-  ( 1 N-000012 )
-  ( 2 N-000036 )
+ ( /4F43F2A8 $noname  C14a1 10uf {Lib=CP1}
+  (    1 VCC )
+  (    2 GND )
  )
- ( /4F4527DB SM0805 R8 Adj
-  ( 1 N-000036 )
-  ( 2 GND )
+ ( /4F43EE71 $noname  R2 68 {Lib=R}
+  (    1 N-000033 )
+  (    2 N-000030 )
  )
- ( /4F4529E6 SM0805 R9 0
-  ( 1 N-000012 )
-  ( 2 MCU_VCC )
+ ( /4F43E533 $noname  R3 68 {Lib=R}
+  (    1 N-000029 )
+  (    2 N-000017 )
  )
- ( /4F452A07 SM0805 R10 0
-  ( 1 N-000012 )
-  ( 2 VCC_OUT )
+ ( /4F43E4F5 $noname  R1 1.5k {Lib=R}
+  (    1 VCC )
+  (    2 N-000029 )
  )
- ( /4F4D1999 SOT223 U1 LM317
-  ( 1 to_regulator )
-  ( 2 N-000036 )
-  ( 3 N-000012 )
+ ( /4F43E1FB $noname  D2 3.6v {Lib=ZENER}
+  (    1 GND )
+  (    2 N-000033 )
  )
- ( /4F44009A Q_49U3HMS X1 12mhz
-  ( 1 N-000007 )
-  ( 2 N-000006 )
+ ( /4F43E1EE $noname  D1 3.6v {Lib=ZENER}
+  (    1 GND )
+  (    2 N-000029 )
  )
- ( /4F4E4713 con-usb-USB-MB-S X2 USB-MB-S
-  ( D+ N-000038 )
-  ( D- N-000037 )
-  ( GND GND )
-  ( VBUS to_regulator )
+ ( /4F43E0D8 $noname  P1 CONN_3X2 {Lib=CONN_3X2}
+  (    1 MISO )
+  (    2 MCU_VCC )
+  (    3 SCK )
+  (    4 MOSI )
+  (    5 N-000021 )
+  (    6 GND )
+ )
+ ( /4F43E08F TQFP32  IC1 ATMEGA8-AI {Lib=ATMEGA8-AI}
+  (    1 IRQ )
+  (    2 CSN )
+  (    3 GND )
+  (    4 MCU_VCC )
+  (    5 GND )
+  (    6 MCU_VCC )
+  (    7 N-000004 )
+  (    8 N-000009 )
+  (    9 CE )
+  (   10 ? )
+  (   11 ? )
+  (   12 N-000006 )
+  (   13 N-000036 )
+  (   14 N-000005 )
+  (   15 MOSI )
+  (   16 MISO )
+  (   17 SCK )
+  (   18 VCC )
+  (   19 ? )
+  (   20 ? )
+  (   21 ? )
+  (   22 ? )
+  (   23 WirelessVcc )
+  (   24 ? )
+  (   25 ? )
+  (   26 ? )
+  (   27 ? )
+  (   28 Controller_Data )
+  (   29 N-000021 )
+  (   30 N-000017 )
+  (   31 N-000017 )
+  (   32 N-000030 )
  )
 )
 *
 { Allowed footprints by component:
-$component C1
- CP*
- SM*
-$endlist
-$component C2
- SM*
- C?
- C1-1
-$endlist
-$component C3
- SM*
- C?
- C1-1
-$endlist
-$component C4
- CP*
- SM*
-$endlist
-$component C5
- CP*
- SM*
-$endlist
 $component C6
  SM*
  C?
  C1-1
 $endlist
-$component D1
- D?
- SO*
+$component C1
  SM*
-$endlist
-$component D2
- D?
- SO*
- SM*
-$endlist
-$component IC1
- TQFP32
-$endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
+ C?
+ C1-1
 $endlist
 $component R5
  R?
@@ -239,12 +186,19 @@ $component R5
  R?-*
  SM1206
 $endlist
-$component R6
- R?
- SM0603
- SM0805
- R?-*
- SM1206
+$component C16
+ SM*
+ C?
+ C1-1
+$endlist
+$component C14
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ CP*
+ SM*
 $endlist
 $component R7
  R?
@@ -260,19 +214,187 @@ $component R8
  R?-*
  SM1206
 $endlist
-$component R9
+$component C4
+ CP*
+ SM*
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component R4
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R10
+$component C14a1
+ CP*
+ SM*
+$endlist
+$component R2
  R?
  SM0603
  SM0805
  R?-*
  SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component D2
+ D?
+ SO*
+ SM*
+$endlist
+$component D1
+ D?
+ SO*
+ SM*
+$endlist
+$component IC1
+ TQFP32
 $endlist
 $endfootprintlist
 }
+{ Pin List by Nets
+Net 1 "VCC" "VCC"
+ C14a1 1
+ R1 1
+ IC1 18
+ U1 1
+ C14 1
+ C16 1
+ X2 VBUS
+ C1 1
+ C4 1
+ GC1 1
+Net 4 "" ""
+ X1 1
+ C3 2
+ IC1 7
+Net 5 "" ""
+ JP2 1
+ IC1 14
+Net 6 "" ""
+ JP1 2
+ JP2 2
+ IC1 12
+Net 8 "MCU_VCC" "MCU_VCC"
+ R4 2
+ P1 2
+ IC1 4
+ N1 2
+ C6 1
+ C5 1
+ R7 1
+ U1 3
+ IC1 6
+Net 9 "" ""
+ X1 2
+ IC1 8
+ C2 2
+Net 10 "MISO" "MISO"
+ IC1 16
+ P2 7
+ P1 1
+Net 11 "MOSI" "MOSI"
+ P1 4
+ P2 6
+ IC1 15
+Net 12 "SCK" "SCK"
+ P2 5
+ IC1 17
+ P1 3
+Net 13 "CSN" "CSN"
+ P2 4
+ IC1 2
+Net 14 "CE" "CE"
+ P2 3
+ IC1 9
+Net 17 "" ""
+ IC1 31
+ R3 2
+ IC1 30
+Net 20 "IRQ" "IRQ"
+ P2 8
+ IC1 1
+Net 21 "" ""
+ IC1 29
+ P1 5
+Net 23 "Controller Data" "Controller Data"
+ N64 2
+ GC1 2
+ R4 1
+ IC1 28
+Net 29 "" ""
+ D1 2
+ R1 2
+ R3 1
+ X2 D-
+Net 30 "" ""
+ R2 2
+ IC1 32
+Net 31 "ControllerVcc" "ControllerVcc"
+ GC1 6
+ N64 1
+ N1 1
+Net 32 "" ""
+ U1 2
+ R7 2
+ R8 1
+Net 33 "" ""
+ X2 D+
+ R2 1
+ D2 2
+Net 34 "WirelessVcc" "WirelessVcc"
+ IC1 23
+ N1 3
+ R5 2
+ P2 2
+Net 35 "GND" "GND"
+ C5 2
+ C14 2
+ R8 2
+ IC1 3
+ GC1 7
+ P2 1
+ P1 6
+ GC1 4
+ C16 2
+ GC1 3
+ X2 GND
+ C4 2
+ C2 1
+ C3 1
+ D1 1
+ D2 1
+ IC1 5
+ C14a1 2
+ C6 2
+ R5 1
+ C1 2
+ N64 3
+Net 36 "" ""
+ JP1 1
+ IC1 13
+}
+#End
