@@ -1,8 +1,6 @@
-update=Tue 13 Mar 2012 10:36:34 PM CET
+update=Mon 19 Mar 2012 08:38:36 PM CET
 version=1
-last_client=pcbnew
-[general]
-version=1
+last_client=kicad
 [cvpcb]
 version=1
 NetIExt=net
@@ -104,3 +102,5 @@ LibName10=pga_sockets
 LibName11=valves
 LibName12=con-usb
 LibName13=/home/delfi/N64_USB_Controller/Kicad_Controller/con-usb
+[general]
+version=1
