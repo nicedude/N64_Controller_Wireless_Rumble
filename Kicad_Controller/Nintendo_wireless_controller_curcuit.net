@@ -1,10 +1,256 @@
-# EESchema Netlist Version 1.1 created  01-03-2012 09:31:20
+# EESchema Netlist Version 1.1 created  Thu 29 Mar 2012 08:27:16 PM CEST
 (
- ( /4F4F3355 con-usb-USB-MB-S X1 USB-MB-S
-  ( D+ ? )
-  ( D- ? )
-  ( GND ? )
-  ( VBUS ? )
+ ( /4F5F9145 $noname  C4 10u {Lib=CP1}
+  (    1 VCC )
+  (    2 GND )
+ )
+ ( /4F5F9071 $noname  C3 100n {Lib=C}
+  (    1 VCC )
+  (    2 GND )
+ )
+ ( /4F5F6F5C $noname  sw1 CONN_2 {Lib=CONN_2}
+  (    1 N-000003 )
+  (    2 +BATT )
+ )
+ ( /4F5F6BB2 $noname  C7 1uF {Lib=CP1}
+  (    1 N-000003 )
+  (    2 GND )
+ )
+ ( /4F5F69B5 $noname  C8 1uF {Lib=CP1}
+  (    1 VCC )
+  (    2 GND )
+ )
+ ( /4F5F6802 MODULE  U2 LP5951MF-3.3 {Lib=LP5951MF-3.3}
+  (    1 N-000003 )
+  (    2 GND )
+  (    3 N-000003 )
+  (    4 ? )
+  (    5 VCC )
+ )
+ ( /4F4F3974 $noname  D1 LED {Lib=LED}
+  (    1 N-000007 )
+  (    2 CHARGE_INDICATOR )
+ )
+ ( /4F4F3966 $noname  R1 200 {Lib=R}
+  (    1 +5V )
+  (    2 N-000007 )
+ )
+ ( /4F4F38FC $noname  C5 4.7uF {Lib=CP1}
+  (    1 +5V )
+  (    2 GND )
+ )
+ ( /4F4F38B3 $noname  U1 MAX1811 {Lib=MAX1811}
+  (    1 GND )
+  (    2 GND )
+  (    3 GND )
+  (    4 +5V )
+  (    5 +BATT )
+  (    6 GND )
+  (    7 +5V )
+  (    8 CHARGE_INDICATOR )
+ )
+ ( /4F4F37F8 $noname  C6 4.7uF {Lib=CP1}
+  (    1 +BATT )
+  (    2 GND )
+ )
+ ( /4F4F3715 $noname  J1 BATT {Lib=CONN_2}
+  (    1 +BATT )
+  (    2 GND )
+ )
+ ( /4F4F35A9 $noname  R2 R {Lib=R}
+  (    1 N-000024 )
+  (    2 VCC )
+ )
+ ( /4F4F356F $noname  C2 C {Lib=C}
+  (    1 GND )
+  (    2 N-000023 )
+ )
+ ( /4F4F3569 $noname  C1 C {Lib=C}
+  (    1 GND )
+  (    2 N-000027 )
+ )
+ ( /4F4F350C $noname  X2 8MHz {Lib=CRYSTAL}
+  (    1 N-000023 )
+  (    2 N-000027 )
+ )
+ ( /4F4F34B3 SO20  IC1 ATTINY2313-S {Lib=ATTINY2313-S}
+  (    1 N-000024 )
+  (    2 ? )
+  (    3 ? )
+  (    4 N-000027 )
+  (    5 N-000023 )
+  (    6 ? )
+  (    7 ? )
+  (    8 ? )
+  (    9 ? )
+  (   10 GND )
+  (   11 ? )
+  (   12 ? )
+  (   13 ? )
+  (   14 IRQ )
+  (   15 CE )
+  (   16 CSN )
+  (   17 MOSI )
+  (   18 MISO )
+  (   19 SCK )
+  (   20 VCC )
+ )
+ ( /4F4F3414 $noname  J2 NRF_conn {Lib=CONN_4X2}
+  (    1 GND )
+  (    2 VCC )
+  (    3 CE )
+  (    4 CSN )
+  (    5 SCK )
+  (    6 MOSI )
+  (    7 MISO )
+  (    8 IRQ )
+ )
+ ( /4F4F3355 con-usb-USB-MB-S  X1 USB-MB-S {Lib=USB-MB-S}
+  (   D+ ? )
+  (   D- ? )
+  (  GND GND )
+  ( VBUS +5V )
  )
 )
 *
+{ Allowed footprints by component:
+$component C4
+ CP*
+ SM*
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ CP*
+ SM*
+$endlist
+$component C8
+ CP*
+ SM*
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component C5
+ CP*
+ SM*
+$endlist
+$component C6
+ CP*
+ SM*
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$endfootprintlist
+}
+{ Pin List by Nets
+Net 1 "GND" "GND"
+ C4 2
+ C1 1
+ C2 1
+ J1 2
+ X1 GND
+ C3 2
+ J2 1
+ IC1 10
+ U2 2
+ U1 3
+ C6 2
+ U1 6
+ C8 2
+ U1 2
+ U1 1
+ C5 2
+ C7 2
+Net 2 "+BATT" "+BATT"
+ J1 1
+ C6 1
+ U1 5
+ sw1 2
+Net 3 "" ""
+ U2 1
+ sw1 1
+ U2 3
+ C7 1
+Net 5 "VCC" "VCC"
+ C3 1
+ IC1 20
+ J2 2
+ C8 1
+ R2 2
+ C4 1
+ U2 5
+Net 6 "CHARGE_INDICATOR" "CHARGE_INDICATOR"
+ D1 2
+ U1 8
+Net 7 "" ""
+ R1 2
+ D1 1
+Net 15 "CE" "CE"
+ J2 3
+ IC1 15
+Net 16 "CSN" "CSN"
+ IC1 16
+ J2 4
+Net 17 "SCK" "SCK"
+ IC1 19
+ J2 5
+Net 18 "MOSI" "MOSI"
+ J2 6
+ IC1 17
+Net 19 "MISO" "MISO"
+ J2 7
+ IC1 18
+Net 20 "IRQ" "IRQ"
+ J2 8
+ IC1 14
+Net 23 "" ""
+ IC1 5
+ C2 2
+ X2 1
+Net 24 "" ""
+ IC1 1
+ R2 1
+Net 27 "" ""
+ C1 2
+ X2 2
+ IC1 4
+Net 28 "+5V" "+5V"
+ C5 1
+ R1 1
+ U1 4
+ U1 7
+ X1 VBUS
+}
+#End
