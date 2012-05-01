@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-02-16 BZR 3416)-testing date = Thu 29 Mar 2012 08:30:16 PM CEST
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 01-05-2012 21:56:57
 
 BeginCmp
 TimeStamp = /4F4F3569;
@@ -60,28 +60,28 @@ BeginCmp
 TimeStamp = /4F4F3974;
 Reference = D1;
 ValeurCmp = LED;
-IdModule  = $noname;
+IdModule  = LED-0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4F34B3;
 Reference = IC1;
 ValeurCmp = ATTINY2313-S;
-IdModule  = SO20;
+IdModule  = SO20L;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4F3715;
 Reference = J1;
 ValeurCmp = BATT;
-IdModule  = $noname;
+IdModule  = C1;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4F3414;
 Reference = J2;
 ValeurCmp = NRF_conn;
-IdModule  = $noname;
+IdModule  = PIN_ARRAY_5x2;
 EndCmp
 
 BeginCmp
@@ -102,21 +102,21 @@ BeginCmp
 TimeStamp = /4F5F6F5C;
 Reference = sw1;
 ValeurCmp = CONN_2;
-IdModule  = $noname;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4F38B3;
 Reference = U1;
 ValeurCmp = MAX1811;
-IdModule  = $noname;
+IdModule  = SO8E;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F5F6802;
 Reference = U2;
 ValeurCmp = LP5951MF-3.3;
-IdModule  = MODULE;
+IdModule  = SOT23-5;
 EndCmp
 
 BeginCmp
@@ -130,7 +130,7 @@ BeginCmp
 TimeStamp = /4F4F350C;
 Reference = X2;
 ValeurCmp = 8MHz;
-IdModule  = $noname;
+IdModule  = Q_49U3HMS;
 EndCmp
 
 EndListe
