@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  Tue 20 Mar 2012 09:37:30 PM CET
+# EESchema Netlist Version 1.1 created  09-05-2012 21:22:07
 (
  ( /4F68E2A7 $noname  P2 CONN_5X2 {Lib=CONN_5X2}
   (    1 ControllerVcc )
@@ -13,8 +13,8 @@
   (   10 ? )
  )
  ( /4F5FBE8F con-usb-USB-MB-S  X2 USB-MB-S {Lib=USB-MB-S}
-  (   D+ N-000029 )
-  (   D- N-000027 )
+  (   D+ N-000028 )
+  (   D- N-000025 )
   (  GND GND )
   ( VBUS VCC )
  )
@@ -40,7 +40,7 @@
  )
  ( /4F4D1999 $noname  U1 LM317 {Lib=LM317}
   (    1 VCC )
-  (    2 N-000011 )
+  (    2 N-000027 )
   (    3 ControllerVcc )
  )
  ( /4F452F7E $noname  N64 CONN_3 {Lib=CONN_3}
@@ -63,10 +63,10 @@
  )
  ( /4F452841 $noname  R7 240 {Lib=R}
   (    1 ControllerVcc )
-  (    2 N-000011 )
+  (    2 N-000027 )
  )
  ( /4F4527DB $noname  R8 Adj {Lib=R}
-  (    1 N-000011 )
+  (    1 N-000027 )
   (    2 GND )
  )
  ( /4F452130 $noname  C4 1uf {Lib=CP1}
@@ -74,24 +74,24 @@
   (    2 GND )
  )
  ( /4F4421DC $noname  JP1 JUMPER {Lib=JUMPER}
-  (    1 N-000036 )
-  (    2 N-000005 )
+  (    1 N-000006 )
+  (    2 N-000036 )
  )
  ( /4F4421CD $noname  JP2 JUMPER {Lib=JUMPER}
-  (    1 N-000006 )
-  (    2 N-000005 )
+  (    1 N-000022 )
+  (    2 N-000036 )
  )
  ( /4F44009A $noname  X1 12mhz {Lib=CRYSTAL}
-  (    1 N-000004 )
-  (    2 N-000010 )
+  (    1 N-000005 )
+  (    2 N-000004 )
  )
  ( /4F43FFC4 $noname  C2 27pf {Lib=C}
   (    1 GND )
-  (    2 N-000010 )
+  (    2 N-000004 )
  )
  ( /4F43FF72 $noname  C3 27pf {Lib=C}
   (    1 GND )
-  (    2 N-000004 )
+  (    2 N-000005 )
  )
  ( /4F43FDBF $noname  R4 1k {Lib=R}
   (    1 Controller_Data )
@@ -102,31 +102,31 @@
   (    2 GND )
  )
  ( /4F43EE71 $noname  R2 68 {Lib=R}
-  (    1 N-000029 )
-  (    2 N-000028 )
+  (    1 N-000028 )
+  (    2 N-000023 )
  )
  ( /4F43E533 $noname  R3 68 {Lib=R}
-  (    1 N-000027 )
-  (    2 N-000014 )
+  (    1 N-000025 )
+  (    2 N-000026 )
  )
  ( /4F43E4F5 $noname  R1 1.5k {Lib=R}
   (    1 VCC )
-  (    2 N-000027 )
+  (    2 N-000025 )
  )
  ( /4F43E1FB $noname  D2 3.6v {Lib=ZENER}
   (    1 GND )
-  (    2 N-000029 )
+  (    2 N-000028 )
  )
  ( /4F43E1EE $noname  D1 3.6v {Lib=ZENER}
   (    1 GND )
-  (    2 N-000027 )
+  (    2 N-000025 )
  )
  ( /4F43E0D8 $noname  P1 CONN_3X2 {Lib=CONN_3X2}
   (    1 MISO )
   (    2 ControllerVcc )
   (    3 SCK )
   (    4 MOSI )
-  (    5 N-000019 )
+  (    5 N-000015 )
   (    6 GND )
  )
  ( /4F43E08F TQFP32  IC1 ATMEGA8-AI {Lib=ATMEGA8-AI}
@@ -136,18 +136,18 @@
   (    4 ControllerVcc )
   (    5 GND )
   (    6 ControllerVcc )
-  (    7 N-000004 )
-  (    8 N-000010 )
+  (    7 N-000005 )
+  (    8 N-000004 )
   (    9 CE )
   (   10 ? )
   (   11 ? )
-  (   12 N-000005 )
-  (   13 N-000036 )
-  (   14 N-000006 )
+  (   12 N-000036 )
+  (   13 N-000006 )
+  (   14 N-000022 )
   (   15 MOSI )
   (   16 MISO )
   (   17 SCK )
-  (   18 VCC )
+  (   18 ControllerVcc )
   (   19 ? )
   (   20 ? )
   (   21 ? )
@@ -158,10 +158,10 @@
   (   26 ? )
   (   27 ? )
   (   28 Controller_Data )
-  (   29 N-000019 )
-  (   30 N-000014 )
-  (   31 N-000014 )
-  (   32 N-000028 )
+  (   29 N-000015 )
+  (   30 N-000026 )
+  (   31 N-000026 )
+  (   32 N-000023 )
  )
 )
 *
@@ -273,120 +273,120 @@ $endlist
 $endfootprintlist
 }
 { Pin List by Nets
-Net 3 "VCC" "VCC"
- R1 1
+Net 1 "VCC" "VCC"
+ U1 1
  C4 1
- IC1 18
+ R1 1
  C1 1
  X2 VBUS
- U1 1
  GC1 1
 Net 4 "" ""
- X1 1
- IC1 7
- C3 2
+ C2 2
+ IC1 8
+ X1 2
 Net 5 "" ""
- IC1 12
- JP2 2
- JP1 2
+ IC1 7
+ X1 1
+ C3 2
 Net 6 "" ""
- IC1 14
- JP2 1
+ JP1 1
+ IC1 13
 Net 7 "ControllerVcc" "ControllerVcc"
- P2 1
- IC1 6
  IC1 4
- P1 2
- R4 2
- IC1 23
- R7 1
- C16 1
- C14a1 1
- GC1 6
- C5 1
- N64 1
+ P2 1
  R5 2
- U1 3
- C6 1
+ IC1 6
+ IC1 23
+ IC1 18
+ R4 2
+ P1 2
+ R7 1
  C14 1
-Net 8 "GND" "GND"
- C16 2
- C6 2
- C1 2
+ C16 1
+ C5 1
+ GC1 6
+ C6 1
+ U1 3
+ C14a1 1
+ N64 1
+Net 13 "CE" "CE"
+ P2 3
+ IC1 9
+Net 14 "CSN" "CSN"
+ IC1 2
+ P2 4
+Net 15 "" ""
+ P1 5
+ IC1 29
+Net 17 "Controller Data" "Controller Data"
+ N64 2
+ GC1 2
+ IC1 28
+ R4 1
+Net 22 "" ""
+ JP2 1
+ IC1 14
+Net 23 "" ""
+ IC1 32
+ R2 2
+Net 25 "" ""
+ X2 D-
+ D1 2
+ R1 2
+ R3 1
+Net 26 "" ""
+ IC1 30
+ IC1 31
+ R3 2
+Net 27 "" ""
+ R7 2
+ R8 1
+ U1 2
+Net 28 "" ""
+ X2 D+
+ D2 2
+ R2 1
+Net 30 "IRQ" "IRQ"
+ IC1 1
+ P2 8
+Net 31 "MISO" "MISO"
+ P1 1
+ P2 7
+ IC1 16
+Net 32 "MOSI" "MOSI"
+ P2 6
+ P1 4
+ IC1 15
+Net 33 "SCK" "SCK"
+ IC1 17
+ P1 3
+ P2 5
+Net 35 "GND" "GND"
+ GC1 3
+ GC1 4
  R5 1
- P2 9
+ C1 2
+ C6 2
  X2 GND
- N64 3
+ GC1 7
+ R8 2
  IC1 5
  IC1 3
  P1 6
- GC1 7
- GC1 4
- GC1 3
- C5 2
- C4 2
- C2 1
- R8 2
- C14 2
- D2 1
  C3 1
+ C4 2
+ P2 9
+ C5 2
+ C14 2
+ C2 1
+ C16 2
+ N64 3
  D1 1
+ D2 1
  C14a1 2
-Net 10 "" ""
- IC1 8
- C2 2
- X1 2
-Net 11 "" ""
- U1 2
- R7 2
- R8 1
-Net 14 "" ""
- IC1 31
- R3 2
- IC1 30
-Net 17 "CE" "CE"
- IC1 9
- P2 3
-Net 18 "CSN" "CSN"
- IC1 2
- P2 4
-Net 19 "" ""
- P1 5
- IC1 29
-Net 21 "Controller Data" "Controller Data"
- N64 2
- R4 1
- GC1 2
- IC1 28
-Net 27 "" ""
- R3 1
- X2 D-
- R1 2
- D1 2
-Net 28 "" ""
- R2 2
- IC1 32
-Net 29 "" ""
- R2 1
- X2 D+
- D2 2
-Net 30 "SCK" "SCK"
- P1 3
- IC1 17
- P2 5
-Net 32 "IRQ" "IRQ"
- IC1 1
- P2 8
-Net 33 "MISO" "MISO"
- IC1 16
- P2 7
- P1 1
-Net 34 "MOSI" "MOSI"
- P1 4
- IC1 15
- P2 6
 Net 36 "" ""
- JP1 1
- IC1 13
+ JP1 2
+ JP2 2
+ IC1 12
 }
 #End
