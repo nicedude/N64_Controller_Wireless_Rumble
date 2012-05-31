@@ -1,13 +1,8 @@
-update=01-05-2012 21:51:00
+update=31-05-2012 09:33:41
 version=1
-last_client=pcbnew
+last_client=cvpcb
 [general]
 version=1
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -71,7 +66,6 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=Nintendo_wireless_controller_curcuit.net
 [pcbnew/libraries]
-LibDir=../Misc files/Kicad libs
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -83,3 +77,10 @@ LibName8=valves
 LibName9=led
 LibName10=dip_sockets
 LibName11=con-usb
+LibName12=con-usb-USB-MB-S
+LibDir=../Misc files/Kicad libs
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms

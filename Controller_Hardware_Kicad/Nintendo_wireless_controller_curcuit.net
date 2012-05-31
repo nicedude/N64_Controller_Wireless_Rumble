@@ -1,20 +1,20 @@
-# EESchema Netlist Version 1.1 created  01-05-2012 21:56:57
+# EESchema Netlist Version 1.1 created  31-05-2012 10:28:23
 (
  ( /4F4F3569 SM0805 C1 C
-  ( 1 GND )
+  ( 1 DGND )
   ( 2 N-000027 )
  )
  ( /4F4F356F SM0805 C2 C
-  ( 1 GND )
-  ( 2 N-000023 )
+  ( 1 DGND )
+  ( 2 N-000026 )
  )
  ( /4F5F9071 SM0805 C3 100n
-  ( 1 VCC )
-  ( 2 GND )
+  ( 1 +3.3V )
+  ( 2 DGND )
  )
  ( /4F5F9145 SM0805 C4 10u
-  ( 1 VCC )
-  ( 2 GND )
+  ( 1 +3.3V )
+  ( 2 DGND )
  )
  ( /4F4F38FC SM0805 C5 4.7uF
   ( 1 +5V )
@@ -24,29 +24,41 @@
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4F5F6BB2 SM0805 C7 1uF
-  ( 1 N-000003 )
+ ( /4F5F6BB2 SM0805 C7 4.7uF
+  ( 1 N-000015 )
   ( 2 GND )
  )
  ( /4F5F69B5 SM0805 C8 1uF
   ( 1 VCC )
   ( 2 GND )
  )
+ ( /4FC72809 SM0805 C9 100n
+  ( 1 N-000015 )
+  ( 2 GND )
+ )
+ ( /4FC72B39 SM0805 C10 100n
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4FC72834 C1 Center_VCC1 CONN_2
+  ( 1 +3.3V )
+  ( 2 DGND )
+ )
  ( /4F4F3974 LED-0805 D1 LED
-  ( 1 N-000007 )
+  ( 1 N-000005 )
   ( 2 CHARGE_INDICATOR )
  )
  ( /4F4F34B3 SO20L IC1 ATTINY2313-S
-  ( 1 N-000024 )
+  ( 1 N-000025 )
   ( 2 ? )
   ( 3 ? )
   ( 4 N-000027 )
-  ( 5 N-000023 )
+  ( 5 N-000026 )
   ( 6 ? )
   ( 7 ? )
   ( 8 ? )
   ( 9 ? )
-  ( 10 GND )
+  ( 10 DGND )
   ( 11 ? )
   ( 12 ? )
   ( 13 ? )
@@ -56,15 +68,15 @@
   ( 17 MOSI )
   ( 18 MISO )
   ( 19 SCK )
-  ( 20 VCC )
+  ( 20 +3.3V )
  )
  ( /4F4F3715 C1 J1 BATT
   ( 1 +BATT )
   ( 2 GND )
  )
  ( /4F4F3414 PIN_ARRAY_5x2 J2 NRF_conn
-  ( 1 GND )
-  ( 2 VCC )
+  ( 1 DGND )
+  ( 2 +3.3V )
   ( 3 CE )
   ( 4 CSN )
   ( 5 SCK )
@@ -74,14 +86,18 @@
  )
  ( /4F4F3966 SM0805 R1 200
   ( 1 +5V )
-  ( 2 N-000007 )
+  ( 2 N-000005 )
  )
- ( /4F4F35A9 SM0805 R2 R
-  ( 1 N-000024 )
+ ( /4F4F35A9 SM0805 R2 100K
+  ( 1 N-000025 )
+  ( 2 +3.3V )
+ )
+ ( /4FC72830 C1 Side_VCC1 CONN_2
+  ( 1 GND )
   ( 2 VCC )
  )
  ( /4F5F6F5C PIN_ARRAY_2X1 sw1 CONN_2
-  ( 1 N-000003 )
+  ( 1 N-000015 )
   ( 2 +BATT )
  )
  ( /4F4F38B3 SO8E U1 MAX1811
@@ -95,9 +111,9 @@
   ( 8 CHARGE_INDICATOR )
  )
  ( /4F5F6802 SOT23-5 U2 LP5951MF-3.3
-  ( 1 N-000003 )
+  ( 1 N-000015 )
   ( 2 GND )
-  ( 3 N-000003 )
+  ( 3 N-000015 )
   ( 4 ? )
   ( 5 VCC )
  )
@@ -108,7 +124,7 @@
   ( VBUS +5V )
  )
  ( /4F4F350C Q_49U3HMS X2 8MHz
-  ( 1 N-000023 )
+  ( 1 N-000026 )
   ( 2 N-000027 )
  )
 )
@@ -148,6 +164,16 @@ $endlist
 $component C8
  CP*
  SM*
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
 $endlist
 $component D1
  LED-3MM
