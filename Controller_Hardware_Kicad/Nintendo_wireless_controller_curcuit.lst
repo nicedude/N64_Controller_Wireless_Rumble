@@ -1,8 +1,8 @@
-eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 04-06-2012 17:16:50
+eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 04-06-2012 18:09:34
 
 #Cmp ( order = Reference )
-| C1         C           
-| C2         C           
+| C1         27p         
+| C2         27p         
 | C3         100n        
 | C4         10u         
 | C5         4.7uF       
@@ -34,14 +34,14 @@ eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 04-06-2012 17:16:50
 | 10u          C4        
 | 1uF          C8        
 | 200          R1        
+| 27p          C1        
+| 27p          C2        
 | 4.7uF        C5        
 | 4.7uF        C6        
 | 4.7uF        C7        
 | 8MHz         X2        
 | ATTINY2313-S IC1       
 | BATT         J1        
-| C            C1        
-| C            C2        
 | CONN_2       Center_VCC1
 | CONN_2       Side_VCC1 
 | CONN_2       sw1       

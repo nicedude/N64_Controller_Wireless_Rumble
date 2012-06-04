@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 09-05-2012 21:22:02
+EESchema Schematic File Version 2  date 04-06-2012 18:07:27
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -38,7 +38,7 @@ $Descr A3 16535 11700
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "9 may 2012"
+Date "4 jun 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -46,6 +46,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 12500 3700 0    60   ~ 0
+= 3.28 Volt output.
 Wire Wire Line
 	7800 4600 7700 4600
 Wire Wire Line
@@ -557,7 +559,7 @@ L R R8
 U 1 1 4F4527DB
 P 12300 3650
 F 0 "R8" V 12380 3650 50  0000 C CNN
-F 1 "Adj" V 12300 3650 50  0000 C CNN
+F 1 "390" V 12300 3650 50  0000 C CNN
 	1    12300 3650
 	1    0    0    -1  
 $EndComp
