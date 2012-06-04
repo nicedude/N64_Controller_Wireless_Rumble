@@ -1,6 +1,6 @@
-update=Mon 19 Mar 2012 08:38:36 PM CET
+update=04-06-2012 17:23:43
 version=1
-last_client=kicad
+last_client=pcbnew
 [cvpcb]
 version=1
 NetIExt=net
@@ -70,6 +70,8 @@ LibName29=contrib
 LibName30=valves
 LibName31=N64_USB_FTW-cache
 LibName32=con-usb
+[general]
+version=1
 [pcbnew]
 version=1
 PadDrlX=320
@@ -88,7 +90,7 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=
 [pcbnew/libraries]
-LibDir=
+LibDir=../Misc files/Kicad libs
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -102,5 +104,4 @@ LibName10=pga_sockets
 LibName11=valves
 LibName12=con-usb
 LibName13=/home/delfi/N64_USB_Controller/Kicad_Controller/con-usb
-[general]
-version=1
+LibName14=OSAA_logo

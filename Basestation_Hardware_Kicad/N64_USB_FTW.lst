@@ -1,0 +1,65 @@
+eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 04-06-2012 17:16:40
+
+#Cmp ( order = Reference )
+| C1         100n        
+| C2         27pf        
+| C3         27pf        
+| C4         1uf         
+| C5         22uf        
+| C6         100n        
+| C14        100n        
+| C16        100n        
+| C14a1      10uf        
+| D1         3.6v        
+| D2         3.6v        
+| GC1        CONN_7      
+| IC1        ATMEGA8-AI  
+| JP1        JUMPER      
+| JP2        JUMPER      
+| N64        CONN_3      
+| P1         CONN_3X2    
+| P2         CONN_5X2    
+| R1         1.5k        
+| R2         68          
+| R3         68          
+| R4         1k          
+| R5         10k         
+| R7         240         
+| R8         Adj         
+| U1         LM317       
+| X1         12mhz       
+| X2         USB-MB-S    
+#End Cmp
+
+#Cmp ( order = Value )
+| 1.5k         R1        
+| 100n         C1        
+| 100n         C6        
+| 100n         C14       
+| 100n         C16       
+| 10k          R5        
+| 10uf         C14a1     
+| 12mhz        X1        
+| 1k           R4        
+| 1uf          C4        
+| 22uf         C5        
+| 240          R7        
+| 27pf         C2        
+| 27pf         C3        
+| 3.6v         D1        
+| 3.6v         D2        
+| 68           R2        
+| 68           R3        
+| Adj          R8        
+| ATMEGA8-AI   IC1       
+| CONN_3       N64       
+| CONN_3X2     P1        
+| CONN_5X2     P2        
+| CONN_7       GC1       
+| JUMPER       JP1       
+| JUMPER       JP2       
+| LM317        U1        
+| USB-MB-S     X2        
+#End Cmp
+
+#End List
