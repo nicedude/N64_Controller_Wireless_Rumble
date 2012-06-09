@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  09-05-2012 21:22:07
+# EESchema Netlist Version 1.1 created  09-06-2012 11:28:48
 (
  ( /4F68E2A7 $noname  P2 CONN_5X2 {Lib=CONN_5X2}
   (    1 ControllerVcc )
@@ -61,11 +61,11 @@
   (    1 ControllerVcc )
   (    2 GND )
  )
- ( /4F452841 $noname  R7 240 {Lib=R}
+ ( /4F452841 $noname  R7 120 {Lib=R}
   (    1 ControllerVcc )
   (    2 N-000027 )
  )
- ( /4F4527DB $noname  R8 Adj {Lib=R}
+ ( /4F4527DB $noname  R8 200 {Lib=R}
   (    1 N-000027 )
   (    2 GND )
  )
