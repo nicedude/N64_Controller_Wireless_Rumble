@@ -1,6 +1,6 @@
-# EESchema Netlist Version 1.1 created  09-06-2012 11:28:48
+# EESchema Netlist Version 1.1 created  19-06-2012 12:51:34
 (
- ( /4F68E2A7 $noname  P2 CONN_5X2 {Lib=CONN_5X2}
+ ( /4F68E2A7 $noname  NRF1 CONN_5X2 {Lib=CONN_5X2}
   (    1 ControllerVcc )
   (    2 ? )
   (    3 CE )
@@ -12,7 +12,7 @@
   (    9 GND )
   (   10 ? )
  )
- ( /4F5FBE8F con-usb-USB-MB-S  X2 USB-MB-S {Lib=USB-MB-S}
+ ( /4F5FBE8F con-usb-USB-MB-S  X2 USB {Lib=USB-MB-S}
   (   D+ N-000028 )
   (   D- N-000025 )
   (  GND GND )
@@ -85,11 +85,11 @@
   (    1 N-000005 )
   (    2 N-000004 )
  )
- ( /4F43FFC4 $noname  C2 27pf {Lib=C}
+ ( /4F43FFC4 $noname  C2 22pf {Lib=C}
   (    1 GND )
   (    2 N-000004 )
  )
- ( /4F43FF72 $noname  C3 27pf {Lib=C}
+ ( /4F43FF72 $noname  C3 22pf {Lib=C}
   (    1 GND )
   (    2 N-000005 )
  )
@@ -121,7 +121,7 @@
   (    1 GND )
   (    2 N-000025 )
  )
- ( /4F43E0D8 $noname  P1 CONN_3X2 {Lib=CONN_3X2}
+ ( /4F43E0D8 $noname  PROG1 CONN_3X2 {Lib=CONN_3X2}
   (    1 MISO )
   (    2 ControllerVcc )
   (    3 SCK )
@@ -293,13 +293,13 @@ Net 6 "" ""
  IC1 13
 Net 7 "ControllerVcc" "ControllerVcc"
  IC1 4
- P2 1
+ NRF1 1
  R5 2
  IC1 6
  IC1 23
  IC1 18
  R4 2
- P1 2
+ PROG1 2
  R7 1
  C14 1
  C16 1
@@ -310,13 +310,13 @@ Net 7 "ControllerVcc" "ControllerVcc"
  C14a1 1
  N64 1
 Net 13 "CE" "CE"
- P2 3
+ NRF1 3
  IC1 9
 Net 14 "CSN" "CSN"
  IC1 2
- P2 4
+ NRF1 4
 Net 15 "" ""
- P1 5
+ PROG1 5
  IC1 29
 Net 17 "Controller Data" "Controller Data"
  N64 2
@@ -348,19 +348,19 @@ Net 28 "" ""
  R2 1
 Net 30 "IRQ" "IRQ"
  IC1 1
- P2 8
+ NRF1 8
 Net 31 "MISO" "MISO"
- P1 1
- P2 7
+ PROG1 1
+ NRF1 7
  IC1 16
 Net 32 "MOSI" "MOSI"
- P2 6
- P1 4
+ NRF1 6
+ PROG1 4
  IC1 15
 Net 33 "SCK" "SCK"
  IC1 17
- P1 3
- P2 5
+ PROG1 3
+ NRF1 5
 Net 35 "GND" "GND"
  GC1 3
  GC1 4
@@ -372,10 +372,10 @@ Net 35 "GND" "GND"
  R8 2
  IC1 5
  IC1 3
- P1 6
+ PROG1 6
  C3 1
  C4 2
- P2 9
+ NRF1 9
  C5 2
  C14 2
  C2 1
