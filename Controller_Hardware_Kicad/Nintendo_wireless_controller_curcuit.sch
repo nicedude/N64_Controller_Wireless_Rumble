@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 04-06-2012 17:42:45
+EESchema Schematic File Version 2  date 19-06-2012 13:27:23
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -39,7 +39,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "4 jun 2012"
+Date "19 jun 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -673,7 +673,7 @@ L C C2
 U 1 1 4F4F356F
 P 2100 2550
 F 0 "C2" H 2150 2650 50  0000 L CNN
-F 1 "27p" H 2150 2450 50  0000 L CNN
+F 1 "22pf" H 2150 2450 50  0000 L CNN
 	1    2100 2550
 	0    -1   -1   0   
 $EndComp
@@ -682,7 +682,7 @@ L C C1
 U 1 1 4F4F3569
 P 2100 1750
 F 0 "C1" H 2150 1850 50  0000 L CNN
-F 1 "27p" H 2150 1650 50  0000 L CNN
+F 1 "22pf" H 2150 1650 50  0000 L CNN
 	1    2100 1750
 	0    -1   -1   0   
 $EndComp
