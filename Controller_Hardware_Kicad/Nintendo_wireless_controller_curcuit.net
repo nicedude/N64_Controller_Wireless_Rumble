@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  19-06-2012 16:34:10
+# EESchema Netlist Version 1.1 created  19-06-2012 16:40:57
 (
  ( /4FC72B39 $noname  C10 100n {Lib=C}
   (    1 +5V )
@@ -13,7 +13,7 @@
   (    2 VCC )
  )
  ( /4FC72809 $noname  C9 100n {Lib=C}
-  (    1 N-000017 )
+  (    1 N-000027 )
   (    2 GND )
  )
  ( /4F5F9145 $noname  C4 10u {Lib=CP1}
@@ -25,11 +25,11 @@
   (    2 DGND )
  )
  ( /4F5F6F5C $noname  sw1 CONN_2 {Lib=CONN_2}
-  (    1 N-000017 )
+  (    1 N-000027 )
   (    2 +BATT )
  )
  ( /4F5F6BB2 $noname  C7 4.7uF {Lib=CP1}
-  (    1 N-000017 )
+  (    1 N-000027 )
   (    2 GND )
  )
  ( /4F5F69B5 $noname  C8 1uF {Lib=CP1}
@@ -37,26 +37,26 @@
   (    2 GND )
  )
  ( /4F5F6802 MODULE  U2 LP5951MF-3.3 {Lib=LP5951MF-3.3}
-  (    1 N-000017 )
+  (    1 N-000027 )
   (    2 GND )
-  (    3 N-000017 )
+  (    3 N-000027 )
   (    4 ? )
   (    5 VCC )
  )
  ( /4F4F3974 $noname  D1 LED {Lib=LED}
-  (    1 N-000005 )
+  (    1 N-000003 )
   (    2 CHARGE_INDICATOR )
  )
  ( /4F4F3966 $noname  R1 200 {Lib=R}
   (    1 +5V )
-  (    2 N-000005 )
+  (    2 N-000003 )
  )
  ( /4F4F38FC $noname  C5 4.7uF {Lib=CP1}
   (    1 +5V )
   (    2 GND )
  )
  ( /4F4F38B3 $noname  U1 MAX1811 {Lib=MAX1811}
-  (    1 +5V )
+  (    1 GND )
   (    2 GND )
   (    3 GND )
   (    4 +5V )
@@ -74,7 +74,7 @@
   (    2 GND )
  )
  ( /4F4F35A9 $noname  R2 100K {Lib=R}
-  (    1 N-000025 )
+  (    1 N-000024 )
   (    2 +3.3V )
  )
  ( /4F4F356F $noname  C2 22pf {Lib=C}
@@ -83,17 +83,17 @@
  )
  ( /4F4F3569 $noname  C1 22pf {Lib=C}
   (    1 DGND )
-  (    2 N-000027 )
+  (    2 N-000025 )
  )
  ( /4F4F350C $noname  X2 8MHz {Lib=CRYSTAL}
   (    1 N-000026 )
-  (    2 N-000027 )
+  (    2 N-000025 )
  )
  ( /4F4F34B3 SO20  IC1 ATTINY2313-S {Lib=ATTINY2313-S}
-  (    1 N-000025 )
+  (    1 N-000024 )
   (    2 ? )
   (    3 ? )
-  (    4 N-000027 )
+  (    4 N-000025 )
   (    5 N-000026 )
   (    6 ? )
   (    7 ? )
@@ -201,92 +201,92 @@ $endlist
 $endfootprintlist
 }
 { Pin List by Nets
-Net 1 "CHARGE_INDICATOR" "CHARGE_INDICATOR"
- D1 2
- U1 8
-Net 2 "VCC" "VCC"
- Side_VCC1 2
- C8 1
- U2 5
-Net 4 "GND" "GND"
+Net 1 "GND" "GND"
+ U1 2
+ U1 1
  X1 GND
+ J1 2
+ U1 6
+ C9 2
  Side_VCC1 1
  C6 2
- C9 2
- J1 2
  C10 2
- U1 6
- U1 3
- U1 2
- C5 2
- C7 2
  C8 2
  U2 2
-Net 5 "" ""
+ C7 2
+ C5 2
+ U1 3
+Net 3 "" ""
  D1 1
  R1 2
-Net 17 "" ""
- sw1 1
- C7 1
- U2 1
- C9 1
- U2 3
-Net 18 "CSN" "CSN"
- IC1 16
+Net 4 "+BATT" "+BATT"
+ C6 1
+ U1 5
+ J1 1
+ sw1 2
+Net 14 "CSN" "CSN"
  J2 4
-Net 19 "IRQ" "IRQ"
+ IC1 16
+Net 17 "IRQ" "IRQ"
  J2 8
  IC1 14
-Net 20 "CE" "CE"
- J2 3
+Net 18 "CE" "CE"
  IC1 15
-Net 21 "MOSI" "MOSI"
- J2 6
+ J2 3
+Net 19 "MOSI" "MOSI"
  IC1 17
-Net 22 "MISO" "MISO"
- IC1 18
+ J2 6
+Net 20 "MISO" "MISO"
  J2 7
-Net 23 "SCK" "SCK"
+ IC1 18
+Net 21 "SCK" "SCK"
  IC1 19
  J2 5
-Net 24 "+BATT" "+BATT"
- sw1 2
- U1 5
- C6 1
- J1 1
-Net 25 "" ""
- IC1 1
+Net 22 "+3.3V" "+3.3V"
+ Center_VCC1 1
+ C3 1
+ C4 1
+ J2 2
+ R2 2
+ IC1 20
+Net 23 "+5V" "+5V"
+ C10 1
+ X1 VBUS
+ C5 1
+ U1 4
+ U1 7
+ R1 1
+Net 24 "" ""
  R2 1
+ IC1 1
+Net 25 "" ""
+ C1 2
+ IC1 4
+ X2 2
 Net 26 "" ""
  X2 1
  IC1 5
  C2 2
 Net 27 "" ""
- X2 2
- C1 2
- IC1 4
-Net 28 "+3.3V" "+3.3V"
- R2 2
- J2 2
- IC1 20
- Center_VCC1 1
- C3 1
- C4 1
+ C9 1
+ sw1 1
+ C7 1
+ U2 1
+ U2 3
+Net 28 "CHARGE_INDICATOR" "CHARGE_INDICATOR"
+ U1 8
+ D1 2
 Net 29 "DGND" "DGND"
- Center_VCC1 2
- C2 1
- J2 1
  IC1 10
- C4 2
  C3 2
+ C4 2
  C1 1
-Net 30 "+5V" "+5V"
- R1 1
- C5 1
- X1 VBUS
- C10 1
- U1 7
- U1 4
- U1 1
+ C2 1
+ Center_VCC1 2
+ J2 1
+Net 30 "VCC" "VCC"
+ U2 5
+ C8 1
+ Side_VCC1 2
 }
 #End
