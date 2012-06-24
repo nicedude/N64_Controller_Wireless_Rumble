@@ -1,12 +1,12 @@
-# EESchema Netlist Version 1.1 created  24-06-2012 12:41:39
+# EESchema Netlist Version 1.1 created  24-06-2012 17:35:12
 (
  ( /4F4F3569 SM0805 C1 22pf
   ( 1 DGND )
-  ( 2 N-000008 )
+  ( 2 N-000012 )
  )
  ( /4F4F356F SM0805 C2 22pf
   ( 1 DGND )
-  ( 2 N-000021 )
+  ( 2 N-000011 )
  )
  ( /4F5F9071 SM0805 C3 100n
   ( 1 +3.3V )
@@ -25,7 +25,7 @@
   ( 2 GND )
  )
  ( /4F5F6BB2 SM0805 C7 4.7uF
-  ( 1 N-000022 )
+  ( 1 N-000023 )
   ( 2 GND )
  )
  ( /4F5F69B5 SM0805 C8 1uF
@@ -33,7 +33,7 @@
   ( 2 GND )
  )
  ( /4FC72809 SM0805 C9 100n
-  ( 1 N-000022 )
+  ( 1 N-000023 )
   ( 2 GND )
  )
  ( /4FC72B39 SM0805 C10 100n
@@ -45,18 +45,18 @@
   ( 2 DGND )
  )
  ( /4F4F3974 LED-0805 D1 LED
-  ( 1 N-000018 )
+  ( 1 N-000020 )
   ( 2 CHARGE_INDICATOR )
  )
  ( /4FE6EC40 1pin dw1 CONN_1
-  ( 1 N-000023 )
+  ( 1 N-000008 )
  )
  ( /4FE6EA8C SO14N IC1 ATTINY24-SS
   ( 1 +3.3V )
-  ( 2 N-000021 )
-  ( 3 N-000008 )
-  ( 4 N-000023 )
-  ( 5 N-000020 )
+  ( 2 N-000011 )
+  ( 3 N-000012 )
+  ( 4 N-000008 )
+  ( 5 N-000007 )
   ( 6 ? )
   ( 7 MOSI )
   ( 8 MISO )
@@ -64,7 +64,7 @@
   ( 10 CSN )
   ( 11 CE )
   ( 12 IRQ )
-  ( 13 ? )
+  ( 13 ANALOG0 )
   ( 14 DGND )
  )
  ( /4F4F3715 PIN_ARRAY_2X1 J1 BATT
@@ -82,18 +82,26 @@
   ( 8 IRQ )
  )
  ( /4FE6EC0B PIN_ARRAY_1 P1 CONN_1
-  ( 1 N-000020 )
+  ( 1 N-000007 )
  )
  ( /4F4F3966 SM0805 R1 200
   ( 1 +5V )
-  ( 2 N-000018 )
+  ( 2 N-000020 )
+ )
+ ( /4FE732F5 SM0805 R2 200
+  ( 1 +BATT )
+  ( 2 ANALOG0 )
+ )
+ ( /4FE732FD SM0805 R3 200
+  ( 1 ANALOG0 )
+  ( 2 DGND )
  )
  ( /4FC72830 C1 Side_VCC1 CONN_2
   ( 1 GND )
   ( 2 VCC )
  )
  ( /4F5F6F5C PIN_ARRAY_2X1 sw1 CONN_2
-  ( 1 N-000022 )
+  ( 1 N-000023 )
   ( 2 +BATT )
  )
  ( /4F4F38B3 SO8E U1 MAX1811
@@ -107,9 +115,9 @@
   ( 8 CHARGE_INDICATOR )
  )
  ( /4F5F6802 SOT23-5 U2 LP5951MF-3.3
-  ( 1 N-000022 )
+  ( 1 N-000023 )
   ( 2 GND )
-  ( 3 N-000022 )
+  ( 3 N-000023 )
   ( 4 ? )
   ( 5 VCC )
  )
@@ -120,8 +128,8 @@
   ( VBUS +5V )
  )
  ( /4F4F350C Q_49U3HMS X2 8MHz
-  ( 1 N-000021 )
-  ( 2 N-000008 )
+  ( 1 N-000011 )
+  ( 2 N-000012 )
  )
 )
 *
@@ -181,6 +189,20 @@ $component D1
  LEDV
 $endlist
 $component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
  R?
  SM0603
  SM0805
