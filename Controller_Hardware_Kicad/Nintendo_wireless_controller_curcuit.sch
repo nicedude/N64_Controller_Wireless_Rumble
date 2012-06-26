@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 24-06-2012 19:59:39
+EESchema Schematic File Version 2  date 26-06-2012 18:31:14
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -39,7 +39,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "24 jun 2012"
+Date "26 jun 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -545,8 +545,6 @@ NoConn ~ 1300 5550
 NoConn ~ 9700 6100
 Text Notes 7450 1950 0    60   ~ 0
 2mA Avg.
-Text Notes 8450 5650 0    60   ~ 0
-70uA@150mA load
 $Comp
 L CP1 C4
 U 1 1 4F5F9145
@@ -620,17 +618,6 @@ P 8900 6850
 F 0 "#PWR018" H 8900 6850 30  0001 C CNN
 F 1 "GND" H 8900 6780 30  0001 C CNN
 	1    8900 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L LP5951MF-3.3 U2
-U 1 1 4F5F6802
-P 8900 6050
-F 0 "U2" H 8900 5950 50  0000 C CNN
-F 1 "LP5951MF-3.3" H 8900 6150 50  0000 C CNN
-F 2 "MODULE" H 8900 6050 50  0001 C CNN
-F 3 "DOCUMENTATION" H 8900 6050 50  0001 C CNN
-	1    8900 6050
 	1    0    0    -1  
 $EndComp
 Text Notes 8150 5250 0    60   ~ 0
