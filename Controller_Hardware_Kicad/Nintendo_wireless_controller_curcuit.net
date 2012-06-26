@@ -1,20 +1,20 @@
-# EESchema Netlist Version 1.1 created  24-06-2012 20:02:18
+# EESchema Netlist Version 1.1 created  26-06-2012 23:11:34
 (
  ( /4FE750E4 SIL-1 Ain1 CONN_1
-  ( 1 N-000023 )
+  ( 1 N-000010 )
  )
  ( /4FE75075 SIL-3 Batt1 CONN_3
-  ( 1 N-000024 )
+  ( 1 GND )
   ( 2 +BATT )
   ( 3 +BATT )
  )
  ( /4F4F3569 SM0805 C1 22pf
   ( 1 DGND )
-  ( 2 N-000018 )
+  ( 2 N-000021 )
  )
  ( /4F4F356F SM0805 C2 22pf
   ( 1 DGND )
-  ( 2 N-000025 )
+  ( 2 N-000013 )
  )
  ( /4F5F9071 SM0805 C3 100n
   ( 1 +3.3V )
@@ -32,40 +32,44 @@
   ( 1 +BATT )
   ( 2 GND )
  )
- ( /4F5F6BB2 SM0805 C7 4.7uF
-  ( 1 N-000024 )
+ ( /4F5F6BB2 SM0805 C7 2.2uF
+  ( 1 +BATT )
   ( 2 GND )
  )
- ( /4F5F69B5 SM0805 C8 1uF
+ ( /4F5F69B5 SM0805 C8 2.2uF
   ( 1 VCC )
   ( 2 GND )
  )
  ( /4FC72809 SM0805 C9 100n
-  ( 1 N-000024 )
+  ( 1 +BATT )
   ( 2 GND )
  )
  ( /4FC72B39 SM0805 C10 100n
   ( 1 +5V )
   ( 2 GND )
  )
- ( /4FC72834 C1 Center_VCC1 CONN_2
+ ( /4FEA1961 SM0805 C11 220nF
+  ( 1 N-000011 )
+  ( 2 N-000024 )
+ )
+ ( /4FC72834 SIL-2 Center_VCC1 CONN_2
   ( 1 +3.3V )
   ( 2 DGND )
  )
  ( /4F4F3974 LED-3MM D1 LED
-  ( 1 N-000020 )
+  ( 1 N-000023 )
   ( 2 CHARGE_INDICATOR )
  )
  ( /4FE6EC40 SIL-1 dw1 CONN_1
-  ( 1 N-000021 )
+  ( 1 N-000020 )
  )
  ( /4FE6EA8C SO14N IC1 ATTINY24-SS
   ( 1 +3.3V )
-  ( 2 N-000025 )
-  ( 3 N-000018 )
-  ( 4 N-000021 )
-  ( 5 N-000007 )
-  ( 6 ? )
+  ( 2 N-000013 )
+  ( 3 N-000021 )
+  ( 4 N-000020 )
+  ( 5 N-000019 )
+  ( 6 ^SHDN )
   ( 7 MOSI )
   ( 8 MISO )
   ( 9 SCK )
@@ -90,19 +94,23 @@
   ( 8 IRQ )
  )
  ( /4FE6EC0B SIL-1 N64 CONN_1
-  ( 1 N-000007 )
+  ( 1 N-000019 )
  )
  ( /4F4F3966 SM0805 R1 200
   ( 1 +5V )
-  ( 2 N-000020 )
+  ( 2 N-000023 )
  )
- ( /4FE732F5 SM0805 R2 200
-  ( 1 N-000023 )
+ ( /4FE732F5 SM0805 R2 100k
+  ( 1 N-000010 )
   ( 2 ANALOG0 )
  )
- ( /4FE732FD SM0805 R3 200
+ ( /4FE732FD SM0805 R3 430k
   ( 1 ANALOG0 )
   ( 2 DGND )
+ )
+ ( /4FEA1B12 SM0805 R4 100K
+  ( 1 +BATT )
+  ( 2 ^SHDN )
  )
  ( /4FC72830 SIL-2 Side_VCC1 CONN_2
   ( 1 GND )
@@ -122,22 +130,25 @@
   ( 7 +5V )
   ( 8 CHARGE_INDICATOR )
  )
- ( /4F5F6802 SOT23-5 U2 LP5951MF-3.3
-  ( 1 N-000024 )
-  ( 2 GND )
-  ( 3 N-000024 )
-  ( 4 ? )
-  ( 5 VCC )
+ ( /4FE9F9F2 SSOP8 U2 MAX1595
+  ( 1 VCC )
+  ( 2 ^SHDN )
+  ( 3 +BATT )
+  ( 4 GND )
+  ( 5 GND )
+  ( 6 N-000024 )
+  ( 7 N-000011 )
+  ( 8 VCC )
  )
- ( /4F4F3355 PIN_ARRAY_4x1 X1 USB-MB-S
+ ( /4F4F3355 SIL-4 X1 USB-MB-S
   ( D+ ? )
   ( D- ? )
   ( GND GND )
   ( VBUS +5V )
  )
  ( /4F4F350C Q_49U3HMS X2 8MHz
-  ( 1 N-000025 )
-  ( 2 N-000018 )
+  ( 1 N-000013 )
+  ( 2 N-000021 )
  )
 )
 *
@@ -187,6 +198,11 @@ $component C10
  C?
  C1-1
 $endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
 $component D1
  LED-3MM
  LED-5MM
@@ -211,6 +227,13 @@ $component R2
  SM1206
 $endlist
 $component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
  R?
  SM0603
  SM0805
