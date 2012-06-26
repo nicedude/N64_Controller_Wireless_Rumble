@@ -1,4 +1,11 @@
-Cmp-Mod V01 Created by CvPcb (2012-02-16 BZR 3416)-testing date = Tue 20 Mar 2012 09:26:53 PM CET
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 26-06-2012 18:00:50
+
+BeginCmp
+TimeStamp = /4FE9AAC8;
+Reference = BAR1;
+ValeurCmp = DOT-BAR2;
+IdModule  = DIP-20__300;
+EndCmp
 
 BeginCmp
 TimeStamp = /4F569396;
@@ -10,14 +17,14 @@ EndCmp
 BeginCmp
 TimeStamp = /4F43FFC4;
 Reference = C2;
-ValeurCmp = 27pf;
+ValeurCmp = 22pf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F43FF72;
 Reference = C3;
-ValeurCmp = 27pf;
+ValeurCmp = 22pf;
 IdModule  = SM0805;
 EndCmp
 
@@ -95,21 +102,14 @@ BeginCmp
 TimeStamp = /4F4421DC;
 Reference = JP1;
 ValeurCmp = JUMPER;
-IdModule  = SIL-2;
+IdModule  = SM0402;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4421CD;
 Reference = JP2;
 ValeurCmp = JUMPER;
-IdModule  = SIL-2;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F5637AB;
-Reference = N1;
-ValeurCmp = CONN_3;
-IdModule  = SIL-3;
+IdModule  = SM0402;
 EndCmp
 
 BeginCmp
@@ -120,17 +120,17 @@ IdModule  = SIL-3;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F43E0D8;
-Reference = P1;
-ValeurCmp = CONN_3X2;
-IdModule  = pin_array_3x2;
+TimeStamp = /4F68E2A7;
+Reference = NRF1;
+ValeurCmp = CONN_5X2;
+IdModule  = PIN_ARRAY_5x2;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F68E2A7;
-Reference = P2;
-ValeurCmp = CONN_5X2;
-IdModule  = PIN_ARRAY_5x2;
+TimeStamp = /4F43E0D8;
+Reference = PROG1;
+ValeurCmp = CONN_3X2;
+IdModule  = pin_array_3x2;
 EndCmp
 
 BeginCmp
@@ -162,23 +162,44 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F5646DC;
+TimeStamp = /4FE9AB31;
 Reference = R5;
-ValeurCmp = 10k;
+ValeurCmp = 40;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FE9AB3E;
+Reference = R6;
+ValeurCmp = 40;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F452841;
 Reference = R7;
-ValeurCmp = 240;
+ValeurCmp = 120;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4527DB;
 Reference = R8;
-ValeurCmp = Adj;
+ValeurCmp = 200;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FE9AB43;
+Reference = R9;
+ValeurCmp = 40;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FE9AC32;
+Reference = R10;
+ValeurCmp = 40;
 IdModule  = SM0805;
 EndCmp
 
@@ -199,7 +220,7 @@ EndCmp
 BeginCmp
 TimeStamp = /4F5FBE8F;
 Reference = X2;
-ValeurCmp = USB-MB-S;
+ValeurCmp = USB;
 IdModule  = con-usb-USB-MB-S;
 EndCmp
 
