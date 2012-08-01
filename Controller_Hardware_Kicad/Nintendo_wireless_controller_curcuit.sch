@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 01-08-2012 11:58:07
+EESchema Schematic File Version 2  date 01-08-2012 12:22:38
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,11 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:con-usb
-LIBS:max1811
-LIBS:LP5951MF-3.3
-LIBS:MAX1595
-LIBS:Nintendo_wireless_controller_curcuit-cache
+LIBS:Controller_Version_2_single_PCB_attempt-cache
 EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267

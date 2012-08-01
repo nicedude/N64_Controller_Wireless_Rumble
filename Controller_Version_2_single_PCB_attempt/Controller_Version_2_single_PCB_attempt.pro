@@ -1,4 +1,4 @@
-update=01-08-2012 12:22:29
+update=01-08-2012 15:24:48
 version=1
 last_client=eeschema
 [cvpcb]
@@ -81,7 +81,7 @@ LibName10=dip_sockets
 version=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../Misc files/Kicad libs
 NetFmt=1
 HPGLSpd=20
 HPGLDm=15
@@ -141,3 +141,6 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
+LibName31=con-usb
+LibName32=MAX1595
+LibName33=max1811
