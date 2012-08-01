@@ -1,0 +1,55 @@
+eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 04-06-2012 18:09:34
+
+#Cmp ( order = Reference )
+| C1         27p         
+| C2         27p         
+| C3         100n        
+| C4         10u         
+| C5         4.7uF       
+| C6         4.7uF       
+| C7         4.7uF       
+| C8         1uF         
+| C9         100n        
+| C10        100n        
+| Center_VCC1 CONN_2      
+| D1         LED         
+| IC1        ATTINY2313-S
+| J1         BATT        
+| J2         NRF_conn    
+| R1         200         
+| R2         100K        
+| Side_VCC1  CONN_2      
+| sw1        CONN_2      
+| U1         MAX1811     
+| U2         LP5951MF-3.3
+| X1         USB-MB-S    
+| X2         8MHz        
+#End Cmp
+
+#Cmp ( order = Value )
+| 100K         R2        
+| 100n         C3        
+| 100n         C9        
+| 100n         C10       
+| 10u          C4        
+| 1uF          C8        
+| 200          R1        
+| 27p          C1        
+| 27p          C2        
+| 4.7uF        C5        
+| 4.7uF        C6        
+| 4.7uF        C7        
+| 8MHz         X2        
+| ATTINY2313-S IC1       
+| BATT         J1        
+| CONN_2       Center_VCC1
+| CONN_2       Side_VCC1 
+| CONN_2       sw1       
+| LED          D1        
+| LP5951MF-3.3 U2        
+| MAX1811      U1        
+| NRF_conn     J2        
+| USB-MB-S     X1        
+#End Cmp
+
+#End List

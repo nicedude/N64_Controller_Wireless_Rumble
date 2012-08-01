@@ -1,0 +1,244 @@
+# EESchema Netlist Version 1.1 created  26-06-2012 23:11:34
+(
+ ( /4FE750E4 SIL-1 Ain1 CONN_1
+  ( 1 N-000010 )
+ )
+ ( /4FE75075 SIL-3 Batt1 CONN_3
+  ( 1 GND )
+  ( 2 +BATT )
+  ( 3 +BATT )
+ )
+ ( /4F4F3569 SM0805 C1 22pf
+  ( 1 DGND )
+  ( 2 N-000021 )
+ )
+ ( /4F4F356F SM0805 C2 22pf
+  ( 1 DGND )
+  ( 2 N-000013 )
+ )
+ ( /4F5F9071 SM0805 C3 100n
+  ( 1 +3.3V )
+  ( 2 DGND )
+ )
+ ( /4F5F9145 SM0805 C4 10u
+  ( 1 +3.3V )
+  ( 2 DGND )
+ )
+ ( /4F4F38FC SM0805 C5 4.7uF
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4F4F37F8 SM0805 C6 4.7uF
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4F5F6BB2 SM0805 C7 2.2uF
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4F5F69B5 SM0805 C8 2.2uF
+  ( 1 VCC )
+  ( 2 GND )
+ )
+ ( /4FC72809 SM0805 C9 100n
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4FC72B39 SM0805 C10 100n
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4FEA1961 SM0805 C11 220nF
+  ( 1 N-000011 )
+  ( 2 N-000024 )
+ )
+ ( /4FC72834 SIL-2 Center_VCC1 CONN_2
+  ( 1 +3.3V )
+  ( 2 DGND )
+ )
+ ( /4F4F3974 LED-3MM D1 LED
+  ( 1 N-000023 )
+  ( 2 CHARGE_INDICATOR )
+ )
+ ( /4FE6EC40 SIL-1 dw1 CONN_1
+  ( 1 N-000020 )
+ )
+ ( /4FE6EA8C SO14N IC1 ATTINY24-SS
+  ( 1 +3.3V )
+  ( 2 N-000013 )
+  ( 3 N-000021 )
+  ( 4 N-000020 )
+  ( 5 N-000019 )
+  ( 6 ^SHDN )
+  ( 7 MOSI )
+  ( 8 MISO )
+  ( 9 SCK )
+  ( 10 CSN )
+  ( 11 CE )
+  ( 12 IRQ )
+  ( 13 ANALOG0 )
+  ( 14 DGND )
+ )
+ ( /4F4F3715 PIN_ARRAY_2X1 J1 BATT
+  ( 1 +BATT )
+  ( 2 GND )
+ )
+ ( /4F4F3414 PIN_ARRAY_5x2 J2 NRF_conn
+  ( 1 DGND )
+  ( 2 +3.3V )
+  ( 3 CE )
+  ( 4 CSN )
+  ( 5 SCK )
+  ( 6 MOSI )
+  ( 7 MISO )
+  ( 8 IRQ )
+ )
+ ( /4FE6EC0B SIL-1 N64 CONN_1
+  ( 1 N-000019 )
+ )
+ ( /4F4F3966 SM0805 R1 200
+  ( 1 +5V )
+  ( 2 N-000023 )
+ )
+ ( /4FE732F5 SM0805 R2 100k
+  ( 1 N-000010 )
+  ( 2 ANALOG0 )
+ )
+ ( /4FE732FD SM0805 R3 430k
+  ( 1 ANALOG0 )
+  ( 2 DGND )
+ )
+ ( /4FEA1B12 SM0805 R4 100K
+  ( 1 +BATT )
+  ( 2 ^SHDN )
+ )
+ ( /4FC72830 SIL-2 Side_VCC1 CONN_2
+  ( 1 GND )
+  ( 2 VCC )
+ )
+ ( /4FE75506 SIL-2 Side_VCC2 CONN_2
+  ( 1 GND )
+  ( 2 VCC )
+ )
+ ( /4F4F38B3 SO8E U1 MAX1811
+  ( 1 +5V )
+  ( 2 GND )
+  ( 3 GND )
+  ( 4 +5V )
+  ( 5 +BATT )
+  ( 6 GND )
+  ( 7 +5V )
+  ( 8 CHARGE_INDICATOR )
+ )
+ ( /4FE9F9F2 SSOP8 U2 MAX1595
+  ( 1 VCC )
+  ( 2 ^SHDN )
+  ( 3 +BATT )
+  ( 4 GND )
+  ( 5 GND )
+  ( 6 N-000024 )
+  ( 7 N-000011 )
+  ( 8 VCC )
+ )
+ ( /4F4F3355 SIL-4 X1 USB-MB-S
+  ( D+ ? )
+  ( D- ? )
+  ( GND GND )
+  ( VBUS +5V )
+ )
+ ( /4F4F350C Q_49U3HMS X2 8MHz
+  ( 1 N-000013 )
+  ( 2 N-000021 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C5
+ CP*
+ SM*
+$endlist
+$component C6
+ CP*
+ SM*
+$endlist
+$component C7
+ CP*
+ SM*
+$endlist
+$component C8
+ CP*
+ SM*
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
