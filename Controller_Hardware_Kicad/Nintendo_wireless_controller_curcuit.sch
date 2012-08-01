@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 26-06-2012 23:01:19
+EESchema Schematic File Version 2  date 01-08-2012 11:58:07
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -40,7 +40,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "26 jun 2012"
+Date "1 aug 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -48,6 +48,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text GLabel 7850 5550 1    60   Input ~ 0
+^SHDN
+Wire Wire Line
+	7850 5550 7850 5650
+Connection ~ 7850 5650
 Connection ~ 5950 2350
 Wire Wire Line
 	5950 2450 5950 1550
@@ -304,12 +309,7 @@ Wire Wire Line
 	6950 5750 6950 5800
 Wire Wire Line
 	8100 5750 7200 5750
-Wire Wire Line
-	7850 5550 7850 5650
-Connection ~ 7850 5650
 Text GLabel 4650 1700 2    60   Input ~ 0
-^SHDN
-Text GLabel 7850 5550 1    60   Input ~ 0
 ^SHDN
 Text Notes 6300 5350 0    60   ~ 0
 pin2 = Aout1
