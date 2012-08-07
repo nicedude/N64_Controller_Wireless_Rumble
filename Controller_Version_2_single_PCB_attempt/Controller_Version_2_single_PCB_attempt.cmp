@@ -1,18 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 26-06-2012 23:11:34
-
-BeginCmp
-TimeStamp = /4FE750E4;
-Reference = Ain1;
-ValeurCmp = CONN_1;
-IdModule  = SIL-1;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FE75075;
-Reference = Batt1;
-ValeurCmp = CONN_3;
-IdModule  = SIL-3;
-EndCmp
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 07-08-2012 09:24:04
 
 BeginCmp
 TimeStamp = /4F4F3569;
@@ -92,24 +78,10 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FC72834;
-Reference = Center_VCC1;
-ValeurCmp = CONN_2;
-IdModule  = SIL-2;
-EndCmp
-
-BeginCmp
 TimeStamp = /4F4F3974;
 Reference = D1;
 ValeurCmp = LED;
 IdModule  = LED-3MM;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FE6EC40;
-Reference = dw1;
-ValeurCmp = CONN_1;
-IdModule  = SIL-1;
 EndCmp
 
 BeginCmp
@@ -134,10 +106,10 @@ IdModule  = PIN_ARRAY_5x2;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FE6EC0B;
+TimeStamp = /50192E70;
 Reference = N64;
-ValeurCmp = CONN_1;
-IdModule  = SIL-1;
+ValeurCmp = CONN_3;
+IdModule  = SIL-3;
 EndCmp
 
 BeginCmp
@@ -169,16 +141,9 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4FC72830;
-Reference = Side_VCC1;
-ValeurCmp = CONN_2;
-IdModule  = SIL-2;
-EndCmp
-
-BeginCmp
-TimeStamp = /4FE75506;
-Reference = Side_VCC2;
-ValeurCmp = CONN_2;
+TimeStamp = /50192F7D;
+Reference = SW1;
+ValeurCmp = SW_PUSH;
 IdModule  = SIL-2;
 EndCmp
 
