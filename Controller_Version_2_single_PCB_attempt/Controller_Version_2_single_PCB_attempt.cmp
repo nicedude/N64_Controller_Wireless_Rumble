@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 07-08-2012 09:24:04
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 10-08-2012 17:32:44
 
 BeginCmp
 TimeStamp = /4F4F3569;
@@ -165,7 +165,7 @@ BeginCmp
 TimeStamp = /4F4F3355;
 Reference = X1;
 ValeurCmp = USB-MB-S;
-IdModule  = SIL-4;
+IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
 BeginCmp

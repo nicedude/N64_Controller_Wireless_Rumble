@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 07-08-2012 09:23:09
+EESchema Schematic File Version 2  date 10-08-2012 17:22:01
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -39,7 +39,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "7 aug 2012"
+Date "10 aug 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -47,6 +47,15 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+$Comp
+L GND #PWR?
+U 1 1 50252716
+P 2600 3650
+F 0 "#PWR?" H 2600 3650 30  0001 C CNN
+F 1 "GND" H 2600 3580 30  0001 C CNN
+	1    2600 3650
+	1    0    0    -1  
+$EndComp
 Text Notes 6550 5150 0    60   ~ 0
 Is the ^SHDN net neccesary?
 Text GLabel 7050 5650 0    60   Input ~ 0
@@ -527,15 +536,6 @@ P 4350 4250
 F 0 "#PWR013" H 4350 4250 30  0001 C CNN
 F 1 "GND" H 4350 4180 30  0001 C CNN
 	1    4350 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L DGND #PWR014
-U 1 1 4FC72A04
-P 2600 3650
-F 0 "#PWR014" H 2600 3650 40  0001 C CNN
-F 1 "DGND" H 2600 3580 40  0000 C CNN
-	1    2600 3650
 	1    0    0    -1  
 $EndComp
 $Comp
