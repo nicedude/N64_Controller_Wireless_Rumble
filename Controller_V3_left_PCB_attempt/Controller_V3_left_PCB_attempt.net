@@ -1,0 +1,225 @@
+# EESchema Netlist Version 1.1 created  14-08-2012 22:19:35
+(
+ ( /4F4F3569 SM0805 C1 22pf
+  ( 1 GND )
+  ( 2 N-000016 )
+ )
+ ( /4F4F356F SM0805 C2 22pf
+  ( 1 GND )
+  ( 2 N-000019 )
+ )
+ ( /4F5F9071 SM0805 C3 100n
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /4F5F9145 SM0805 C4 10u
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /4F4F38FC SM0805 C5 4.7uF
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4F4F37F8 SM0805 C6 4.7uF
+  ( 1 V_Batt_switched )
+  ( 2 GND )
+ )
+ ( /4F5F6BB2 SM0805 C7 2.2uF
+  ( 1 V_Batt_switched )
+  ( 2 GND )
+ )
+ ( /4F5F69B5 SM0805 C8 2.2uF
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /4FC72809 SM0805 C9 100n
+  ( 1 V_Batt_switched )
+  ( 2 GND )
+ )
+ ( /4FC72B39 SM0805 C10 100n
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /4FEA1961 SM0805 C11 220nF
+  ( 1 N-000013 )
+  ( 2 N-000014 )
+ )
+ ( /4F4F3974 LED-3MM D1 LED
+  ( 1 N-000018 )
+  ( 2 CHARGE_INDICATOR )
+ )
+ ( /4FE6EA8C SO14N IC1 ATTINY24-SS
+  ( 1 +3.3V )
+  ( 2 N-000019 )
+  ( 3 N-000016 )
+  ( 4 ? )
+  ( 5 N64Serial )
+  ( 6 ^SHDN )
+  ( 7 MOSI )
+  ( 8 MISO )
+  ( 9 SCK )
+  ( 10 CSN )
+  ( 11 CE )
+  ( 12 IRQ )
+  ( 13 ANALOG0 )
+  ( 14 GND )
+ )
+ ( /4F4F3715 PIN_ARRAY_2X1 J1 BATT
+  ( 1 Vchrg )
+  ( 2 GND )
+ )
+ ( /4F4F3414 PIN_ARRAY_5x2 J2 NRF_conn
+  ( 1 GND )
+  ( 2 +3.3V )
+  ( 3 CE )
+  ( 4 CSN )
+  ( 5 SCK )
+  ( 6 MOSI )
+  ( 7 MISO )
+  ( 8 IRQ )
+ )
+ ( /50192E70 PIN_ARRAY_3X1 N64 CONN_3
+  ( 1 GND )
+  ( 2 N64Serial )
+  ( 3 +3.3V )
+ )
+ ( /4F4F3966 SM0805 R1 200
+  ( 1 +5V )
+  ( 2 N-000018 )
+ )
+ ( /4FE732F5 SM0805 R2 100k
+  ( 1 Vchrg )
+  ( 2 ANALOG0 )
+ )
+ ( /4FE732FD SM0805 R3 430k
+  ( 1 ANALOG0 )
+  ( 2 GND )
+ )
+ ( /4FEA1B12 SM0805 R4 100K
+  ( 1 V_Batt_switched )
+  ( 2 ^SHDN )
+ )
+ ( /50192F7D PIN_ARRAY_2X1 SW1 SW_PUSH
+  ( 1 Vchrg )
+  ( 2 V_Batt_switched )
+ )
+ ( /4F4F38B3 SO8E U1 MAX1811
+  ( 1 +5V )
+  ( 2 GND )
+  ( 3 GND )
+  ( 4 +5V )
+  ( 5 Vchrg )
+  ( 6 GND )
+  ( 7 +5V )
+  ( 8 CHARGE_INDICATOR )
+ )
+ ( /4FE9F9F2 SSOP8 U2 MAX1595
+  ( 1 +3.3V )
+  ( 2 ^SHDN )
+  ( 3 V_Batt_switched )
+  ( 4 GND )
+  ( 5 GND )
+  ( 6 N-000014 )
+  ( 7 N-000013 )
+  ( 8 +3.3V )
+ )
+ ( /502A9C6F PIN_ARRAY_2X1 USB1 CONN_2
+  ( 1 GND )
+  ( 2 +5V )
+ )
+ ( /4F4F350C XTAL X2 8MHz
+  ( 1 N-000019 )
+  ( 3 N-000016 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C5
+ CP*
+ SM*
+$endlist
+$component C6
+ CP*
+ SM*
+$endlist
+$component C7
+ CP*
+ SM*
+$endlist
+$component C8
+ CP*
+ SM*
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component C11
+ SM*
+ C?
+ C1-1
+$endlist
+$component D1
+ LED-3MM
+ LED-5MM
+ LED-10MM
+ LED-0603
+ LED-0805
+ LED-1206
+ LEDV
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
+$endlist
+$endfootprintlist
+}
