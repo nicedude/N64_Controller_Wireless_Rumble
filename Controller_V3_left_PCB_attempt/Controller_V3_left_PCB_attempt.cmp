@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 15-08-2012 09:24:42
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 17-08-2012 09:40:42
 
 BeginCmp
 TimeStamp = /4F4F3569;
@@ -78,13 +78,6 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4F3974;
-Reference = D1;
-ValeurCmp = LED;
-IdModule  = PIN_ARRAY_2X1;
-EndCmp
-
-BeginCmp
 TimeStamp = /4FE6EA8C;
 Reference = IC1;
 ValeurCmp = ATTINY24-SS;
@@ -92,9 +85,9 @@ IdModule  = SO14E;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4F3715;
-Reference = J1;
-ValeurCmp = BATT;
+TimeStamp = /502DF4BC;
+Reference = LED1;
+ValeurCmp = CONN_2;
 IdModule  = PIN_ARRAY_2X1;
 EndCmp
 
@@ -107,7 +100,7 @@ EndCmp
 
 BeginCmp
 TimeStamp = /502B4E54;
-Reference = P1;
+Reference = NRF1;
 ValeurCmp = CONN_5X2;
 IdModule  = PIN_ARRAY_5x2;
 EndCmp
@@ -141,10 +134,10 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /50192F7D;
-Reference = SW1;
-ValeurCmp = SW_PUSH;
-IdModule  = PIN_ARRAY_2X1;
+TimeStamp = /502DF402;
+Reference = TOP1;
+ValeurCmp = CONN_3;
+IdModule  = PIN_ARRAY_3X1;
 EndCmp
 
 BeginCmp
