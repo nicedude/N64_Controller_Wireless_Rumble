@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 26-06-2012 18:00:50
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 21-08-2012 09:00:59
 
 BeginCmp
 TimeStamp = /4FE9AAC8;
@@ -214,7 +214,7 @@ BeginCmp
 TimeStamp = /4F44009A;
 Reference = X1;
 ValeurCmp = 12mhz;
-IdModule  = Q_49U3HMS;
+IdModule  = XTAL;
 EndCmp
 
 BeginCmp

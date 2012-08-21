@@ -1,4 +1,4 @@
-EESchema-LIBRARY Version 2.3  Date: 26-06-2012 15:50:33
+EESchema-LIBRARY Version 2.3  Date: 21-08-2012 09:10:22
 #encoding utf-8
 #
 # ATMEGA8-AI
@@ -159,7 +159,7 @@ P 2 0 1 16  -100 100  -100 -100 N
 P 2 0 1 16  100 100  100 -100 N
 P 5 0 1 12  -50 50  50 50  50 -50  -50 -50  -50 50 f
 X 1 1 -300 0 200 R 40 40 1 1 P
-X 2 2 300 0 200 L 40 40 1 1 P
+X 3 3 300 0 200 L 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #

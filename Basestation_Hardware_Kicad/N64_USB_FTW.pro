@@ -1,4 +1,4 @@
-update=04-06-2012 18:28:47
+update=21-08-2012 09:00:52
 version=1
 last_client=cvpcb
 [eeschema]
@@ -98,6 +98,7 @@ LibName10=pga_sockets
 LibName11=valves
 LibName12=con-usb
 LibName13=OSAA_logo
+LibName14=XTAL
 LibDir=../Misc files/Kicad libs
 [cvpcb]
 version=1
