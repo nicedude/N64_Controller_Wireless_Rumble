@@ -1,0 +1,57 @@
+eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 8/21/2012 21:03:33
+
+#Cmp ( order = Reference )
+| C1         16pf        ;             
+| C2         16pf        ;             
+| C3         100n        ;             
+| C4         10u         ;             
+| C5         4.7uF       ;             
+| C6         4.7uF       ;             
+| C7         2.2uF       ;             
+| C8         2.2uF       ;             
+| C9         100n        ;             
+| C10        100n        ;             
+| C11        220nF       ;             
+| IC1        ATTINY24-SS ; SO14        
+| LED1       CONN_2      ;             
+| N64        CONN_3      ;             
+| NRF1       CONN_5X2    ;             
+| R1         200         ;              
+| R2         100k        ;             
+| R3         430k        ;                  
+| R4         100K        ;             
+| TOP1       CONN_3      ;             
+| U1         MAX1811     ;    x         
+| U2         MAX1595     ; MODULE    x  
+| USB1       CONN_2      ;             
+| X2         8MHz        ;       x      
+#End Cmp
+
+#Cmp ( order = Value )
+| 100k         R2        ;             
+| 100K         R4        ;             
+| 100n         C3        ;             
+| 100n         C9        ;             
+| 100n         C10       ;             
+| 10u          C4        ;             
+| 16pf         C1        ;             
+| 16pf         C2        ;             
+| 2.2uF        C7        ;             
+| 2.2uF        C8        ;             
+| 200          R1        ;             
+| 220nF        C11       ;             
+| 4.7uF        C5        ;             
+| 4.7uF        C6        ;             
+| 430k         R3        ;             
+| 8MHz         X2        ;             
+| ATTINY24-SS  IC1       ; SO14        
+| CONN_2       LED1      ;             
+| CONN_2       USB1      ;             
+| CONN_3       N64       ;             
+| CONN_3       TOP1      ;             
+| CONN_5X2     NRF1      ;             
+| MAX1595      U2        ; MODULE      
+| MAX1811      U1        ;             
+#End Cmp
+
+#End List

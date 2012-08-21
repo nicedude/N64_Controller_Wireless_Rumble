@@ -1,65 +1,38 @@
-eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 04-06-2012 18:09:04
-
-#Cmp ( order = Reference )
-| C1         100n        
-| C2         27pf        
-| C3         27pf        
-| C4         1uf         
-| C5         22uf        
-| C6         100n        
-| C14        100n        
-| C16        100n        
-| C14a1      10uf        
-| D1         3.6v        
-| D2         3.6v        
-| GC1        CONN_7      
-| IC1        ATMEGA8-AI  
-| JP1        JUMPER      
-| JP2        JUMPER      
-| N64        CONN_3      
-| P1         CONN_3X2    
-| P2         CONN_5X2    
-| R1         1.5k        
-| R2         68          
-| R3         68          
-| R4         1k          
-| R5         10k         
-| R7         240         
-| R8         390         
-| U1         LM317       
-| X1         12mhz       
-| X2         USB-MB-S    
-#End Cmp
+eeschema (2012-01-19 BZR 3256)-stable  >> Creation date: 8/21/2012 19:00:28
 
 #Cmp ( order = Value )
-| 1.5k         R1        
-| 100n         C1        
-| 100n         C6        
-| 100n         C14       
-| 100n         C16       
-| 10k          R5        
-| 10uf         C14a1     
-| 12mhz        X1        
-| 1k           R4        
-| 1uf          C4        
-| 22uf         C5        
-| 240          R7        
-| 27pf         C2        
-| 27pf         C3        
-| 3.6v         D1        
-| 3.6v         D2        
-| 390          R8        
-| 68           R2        
-| 68           R3        
-| ATMEGA8-AI   IC1       
-| CONN_3       N64       
-| CONN_3X2     P1        
-| CONN_5X2     P2        
-| CONN_7       GC1       
-| JUMPER       JP1       
-| JUMPER       JP2       
-| LM317        U1        
-| USB-MB-S     X2        
+| 1.5k         R1        ;             
+| 100n         C1        ;             
+| 100n         C6        ;             
+| 100n         C14       ;             
+| 100n         C16       ;             
+| 10uf         C14a1     ;             
+| 120          R7        ;             
+| 12mhz        X1        ;             
+| 12pf         C2        ;             
+| 12pf         C3        ;             
+| 1k           R4        ;             
+| 1uf          C4        ;             
+| 200          R8        ;             
+| 22uf         C5        ;             
+| 3.6v         D1        ;             
+| 3.6v         D2        ;             
+| 40           R5        ;             
+| 40           R6        ;             
+| 40           R9        ;             
+| 40           R10       ;             
+| 68           R2        ;             
+| 68           R3        ;             
+| ATMEGA8-AI   IC1       ; TQFP32      
+| CONN_3       N64       ;             
+| CONN_3X2     PROG1     ;             
+| CONN_5X2     NRF1      ;             
+| CONN_7       GC1       ;             
+| DOT-BAR2     BAR1      ;             
+| JUMPER       JP1       ;             
+| JUMPER       JP2       ;             
+| LM317        U1        ;             
+| USB          X2        ; con-usb-USB-MB-S   X
 #End Cmp
 
 #End List
