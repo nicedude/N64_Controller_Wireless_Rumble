@@ -1,189 +1,151 @@
-# EESchema Netlist Version 1.1 created  17-08-2012 09:40:42
+# EESchema Netlist Version 1.1 created  21-08-2012 09:27:41
 (
- ( /4F4F3569 SM0805 C1 22pf
-  ( 1 GND )
-  ( 2 N-000016 )
+ ( /502DF4BC $noname  LED1 CONN_2 {Lib=CONN_2}
+  (    1 CHARGE_INDICATOR )
+  (    2 N-000018 )
  )
- ( /4F4F356F SM0805 C2 22pf
-  ( 1 GND )
-  ( 2 N-000017 )
+ ( /502DF402 $noname  TOP1 CONN_3 {Lib=CONN_3}
+  (    1 V_Batt_switched )
+  (    2 Vchrg )
+  (    3 GND )
  )
- ( /4F5F9071 SM0805 C3 100n
-  ( 1 +3.3V )
-  ( 2 GND )
+ ( /502B4E54 $noname  NRF1 CONN_5X2 {Lib=CONN_5X2}
+  (    1 +3.3V )
+  (    2 +3.3V )
+  (    3 CE )
+  (    4 CSN )
+  (    5 SCK )
+  (    6 MOSI )
+  (    7 MISO )
+  (    8 IRQ )
+  (    9 GND )
+  (   10 GND )
  )
- ( /4F5F9145 SM0805 C4 10u
-  ( 1 +3.3V )
-  ( 2 GND )
+ ( /502A9C6F $noname  USB1 CONN_2 {Lib=CONN_2}
+  (    1 GND )
+  (    2 +5V )
  )
- ( /4F4F38FC SM0805 C5 4.7uF
-  ( 1 +5V )
-  ( 2 GND )
+ ( /50192E70 $noname  N64 CONN_3 {Lib=CONN_3}
+  (    1 GND )
+  (    2 N64Serial )
+  (    3 +3.3V )
  )
- ( /4F4F37F8 SM0805 C6 4.7uF
-  ( 1 V_Batt_switched )
-  ( 2 GND )
+ ( /4FEA1B12 $noname  R4 100K {Lib=R}
+  (    1 V_Batt_switched )
+  (    2 ^SHDN )
  )
- ( /4F5F6BB2 SM0805 C7 2.2uF
-  ( 1 V_Batt_switched )
-  ( 2 GND )
+ ( /4FEA1961 $noname  C11 220nF {Lib=C}
+  (    1 N-000002 )
+  (    2 N-000003 )
  )
- ( /4F5F69B5 SM0805 C8 2.2uF
-  ( 1 +3.3V )
-  ( 2 GND )
+ ( /4FE9F9F2 MODULE  U2 MAX1595 {Lib=MAX1595}
+  (    1 +3.3V )
+  (    2 ^SHDN )
+  (    3 V_Batt_switched )
+  (    4 GND )
+  (    5 GND )
+  (    6 N-000003 )
+  (    7 N-000002 )
+  (    8 +3.3V )
  )
- ( /4FC72809 SM0805 C9 100n
-  ( 1 V_Batt_switched )
-  ( 2 GND )
+ ( /4FE732FD $noname  R3 430k {Lib=R}
+  (    1 ANALOG0 )
+  (    2 GND )
  )
- ( /4FC72B39 SM0805 C10 100n
-  ( 1 +5V )
-  ( 2 GND )
+ ( /4FE732F5 $noname  R2 100k {Lib=R}
+  (    1 Vchrg )
+  (    2 ANALOG0 )
  )
- ( /4FEA1961 SM0805 C11 220nF
-  ( 1 N-000002 )
-  ( 2 N-000003 )
+ ( /4FE6EA8C SO14  IC1 ATTINY24-SS {Lib=ATTINY24-SS}
+  (    1 +3.3V )
+  (    2 N-000017 )
+  (    3 N-000016 )
+  (    4 ? )
+  (    5 N64Serial )
+  (    6 ^SHDN )
+  (    7 MOSI )
+  (    8 MISO )
+  (    9 SCK )
+  (   10 CSN )
+  (   11 CE )
+  (   12 IRQ )
+  (   13 ANALOG0 )
+  (   14 GND )
  )
- ( /4FE6EA8C SO14E IC1 ATTINY24-SS
-  ( 1 +3.3V )
-  ( 2 N-000017 )
-  ( 3 N-000016 )
-  ( 4 ? )
-  ( 5 N64Serial )
-  ( 6 ^SHDN )
-  ( 7 MOSI )
-  ( 8 MISO )
-  ( 9 SCK )
-  ( 10 CSN )
-  ( 11 CE )
-  ( 12 IRQ )
-  ( 13 ANALOG0 )
-  ( 14 GND )
+ ( /4FC72B39 $noname  C10 100n {Lib=C}
+  (    1 +5V )
+  (    2 GND )
  )
- ( /502DF4BC PIN_ARRAY_2X1 LED1 CONN_2
-  ( 1 CHARGE_INDICATOR )
-  ( 2 N-000018 )
+ ( /4FC72809 $noname  C9 100n {Lib=C}
+  (    1 V_Batt_switched )
+  (    2 GND )
  )
- ( /50192E70 PIN_ARRAY_3X1 N64 CONN_3
-  ( 1 GND )
-  ( 2 N64Serial )
-  ( 3 +3.3V )
+ ( /4F5F9145 $noname  C4 10u {Lib=CP1}
+  (    1 +3.3V )
+  (    2 GND )
  )
- ( /502B4E54 PIN_ARRAY_5x2 NRF1 CONN_5X2
-  ( 1 +3.3V )
-  ( 2 +3.3V )
-  ( 3 CE )
-  ( 4 CSN )
-  ( 5 SCK )
-  ( 6 MOSI )
-  ( 7 MISO )
-  ( 8 IRQ )
-  ( 9 GND )
-  ( 10 GND )
+ ( /4F5F9071 $noname  C3 100n {Lib=C}
+  (    1 +3.3V )
+  (    2 GND )
  )
- ( /4F4F3966 SM0805 R1 200
-  ( 1 +5V )
-  ( 2 N-000018 )
+ ( /4F5F6BB2 $noname  C7 2.2uF {Lib=CP1}
+  (    1 V_Batt_switched )
+  (    2 GND )
  )
- ( /4FE732F5 SM0805 R2 100k
-  ( 1 Vchrg )
-  ( 2 ANALOG0 )
+ ( /4F5F69B5 $noname  C8 2.2uF {Lib=CP1}
+  (    1 +3.3V )
+  (    2 GND )
  )
- ( /4FE732FD SM0805 R3 430k
-  ( 1 ANALOG0 )
-  ( 2 GND )
+ ( /4F4F3966 $noname  R1 200 {Lib=R}
+  (    1 +5V )
+  (    2 N-000018 )
  )
- ( /4FEA1B12 SM0805 R4 100K
-  ( 1 V_Batt_switched )
-  ( 2 ^SHDN )
+ ( /4F4F38FC $noname  C5 4.7uF {Lib=CP1}
+  (    1 +5V )
+  (    2 GND )
  )
- ( /502DF402 PIN_ARRAY_3X1 TOP1 CONN_3
-  ( 1 V_Batt_switched )
-  ( 2 Vchrg )
-  ( 3 GND )
+ ( /4F4F38B3 $noname  U1 MAX1811 {Lib=MAX1811}
+  (    1 +5V )
+  (    2 GND )
+  (    3 GND )
+  (    4 +5V )
+  (    5 Vchrg )
+  (    6 GND )
+  (    7 +5V )
+  (    8 CHARGE_INDICATOR )
  )
- ( /4F4F38B3 SO8E U1 MAX1811
-  ( 1 +5V )
-  ( 2 GND )
-  ( 3 GND )
-  ( 4 +5V )
-  ( 5 Vchrg )
-  ( 6 GND )
-  ( 7 +5V )
-  ( 8 CHARGE_INDICATOR )
+ ( /4F4F37F8 $noname  C6 4.7uF {Lib=CP1}
+  (    1 V_Batt_switched )
+  (    2 GND )
  )
- ( /4FE9F9F2 SSOP8 U2 MAX1595
-  ( 1 +3.3V )
-  ( 2 ^SHDN )
-  ( 3 V_Batt_switched )
-  ( 4 GND )
-  ( 5 GND )
-  ( 6 N-000003 )
-  ( 7 N-000002 )
-  ( 8 +3.3V )
+ ( /4F4F356F $noname  C2 16pf {Lib=C}
+  (    1 GND )
+  (    2 N-000017 )
  )
- ( /502A9C6F PIN_ARRAY_2X1 USB1 CONN_2
-  ( 1 GND )
-  ( 2 +5V )
+ ( /4F4F3569 $noname  C1 16pf {Lib=C}
+  (    1 GND )
+  (    2 N-000016 )
  )
- ( /4F4F350C XTAL X2 8MHz
-  ( 1 N-000017 )
-  ( 3 N-000016 )
+ ( /4F4F350C $noname  X2 8MHz {Lib=CRYSTAL}
+  (    1 N-000017 )
+  (    3 N-000016 )
  )
 )
 *
 { Allowed footprints by component:
-$component C1
- SM*
- C?
- C1-1
-$endlist
-$component C2
- SM*
- C?
- C1-1
-$endlist
-$component C3
- SM*
- C?
- C1-1
-$endlist
-$component C4
- CP*
- SM*
-$endlist
-$component C5
- CP*
- SM*
-$endlist
-$component C6
- CP*
- SM*
-$endlist
-$component C7
- CP*
- SM*
-$endlist
-$component C8
- CP*
- SM*
-$endlist
-$component C9
- SM*
- C?
- C1-1
-$endlist
-$component C10
- SM*
- C?
- C1-1
+$component R4
+ R?
+ SM0603
+ SM0805
+ R?-*
+ SM1206
 $endlist
 $component C11
  SM*
  C?
  C1-1
 $endlist
-$component R1
+$component R3
  R?
  SM0603
  SM0805
@@ -197,19 +159,161 @@ $component R2
  R?-*
  SM1206
 $endlist
-$component R3
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ CP*
+ SM*
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ CP*
+ SM*
+$endlist
+$component C8
+ CP*
+ SM*
+$endlist
+$component R1
  R?
  SM0603
  SM0805
  R?-*
  SM1206
 $endlist
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
+$component C5
+ CP*
+ SM*
+$endlist
+$component C6
+ CP*
+ SM*
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C1
+ SM*
+ C?
+ C1-1
 $endlist
 $endfootprintlist
 }
+{ Pin List by Nets
+Net 1 "ANALOG0" "ANALOG0"
+ R2 2
+ R3 1
+ IC1 13
+Net 2 "" ""
+ U2 7
+ C11 1
+Net 3 "" ""
+ C11 2
+ U2 6
+Net 4 "GND" "GND"
+ C10 2
+ IC1 14
+ C8 2
+ C7 2
+ C2 1
+ C1 1
+ TOP1 3
+ C6 2
+ U1 6
+ C4 2
+ C9 2
+ C3 2
+ NRF1 9
+ USB1 1
+ NRF1 10
+ U2 4
+ R3 2
+ U2 5
+ U1 3
+ U1 2
+ N64 1
+ C5 2
+Net 6 "+3.3V" "+3.3V"
+ N64 3
+ U2 8
+ IC1 1
+ U2 1
+ NRF1 2
+ C3 1
+ C4 1
+ C8 1
+ NRF1 1
+Net 7 "SCK" "SCK"
+ IC1 9
+ NRF1 5
+Net 8 "MISO" "MISO"
+ NRF1 7
+ IC1 8
+Net 9 "MOSI" "MOSI"
+ NRF1 6
+ IC1 7
+Net 10 "CSN" "CSN"
+ IC1 10
+ NRF1 4
+Net 11 "CE" "CE"
+ IC1 11
+ NRF1 3
+Net 12 "^SHDN" "^SHDN"
+ U2 2
+ R4 2
+ IC1 6
+Net 13 "IRQ" "IRQ"
+ NRF1 8
+ IC1 12
+Net 14 "N64Serial" "N64Serial"
+ IC1 5
+ N64 2
+Net 15 "Vchrg" "Vchrg"
+ TOP1 2
+ U1 5
+ R2 1
+Net 16 "" ""
+ C1 2
+ X2 3
+ IC1 3
+Net 17 "" ""
+ C2 2
+ IC1 2
+ X2 1
+Net 18 "" ""
+ LED1 2
+ R1 2
+Net 19 "CHARGE_INDICATOR" "CHARGE_INDICATOR"
+ U1 8
+ LED1 1
+Net 20 "+5V" "+5V"
+ U1 1
+ U1 4
+ C5 1
+ USB1 2
+ R1 1
+ C10 1
+ U1 7
+Net 21 "V_Batt_switched" "V_Batt_switched"
+ TOP1 1
+ U2 3
+ C9 1
+ C6 1
+ R4 1
+ C7 1
+}
+#End
