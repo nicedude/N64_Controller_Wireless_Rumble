@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "NRF_N64_Controller", "NRF_N64_Controller\NRF_N64_Controller.cproj", "{FE5B1AFF-9DE2-42CB-B531-36C5A1F28D85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE5B1AFF-9DE2-42CB-B531-36C5A1F28D85}.Debug|AVR.ActiveCfg = Debug|AVR
+		{FE5B1AFF-9DE2-42CB-B531-36C5A1F28D85}.Debug|AVR.Build.0 = Debug|AVR
+		{FE5B1AFF-9DE2-42CB-B531-36C5A1F28D85}.Release|AVR.ActiveCfg = Release|AVR
+		{FE5B1AFF-9DE2-42CB-B531-36C5A1F28D85}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
