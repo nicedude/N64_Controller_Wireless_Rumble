@@ -6,7 +6,8 @@
  */ 
 
 
-#include <avr/io.h>
+#include <avr/io.h> //basic IO definitions
+#include <avr/interrupt.h> //we use interrupts for recieving from the NRF, and for getting data from the ADC which measures the battery voltage.
 
 int main(void)
 {
@@ -15,3 +16,4 @@ int main(void)
         //TODO:: Please write your application code 
     }
 }
+

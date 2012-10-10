@@ -65,6 +65,9 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="SPI.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="NRF_N64_Controller.c">
       <SubType>compile</SubType>
     </Compile>
