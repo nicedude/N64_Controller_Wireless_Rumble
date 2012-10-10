@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  21-08-2012 09:27:41
+# EESchema Netlist Version 1.1 created  10-10-2012 09:57:52
 (
  ( /502DF4BC $noname  LED1 CONN_2 {Lib=CONN_2}
   (    1 CHARGE_INDICATOR )
@@ -34,7 +34,7 @@
   (    1 V_Batt_switched )
   (    2 ^SHDN )
  )
- ( /4FEA1961 $noname  C11 220nF {Lib=C}
+ ( /4FEA1961 $noname  C11 470nF {Lib=C}
   (    1 N-000002 )
   (    2 N-000003 )
  )
