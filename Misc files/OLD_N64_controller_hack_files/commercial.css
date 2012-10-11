@@ -1,0 +1,28 @@
+div.tdftdiv{
+	padding:3px;
+/*	margin:11px 0 0 0;*/
+	line-height:16px;
+}
+ul.tdftad{
+	margin:0;
+	padding:0;
+}
+ul.tdftad li{
+	display:inline;
+	background-image:url("al.gif");
+	background-position:left center;
+	background-repeat:no-repeat;
+	padding:0 4px 0 8px;
+	font-size:13px;
+}
+ul.tdftad li.tdftpr{
+	background-image:url("pr.gif");
+	padding-left:20px;
+}
+ul.tdftad li.tdftlink{
+	background-image:url("link.gif");
+	padding-left:25px;
+}
+ul.tdftad li a:hover{
+	text-decoration:none;
+}
