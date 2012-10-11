@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 10-10-2012 09:57:18
+EESchema Schematic File Version 2  date 11-10-2012 13:37:10
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -39,7 +39,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "10 oct 2012"
+Date "11 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -47,6 +47,8 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Notes 4450 3800 0    60   ~ 0
+N64 controller itself draws about 14 mA
 Wire Wire Line
 	2150 6250 2150 6500
 Wire Wire Line

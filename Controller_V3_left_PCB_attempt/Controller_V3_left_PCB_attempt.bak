@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 21-08-2012 09:27:37
+EESchema Schematic File Version 2  date 10-10-2012 09:57:18
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -39,7 +39,7 @@ $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "21 aug 2012"
+Date "10 oct 2012"
 Rev ""
 Comp ""
 Comment1 ""
@@ -461,7 +461,7 @@ L C C11
 U 1 1 4FEA1961
 P 10250 5750
 F 0 "C11" H 10300 5850 50  0000 L CNN
-F 1 "220nF" H 10300 5650 50  0000 L CNN
+F 1 "470nF" H 10300 5650 50  0000 L CNN
 	1    10250 5750
 	1    0    0    -1  
 $EndComp
