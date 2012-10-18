@@ -1,0 +1,517 @@
+
+NRF_N64_Basestation.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002b0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          0000001a  00800060  00800060  00000324  2**0
+                  ALLOC
+  2 .stab         000006cc  00000000  00000000  00000324  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000085  00000000  00000000  000009f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000080  00000000  00000000  00000a78  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000611  00000000  00000000  00000af8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000212  00000000  00000000  00001109  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000003b0  00000000  00000000  0000131b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000c8  00000000  00000000  000016cc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000001e3  00000000  00000000  00001794  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000189  00000000  00000000  00001977  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	1e c0       	rjmp	.+60     	; 0x3e <__ctors_end>
+   2:	38 c0       	rjmp	.+112    	; 0x74 <__bad_interrupt>
+   4:	37 c0       	rjmp	.+110    	; 0x74 <__bad_interrupt>
+   6:	36 c0       	rjmp	.+108    	; 0x74 <__bad_interrupt>
+   8:	35 c0       	rjmp	.+106    	; 0x74 <__bad_interrupt>
+   a:	34 c0       	rjmp	.+104    	; 0x74 <__bad_interrupt>
+   c:	33 c0       	rjmp	.+102    	; 0x74 <__bad_interrupt>
+   e:	32 c0       	rjmp	.+100    	; 0x74 <__bad_interrupt>
+  10:	31 c0       	rjmp	.+98     	; 0x74 <__bad_interrupt>
+  12:	70 c0       	rjmp	.+224    	; 0xf4 <__vector_9>
+  14:	2f c0       	rjmp	.+94     	; 0x74 <__bad_interrupt>
+  16:	2e c0       	rjmp	.+92     	; 0x74 <__bad_interrupt>
+  18:	2d c0       	rjmp	.+90     	; 0x74 <__bad_interrupt>
+  1a:	2c c0       	rjmp	.+88     	; 0x74 <__bad_interrupt>
+  1c:	2b c0       	rjmp	.+86     	; 0x74 <__bad_interrupt>
+  1e:	2a c0       	rjmp	.+84     	; 0x74 <__bad_interrupt>
+  20:	29 c0       	rjmp	.+82     	; 0x74 <__bad_interrupt>
+  22:	28 c0       	rjmp	.+80     	; 0x74 <__bad_interrupt>
+  24:	27 c0       	rjmp	.+78     	; 0x74 <__bad_interrupt>
+  26:	13 c1       	rjmp	.+550    	; 0x24e <set_charlie+0xac>
+  28:	0b c1       	rjmp	.+534    	; 0x240 <set_charlie+0x9e>
+  2a:	03 c1       	rjmp	.+518    	; 0x232 <set_charlie+0x90>
+  2c:	fb c0       	rjmp	.+502    	; 0x224 <set_charlie+0x82>
+  2e:	f3 c0       	rjmp	.+486    	; 0x216 <set_charlie+0x74>
+  30:	eb c0       	rjmp	.+470    	; 0x208 <set_charlie+0x66>
+  32:	e3 c0       	rjmp	.+454    	; 0x1fa <set_charlie+0x58>
+  34:	db c0       	rjmp	.+438    	; 0x1ec <set_charlie+0x4a>
+  36:	d3 c0       	rjmp	.+422    	; 0x1de <set_charlie+0x3c>
+  38:	cb c0       	rjmp	.+406    	; 0x1d0 <set_charlie+0x2e>
+  3a:	c3 c0       	rjmp	.+390    	; 0x1c2 <set_charlie+0x20>
+  3c:	bb c0       	rjmp	.+374    	; 0x1b4 <set_charlie+0x12>
+
+0000003e <__ctors_end>:
+  3e:	11 24       	eor	r1, r1
+  40:	1f be       	out	0x3f, r1	; 63
+  42:	cf e5       	ldi	r28, 0x5F	; 95
+  44:	d4 e0       	ldi	r29, 0x04	; 4
+  46:	de bf       	out	0x3e, r29	; 62
+  48:	cd bf       	out	0x3d, r28	; 61
+
+0000004a <__do_copy_data>:
+  4a:	10 e0       	ldi	r17, 0x00	; 0
+  4c:	a0 e6       	ldi	r26, 0x60	; 96
+  4e:	b0 e0       	ldi	r27, 0x00	; 0
+  50:	e0 eb       	ldi	r30, 0xB0	; 176
+  52:	f2 e0       	ldi	r31, 0x02	; 2
+  54:	02 c0       	rjmp	.+4      	; 0x5a <__do_copy_data+0x10>
+  56:	05 90       	lpm	r0, Z+
+  58:	0d 92       	st	X+, r0
+  5a:	a0 36       	cpi	r26, 0x60	; 96
+  5c:	b1 07       	cpc	r27, r17
+  5e:	d9 f7       	brne	.-10     	; 0x56 <__do_copy_data+0xc>
+
+00000060 <__do_clear_bss>:
+  60:	10 e0       	ldi	r17, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
+
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
+
+0000006a <.do_clear_bss_start>:
+  6a:	aa 37       	cpi	r26, 0x7A	; 122
+  6c:	b1 07       	cpc	r27, r17
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	93 d0       	rcall	.+294    	; 0x198 <main>
+  72:	1c c1       	rjmp	.+568    	; 0x2ac <_exit>
+
+00000074 <__bad_interrupt>:
+  74:	c5 cf       	rjmp	.-118    	; 0x0 <__vectors>
+
+00000076 <setup_hw>:
+}
+
+
+void setup_hw(void)
+{
+	DDRC=0; //input all the things!
+  76:	14 ba       	out	0x14, r1	; 20
+	PORTC=0;
+  78:	15 ba       	out	0x15, r1	; 21
+	MCUCR&=~(1<<PUD);
+  7a:	85 b7       	in	r24, 0x35	; 53
+  7c:	8b 7f       	andi	r24, 0xFB	; 251
+  7e:	85 bf       	out	0x35, r24	; 53
+	
+	//timer0 set up to interrupt on overflow @ 1MHz/8/256 = 488,28125Hz
+	TCCR0|=(1<<CS00); //prescaler to /1
+  80:	83 b7       	in	r24, 0x33	; 51
+  82:	81 60       	ori	r24, 0x01	; 1
+  84:	83 bf       	out	0x33, r24	; 51
+	TIMSK|=(1<<TOIE0); //Overflow interrupt enabled
+  86:	89 b7       	in	r24, 0x39	; 57
+  88:	81 60       	ori	r24, 0x01	; 1
+  8a:	89 bf       	out	0x39, r24	; 57
+	
+	//ADCSRB Standard values are fine
+//	DIDR0|=(1<<ADC2D); //disable digital input on ADC ch2 (PB4)
+//	ADCSRA|=(1<<ADSC); //GO!
+	
+}
+  8c:	08 95       	ret
+
+0000008e <setup_charlie_struct>:
+	//setup bit patterns for DDRs and output pins.
+	
+	//PB4 and PB5 are input.
+	
+	//HLZZ:
+	charlie.LEDS[0].DDRS=0b001100;
+  8e:	2c e0       	ldi	r18, 0x0C	; 12
+  90:	20 93 64 00 	sts	0x0064, r18
+	charlie.LEDS[0].PORT=0b1000;
+  94:	88 e0       	ldi	r24, 0x08	; 8
+  96:	80 93 65 00 	sts	0x0065, r24
+	//ZHZL:
+	charlie.LEDS[1].DDRS=0b000101;
+  9a:	95 e0       	ldi	r25, 0x05	; 5
+  9c:	90 93 66 00 	sts	0x0066, r25
+	charlie.LEDS[1].PORT=0b0100;
+  a0:	84 e0       	ldi	r24, 0x04	; 4
+  a2:	80 93 67 00 	sts	0x0067, r24
+	//ZHLZ:
+	charlie.LEDS[2].DDRS=0b000110;
+  a6:	36 e0       	ldi	r19, 0x06	; 6
+  a8:	30 93 68 00 	sts	0x0068, r19
+	charlie.LEDS[2].PORT=0b0100;
+  ac:	80 93 69 00 	sts	0x0069, r24
+	//LHZZ:
+	charlie.LEDS[3].DDRS=0b001100;
+  b0:	20 93 6a 00 	sts	0x006A, r18
+	charlie.LEDS[3].PORT=0b0100;
+  b4:	80 93 6b 00 	sts	0x006B, r24
+	//ZZHL:
+	charlie.LEDS[4].DDRS=0b000011;
+  b8:	23 e0       	ldi	r18, 0x03	; 3
+  ba:	20 93 6c 00 	sts	0x006C, r18
+	charlie.LEDS[4].PORT=0b0010;
+  be:	82 e0       	ldi	r24, 0x02	; 2
+  c0:	80 93 6d 00 	sts	0x006D, r24
+	//ZLHZ:
+	charlie.LEDS[5].DDRS=0b000110;
+  c4:	30 93 6e 00 	sts	0x006E, r19
+	charlie.LEDS[5].PORT=0b0010;
+  c8:	80 93 6f 00 	sts	0x006F, r24
+	//LZHZ:
+	charlie.LEDS[6].DDRS=0b001010;
+  cc:	3a e0       	ldi	r19, 0x0A	; 10
+  ce:	30 93 70 00 	sts	0x0070, r19
+	charlie.LEDS[6].PORT=0b0010;
+  d2:	80 93 71 00 	sts	0x0071, r24
+	//ZZLH:
+	charlie.LEDS[7].DDRS=0b000011;
+  d6:	20 93 72 00 	sts	0x0072, r18
+	charlie.LEDS[7].PORT=0b000001;
+  da:	81 e0       	ldi	r24, 0x01	; 1
+  dc:	80 93 73 00 	sts	0x0073, r24
+	//ZLZH:
+	charlie.LEDS[8].DDRS=0b000101;
+  e0:	90 93 74 00 	sts	0x0074, r25
+	charlie.LEDS[8].PORT=0b0001;
+  e4:	80 93 75 00 	sts	0x0075, r24
+	//LZZH:
+	charlie.LEDS[9].DDRS=0b001001;
+  e8:	99 e0       	ldi	r25, 0x09	; 9
+  ea:	90 93 76 00 	sts	0x0076, r25
+	charlie.LEDS[9].PORT=0b0001;
+  ee:	80 93 77 00 	sts	0x0077, r24
+	
+}
+  f2:	08 95       	ret
+
+000000f4 <__vector_9>:
+//unsigned long ADC_sum=0;
+
+int button_ID=0;
+
+ISR (TIMER0_OVF_vect) //runs at 1MHz/256 = 3906,25Hz
+{
+  f4:	1f 92       	push	r1
+  f6:	0f 92       	push	r0
+  f8:	0f b6       	in	r0, 0x3f	; 63
+  fa:	0f 92       	push	r0
+  fc:	11 24       	eor	r1, r1
+  fe:	2f 93       	push	r18
+ 100:	3f 93       	push	r19
+ 102:	4f 93       	push	r20
+ 104:	5f 93       	push	r21
+ 106:	6f 93       	push	r22
+ 108:	7f 93       	push	r23
+ 10a:	8f 93       	push	r24
+ 10c:	9f 93       	push	r25
+ 10e:	ef 93       	push	r30
+ 110:	ff 93       	push	r31
+	ovf_count++;
+ 112:	80 91 63 00 	lds	r24, 0x0063
+ 116:	8f 5f       	subi	r24, 0xFF	; 255
+ 118:	80 93 63 00 	sts	0x0063, r24
+	if (ovf_count<32) return;	//half the frq: 1953,125Hz - period= 512µS
+ 11c:	80 32       	cpi	r24, 0x20	; 32
+ 11e:	68 f1       	brcs	.+90     	; 0x17a <__vector_9+0x86>
+	ovf_count=0;
+ 120:	10 92 63 00 	sts	0x0063, r1
+	
+	PORTC=0;	
+ 124:	15 ba       	out	0x15, r1	; 21
+	if (LED_PATTERN & (1<<charlie_counter))
+ 126:	20 91 62 00 	lds	r18, 0x0062
+ 12a:	82 2f       	mov	r24, r18
+ 12c:	90 e0       	ldi	r25, 0x00	; 0
+ 12e:	41 e0       	ldi	r20, 0x01	; 1
+ 130:	50 e0       	ldi	r21, 0x00	; 0
+ 132:	ba 01       	movw	r22, r20
+ 134:	02 c0       	rjmp	.+4      	; 0x13a <__vector_9+0x46>
+ 136:	66 0f       	add	r22, r22
+ 138:	77 1f       	adc	r23, r23
+ 13a:	2a 95       	dec	r18
+ 13c:	e2 f7       	brpl	.-8      	; 0x136 <__vector_9+0x42>
+ 13e:	9b 01       	movw	r18, r22
+ 140:	40 91 78 00 	lds	r20, 0x0078
+ 144:	50 91 79 00 	lds	r21, 0x0079
+ 148:	24 23       	and	r18, r20
+ 14a:	35 23       	and	r19, r21
+ 14c:	21 15       	cp	r18, r1
+ 14e:	31 05       	cpc	r19, r1
+ 150:	59 f0       	breq	.+22     	; 0x168 <__vector_9+0x74>
+	{
+	DDRC=charlie.LEDS[charlie_counter].DDRS;
+ 152:	24 e6       	ldi	r18, 0x64	; 100
+ 154:	30 e0       	ldi	r19, 0x00	; 0
+ 156:	fc 01       	movw	r30, r24
+ 158:	ee 0f       	add	r30, r30
+ 15a:	ff 1f       	adc	r31, r31
+ 15c:	e2 0f       	add	r30, r18
+ 15e:	f3 1f       	adc	r31, r19
+ 160:	80 81       	ld	r24, Z
+ 162:	84 bb       	out	0x14, r24	; 20
+	PORTC=charlie.LEDS[charlie_counter].PORT;
+ 164:	81 81       	ldd	r24, Z+1	; 0x01
+ 166:	85 bb       	out	0x15, r24	; 21
+	}
+	charlie_counter++;
+ 168:	80 91 62 00 	lds	r24, 0x0062
+ 16c:	8f 5f       	subi	r24, 0xFF	; 255
+ 16e:	80 93 62 00 	sts	0x0062, r24
+	if (charlie_counter>9) charlie_counter=0;	
+ 172:	8a 30       	cpi	r24, 0x0A	; 10
+ 174:	10 f0       	brcs	.+4      	; 0x17a <__vector_9+0x86>
+ 176:	10 92 62 00 	sts	0x0062, r1
+}
+ 17a:	ff 91       	pop	r31
+ 17c:	ef 91       	pop	r30
+ 17e:	9f 91       	pop	r25
+ 180:	8f 91       	pop	r24
+ 182:	7f 91       	pop	r23
+ 184:	6f 91       	pop	r22
+ 186:	5f 91       	pop	r21
+ 188:	4f 91       	pop	r20
+ 18a:	3f 91       	pop	r19
+ 18c:	2f 91       	pop	r18
+ 18e:	0f 90       	pop	r0
+ 190:	0f be       	out	0x3f, r0	; 63
+ 192:	0f 90       	pop	r0
+ 194:	1f 90       	pop	r1
+ 196:	18 95       	reti
+
+00000198 <main>:
+
+int main(void)
+{
+	
+	setup_charlie_struct();
+ 198:	7a df       	rcall	.-268    	; 0x8e <setup_charlie_struct>
+	setup_hw();
+ 19a:	6d df       	rcall	.-294    	; 0x76 <setup_hw>
+	
+	sei(); //global interrupt enable
+ 19c:	78 94       	sei
+	
+while (1)
+{
+	roll_charlie();
+ 19e:	63 d0       	rcall	.+198    	; 0x266 <roll_charlie>
+ 1a0:	fe cf       	rjmp	.-4      	; 0x19e <main+0x6>
+
+000001a2 <set_charlie>:
+	
+}
+
+void set_charlie(uint8_t charlieVal)
+{
+	switch (charlieVal)
+ 1a2:	e8 2f       	mov	r30, r24
+ 1a4:	f0 e0       	ldi	r31, 0x00	; 0
+ 1a6:	ec 30       	cpi	r30, 0x0C	; 12
+ 1a8:	f1 05       	cpc	r31, r1
+ 1aa:	08 f0       	brcs	.+2      	; 0x1ae <set_charlie+0xc>
+ 1ac:	55 c0       	rjmp	.+170    	; 0x258 <set_charlie+0xb6>
+ 1ae:	ed 5e       	subi	r30, 0xED	; 237
+ 1b0:	ff 4f       	sbci	r31, 0xFF	; 255
+ 1b2:	09 94       	ijmp
+	{
+		case 11: //one louder.
+		LED_PATTERN = 0xAAA;
+ 1b4:	8a ea       	ldi	r24, 0xAA	; 170
+ 1b6:	9a e0       	ldi	r25, 0x0A	; 10
+ 1b8:	90 93 79 00 	sts	0x0079, r25
+ 1bc:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 1c0:	08 95       	ret
+		case 10:
+		LED_PATTERN = 0b1111111111;
+ 1c2:	8f ef       	ldi	r24, 0xFF	; 255
+ 1c4:	93 e0       	ldi	r25, 0x03	; 3
+ 1c6:	90 93 79 00 	sts	0x0079, r25
+ 1ca:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 1ce:	08 95       	ret
+		case 9:
+		LED_PATTERN = 0b0111111111;
+ 1d0:	8f ef       	ldi	r24, 0xFF	; 255
+ 1d2:	91 e0       	ldi	r25, 0x01	; 1
+ 1d4:	90 93 79 00 	sts	0x0079, r25
+ 1d8:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 1dc:	08 95       	ret
+		case 8:
+		LED_PATTERN = 0b0011111111;
+ 1de:	8f ef       	ldi	r24, 0xFF	; 255
+ 1e0:	90 e0       	ldi	r25, 0x00	; 0
+ 1e2:	90 93 79 00 	sts	0x0079, r25
+ 1e6:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 1ea:	08 95       	ret
+		case 7:
+		LED_PATTERN = 0b0001111111;
+ 1ec:	8f e7       	ldi	r24, 0x7F	; 127
+ 1ee:	90 e0       	ldi	r25, 0x00	; 0
+ 1f0:	90 93 79 00 	sts	0x0079, r25
+ 1f4:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 1f8:	08 95       	ret
+		case 6:
+		LED_PATTERN = 0b0000111111;
+ 1fa:	8f e3       	ldi	r24, 0x3F	; 63
+ 1fc:	90 e0       	ldi	r25, 0x00	; 0
+ 1fe:	90 93 79 00 	sts	0x0079, r25
+ 202:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 206:	08 95       	ret
+		case 5:
+		LED_PATTERN = 0b0000011111;
+ 208:	8f e1       	ldi	r24, 0x1F	; 31
+ 20a:	90 e0       	ldi	r25, 0x00	; 0
+ 20c:	90 93 79 00 	sts	0x0079, r25
+ 210:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 214:	08 95       	ret
+		case 4:
+		LED_PATTERN = 0b0000001111;
+ 216:	8f e0       	ldi	r24, 0x0F	; 15
+ 218:	90 e0       	ldi	r25, 0x00	; 0
+ 21a:	90 93 79 00 	sts	0x0079, r25
+ 21e:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 222:	08 95       	ret
+		case 3:
+		LED_PATTERN = 0b0000000111;
+ 224:	87 e0       	ldi	r24, 0x07	; 7
+ 226:	90 e0       	ldi	r25, 0x00	; 0
+ 228:	90 93 79 00 	sts	0x0079, r25
+ 22c:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 230:	08 95       	ret
+		case 2:
+		LED_PATTERN = 0b0000000011;
+ 232:	83 e0       	ldi	r24, 0x03	; 3
+ 234:	90 e0       	ldi	r25, 0x00	; 0
+ 236:	90 93 79 00 	sts	0x0079, r25
+ 23a:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 23e:	08 95       	ret
+		case 1:
+		LED_PATTERN = 0b0000000001;
+ 240:	81 e0       	ldi	r24, 0x01	; 1
+ 242:	90 e0       	ldi	r25, 0x00	; 0
+ 244:	90 93 79 00 	sts	0x0079, r25
+ 248:	80 93 78 00 	sts	0x0078, r24
+		break;
+ 24c:	08 95       	ret
+		case 0:
+		LED_PATTERN = 0b0000000000;
+ 24e:	10 92 79 00 	sts	0x0079, r1
+ 252:	10 92 78 00 	sts	0x0078, r1
+		break;
+ 256:	08 95       	ret
+		default:
+		LED_PATTERN = 0b0101010101;
+ 258:	85 e5       	ldi	r24, 0x55	; 85
+ 25a:	91 e0       	ldi	r25, 0x01	; 1
+ 25c:	90 93 79 00 	sts	0x0079, r25
+ 260:	80 93 78 00 	sts	0x0078, r24
+ 264:	08 95       	ret
+
+00000266 <roll_charlie>:
+		break;
+	}
+}
+
+void roll_charlie(void) //scroll the LED's (during reload)
+{
+ 266:	cf 93       	push	r28
+	uint8_t i;
+	for (i=0;i<=10;i++)
+ 268:	c0 e0       	ldi	r28, 0x00	; 0
+	{
+		set_charlie(i);
+ 26a:	8c 2f       	mov	r24, r28
+ 26c:	9a df       	rcall	.-204    	; 0x1a2 <set_charlie>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 26e:	8f e3       	ldi	r24, 0x3F	; 63
+ 270:	9d e0       	ldi	r25, 0x0D	; 13
+ 272:	a3 e0       	ldi	r26, 0x03	; 3
+ 274:	81 50       	subi	r24, 0x01	; 1
+ 276:	90 40       	sbci	r25, 0x00	; 0
+ 278:	a0 40       	sbci	r26, 0x00	; 0
+ 27a:	e1 f7       	brne	.-8      	; 0x274 <roll_charlie+0xe>
+ 27c:	00 c0       	rjmp	.+0      	; 0x27e <roll_charlie+0x18>
+ 27e:	00 00       	nop
+}
+
+void roll_charlie(void) //scroll the LED's (during reload)
+{
+	uint8_t i;
+	for (i=0;i<=10;i++)
+ 280:	cf 5f       	subi	r28, 0xFF	; 255
+ 282:	cb 30       	cpi	r28, 0x0B	; 11
+ 284:	91 f7       	brne	.-28     	; 0x26a <roll_charlie+0x4>
+	{
+		set_charlie(i);
+		_delay_ms(1000);
+	}
+}
+ 286:	cf 91       	pop	r28
+ 288:	08 95       	ret
+
+0000028a <charlie_blink>:
+
+void charlie_blink(void) //Blink the LED's
+{
+	set_charlie(11);
+ 28a:	8b e0       	ldi	r24, 0x0B	; 11
+ 28c:	8a df       	rcall	.-236    	; 0x1a2 <set_charlie>
+ 28e:	83 ed       	ldi	r24, 0xD3	; 211
+ 290:	90 e3       	ldi	r25, 0x30	; 48
+ 292:	01 97       	sbiw	r24, 0x01	; 1
+ 294:	f1 f7       	brne	.-4      	; 0x292 <charlie_blink+0x8>
+ 296:	00 c0       	rjmp	.+0      	; 0x298 <charlie_blink+0xe>
+ 298:	00 00       	nop
+	//LED_PATTERN=0xAAA;
+	_delay_ms(50);
+	//LED_PATTERN=0x555;
+	set_charlie(12);
+ 29a:	8c e0       	ldi	r24, 0x0C	; 12
+ 29c:	82 df       	rcall	.-252    	; 0x1a2 <set_charlie>
+ 29e:	83 ed       	ldi	r24, 0xD3	; 211
+ 2a0:	90 e3       	ldi	r25, 0x30	; 48
+ 2a2:	01 97       	sbiw	r24, 0x01	; 1
+ 2a4:	f1 f7       	brne	.-4      	; 0x2a2 <charlie_blink+0x18>
+ 2a6:	00 c0       	rjmp	.+0      	; 0x2a8 <charlie_blink+0x1e>
+ 2a8:	00 00       	nop
+	_delay_ms(50);
+}
+ 2aa:	08 95       	ret
+
+000002ac <_exit>:
+ 2ac:	f8 94       	cli
+
+000002ae <__stop_program>:
+ 2ae:	ff cf       	rjmp	.-2      	; 0x2ae <__stop_program>
