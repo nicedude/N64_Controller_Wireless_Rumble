@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 21-08-2012 09:00:59
+Cmp-Mod V01 Created by CvPcb (2012-01-19 BZR 3256)-stable date = 19-10-2012 08:19:33
 
 BeginCmp
 TimeStamp = /4FE9AAC8;
@@ -17,14 +17,14 @@ EndCmp
 BeginCmp
 TimeStamp = /4F43FFC4;
 Reference = C2;
-ValeurCmp = 22pf;
+ValeurCmp = 12pf;
 IdModule  = SM0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F43FF72;
 Reference = C3;
-ValeurCmp = 22pf;
+ValeurCmp = 12pf;
 IdModule  = SM0805;
 EndCmp
 
@@ -92,6 +92,27 @@ IdModule  = SIL-4;
 EndCmp
 
 BeginCmp
+TimeStamp = /5080F089;
+Reference = H1;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /5080F090;
+Reference = H2;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /5080F094;
+Reference = H3;
+ValeurCmp = CONN_1;
+IdModule  = 1pin;
+EndCmp
+
+BeginCmp
 TimeStamp = /4F43E08F;
 Reference = IC1;
 ValeurCmp = ATMEGA8-AI;
@@ -102,14 +123,14 @@ BeginCmp
 TimeStamp = /4F4421DC;
 Reference = JP1;
 ValeurCmp = JUMPER;
-IdModule  = SM0402;
+IdModule  = GS2;
 EndCmp
 
 BeginCmp
 TimeStamp = /4F4421CD;
 Reference = JP2;
 ValeurCmp = JUMPER;
-IdModule  = SM0402;
+IdModule  = GS2;
 EndCmp
 
 BeginCmp
@@ -176,20 +197,6 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F452841;
-Reference = R7;
-ValeurCmp = 120;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /4F4527DB;
-Reference = R8;
-ValeurCmp = 200;
-IdModule  = SM0805;
-EndCmp
-
-BeginCmp
 TimeStamp = /4FE9AB43;
 Reference = R9;
 ValeurCmp = 40;
@@ -204,9 +211,9 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /4F4D1999;
+TimeStamp = /5080EC98;
 Reference = U1;
-ValeurCmp = LM317;
+ValeurCmp = LM1117;
 IdModule  = SOT223;
 EndCmp
 
