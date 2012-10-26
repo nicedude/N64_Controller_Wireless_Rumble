@@ -3,27 +3,27 @@ NRF_N64_Basestation.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         000002b0  00000000  00000000  00000074  2**1
+  0 .text         000002bc  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .bss          0000001a  00800060  00800060  00000324  2**0
+  1 .bss          0000001a  00800060  00800060  00000330  2**0
                   ALLOC
-  2 .stab         000006cc  00000000  00000000  00000324  2**2
+  2 .stab         000006cc  00000000  00000000  00000330  2**2
                   CONTENTS, READONLY, DEBUGGING
-  3 .stabstr      00000085  00000000  00000000  000009f0  2**0
+  3 .stabstr      00000085  00000000  00000000  000009fc  2**0
                   CONTENTS, READONLY, DEBUGGING
-  4 .debug_aranges 00000080  00000000  00000000  00000a78  2**3
+  4 .debug_aranges 00000080  00000000  00000000  00000a88  2**3
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000611  00000000  00000000  00000af8  2**0
+  5 .debug_info   00000615  00000000  00000000  00000b08  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 00000212  00000000  00000000  00001109  2**0
+  6 .debug_abbrev 00000209  00000000  00000000  0000111d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000003b0  00000000  00000000  0000131b  2**0
+  7 .debug_line   000003b0  00000000  00000000  00001326  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  000000c8  00000000  00000000  000016cc  2**2
+  8 .debug_frame  000000c8  00000000  00000000  000016d8  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000001e3  00000000  00000000  00001794  2**0
+  9 .debug_str    000001e3  00000000  00000000  000017a0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000189  00000000  00000000  00001977  2**0
+ 10 .debug_loc    00000189  00000000  00000000  00001983  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -73,7 +73,7 @@ Disassembly of section .text:
   4a:	10 e0       	ldi	r17, 0x00	; 0
   4c:	a0 e6       	ldi	r26, 0x60	; 96
   4e:	b0 e0       	ldi	r27, 0x00	; 0
-  50:	e0 eb       	ldi	r30, 0xB0	; 176
+  50:	ec eb       	ldi	r30, 0xBC	; 188
   52:	f2 e0       	ldi	r31, 0x02	; 2
   54:	02 c0       	rjmp	.+4      	; 0x5a <__do_copy_data+0x10>
   56:	05 90       	lpm	r0, Z+
@@ -96,17 +96,17 @@ Disassembly of section .text:
   6c:	b1 07       	cpc	r27, r17
   6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
   70:	93 d0       	rcall	.+294    	; 0x198 <main>
-  72:	1c c1       	rjmp	.+568    	; 0x2ac <_exit>
+  72:	22 c1       	rjmp	.+580    	; 0x2b8 <_exit>
 
 00000074 <__bad_interrupt>:
   74:	c5 cf       	rjmp	.-118    	; 0x0 <__vectors>
 
 00000076 <setup_hw>:
-}
-
-
-void setup_hw(void)
 {
+	
+	//SET THE APPROPRIATE FREQUENCY:
+	
+	
 	DDRC=0; //input all the things!
   76:	14 ba       	out	0x14, r1	; 20
 	PORTC=0;
@@ -309,6 +309,7 @@ int main(void)
 	sei(); //global interrupt enable
  19c:	78 94       	sei
 	
+
 while (1)
 {
 	roll_charlie();
@@ -455,9 +456,9 @@ void roll_charlie(void) //scroll the LED's (during reload)
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 26e:	8f e3       	ldi	r24, 0x3F	; 63
- 270:	9d e0       	ldi	r25, 0x0D	; 13
- 272:	a3 e0       	ldi	r26, 0x03	; 3
+ 26e:	8f ef       	ldi	r24, 0xFF	; 255
+ 270:	90 e7       	ldi	r25, 0x70	; 112
+ 272:	a2 e0       	ldi	r26, 0x02	; 2
  274:	81 50       	subi	r24, 0x01	; 1
  276:	90 40       	sbci	r25, 0x00	; 0
  278:	a0 40       	sbci	r26, 0x00	; 0
@@ -475,7 +476,7 @@ void roll_charlie(void) //scroll the LED's (during reload)
  284:	91 f7       	brne	.-28     	; 0x26a <roll_charlie+0x4>
 	{
 		set_charlie(i);
-		_delay_ms(1000);
+		_delay_ms(100);
 	}
 }
  286:	cf 91       	pop	r28
@@ -488,30 +489,36 @@ void charlie_blink(void) //Blink the LED's
 	set_charlie(11);
  28a:	8b e0       	ldi	r24, 0x0B	; 11
  28c:	8a df       	rcall	.-236    	; 0x1a2 <set_charlie>
- 28e:	83 ed       	ldi	r24, 0xD3	; 211
- 290:	90 e3       	ldi	r25, 0x30	; 48
- 292:	01 97       	sbiw	r24, 0x01	; 1
- 294:	f1 f7       	brne	.-4      	; 0x292 <charlie_blink+0x8>
- 296:	00 c0       	rjmp	.+0      	; 0x298 <charlie_blink+0xe>
- 298:	00 00       	nop
+ 28e:	8f e7       	ldi	r24, 0x7F	; 127
+ 290:	98 e3       	ldi	r25, 0x38	; 56
+ 292:	a1 e0       	ldi	r26, 0x01	; 1
+ 294:	81 50       	subi	r24, 0x01	; 1
+ 296:	90 40       	sbci	r25, 0x00	; 0
+ 298:	a0 40       	sbci	r26, 0x00	; 0
+ 29a:	e1 f7       	brne	.-8      	; 0x294 <charlie_blink+0xa>
+ 29c:	00 c0       	rjmp	.+0      	; 0x29e <charlie_blink+0x14>
+ 29e:	00 00       	nop
 	//LED_PATTERN=0xAAA;
 	_delay_ms(50);
 	//LED_PATTERN=0x555;
 	set_charlie(12);
- 29a:	8c e0       	ldi	r24, 0x0C	; 12
- 29c:	82 df       	rcall	.-252    	; 0x1a2 <set_charlie>
- 29e:	83 ed       	ldi	r24, 0xD3	; 211
- 2a0:	90 e3       	ldi	r25, 0x30	; 48
- 2a2:	01 97       	sbiw	r24, 0x01	; 1
- 2a4:	f1 f7       	brne	.-4      	; 0x2a2 <charlie_blink+0x18>
- 2a6:	00 c0       	rjmp	.+0      	; 0x2a8 <charlie_blink+0x1e>
- 2a8:	00 00       	nop
+ 2a0:	8c e0       	ldi	r24, 0x0C	; 12
+ 2a2:	7f df       	rcall	.-258    	; 0x1a2 <set_charlie>
+ 2a4:	8f e7       	ldi	r24, 0x7F	; 127
+ 2a6:	98 e3       	ldi	r25, 0x38	; 56
+ 2a8:	a1 e0       	ldi	r26, 0x01	; 1
+ 2aa:	81 50       	subi	r24, 0x01	; 1
+ 2ac:	90 40       	sbci	r25, 0x00	; 0
+ 2ae:	a0 40       	sbci	r26, 0x00	; 0
+ 2b0:	e1 f7       	brne	.-8      	; 0x2aa <charlie_blink+0x20>
+ 2b2:	00 c0       	rjmp	.+0      	; 0x2b4 <charlie_blink+0x2a>
+ 2b4:	00 00       	nop
 	_delay_ms(50);
 }
- 2aa:	08 95       	ret
+ 2b6:	08 95       	ret
 
-000002ac <_exit>:
- 2ac:	f8 94       	cli
+000002b8 <_exit>:
+ 2b8:	f8 94       	cli
 
-000002ae <__stop_program>:
- 2ae:	ff cf       	rjmp	.-2      	; 0x2ae <__stop_program>
+000002ba <__stop_program>:
+ 2ba:	ff cf       	rjmp	.-2      	; 0x2ba <__stop_program>

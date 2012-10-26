@@ -6,12 +6,12 @@
  */ 
 
 
+#define F_CPU 8000000UL
+
 #include <avr/io.h>
 #include <avr/delay.h>
 #include <avr/interrupt.h>
 
-#define F_CPU 320000000UL
-//#define F_CPU 8000000UL
 
 #define TRUE 1
 #define FALSE 0
@@ -71,6 +71,7 @@ int main(void)
 	
 	sei(); //global interrupt enable
 	
+
 while (1)
 {
 	roll_charlie();
@@ -84,6 +85,10 @@ while (1)
 
 void setup_hw(void)
 {
+	
+	//SET THE APPROPRIATE FREQUENCY:
+	
+	
 	DDRC=0; //input all the things!
 	PORTC=0;
 	MCUCR&=~(1<<PUD);
@@ -198,7 +203,7 @@ void roll_charlie(void) //scroll the LED's (during reload)
 	for (i=0;i<=10;i++)
 	{
 		set_charlie(i);
-		_delay_ms(1000);
+		_delay_ms(100);
 	}
 }
 
