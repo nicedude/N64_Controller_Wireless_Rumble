@@ -8,18 +8,30 @@
  */ 
 
 #include <avr/interrupt.h>
+#include <avr/io.h> //basic IO definitions
+//#include <avr/>
 
 void setup_spi(void) //enables the SPI module of the µC
 {
 	
 }
 
-void spi_tx(byte tx) //sends a byte via the SPI module.
-{
-		
-}
 
 ISR (PCINT1_vect)
 {
 	
+}
+
+unsigned char spi_trx(unsigned char tx_byte)
+{
+SPDR=tx_byte;
+SPI_tx_wait();
+return SPDR;
+}
+
+void setup_SPI(void)
+{
+	DDRB = (1<<DDB2)|(1<<DDB3)|(1<<DDB5); //Set CS, MOSI and SCK output, all others input
+	SPSR |= (1<<SPI2X);				      //double speed
+	SPCR = (1<<SPE)|(1<<MSTR);			  //Enable SPI, Master, set clock rate fck/2
 }
