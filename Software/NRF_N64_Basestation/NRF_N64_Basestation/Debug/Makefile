@@ -35,7 +35,10 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../NRF_N64_Basestation.c
+../charlie.c \
+../nrf24L01.c \
+../NRF_N64_Basestation.c \
+../spi.c
 
 
 PREPROCESSING_SRCS += 
@@ -45,19 +48,31 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-NRF_N64_Basestation.o
+charlie.o \
+nrf24L01.o \
+NRF_N64_Basestation.o \
+spi.o
 
 
 OBJS_AS_ARGS +=  \
-NRF_N64_Basestation.o
+charlie.o \
+nrf24L01.o \
+NRF_N64_Basestation.o \
+spi.o
 
 
 C_DEPS +=  \
-NRF_N64_Basestation.d
+charlie.d \
+nrf24L01.d \
+NRF_N64_Basestation.d \
+spi.d
 
 
 C_DEPS_AS_ARGS +=  \
-NRF_N64_Basestation.d
+charlie.d \
+nrf24L01.d \
+NRF_N64_Basestation.d \
+spi.d
 
 
 OUTPUT_FILE_PATH +=NRF_N64_Basestation.elf
@@ -69,6 +84,12 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
 
 
 

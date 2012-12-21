@@ -147,7 +147,25 @@ avrdude -c avrispmkII -V -P usb -vv -p $(avrdevice) -U flash:w:$(OutputFileName)
     <OutputType>Executable</OutputType>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="charlie.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="charlie.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nrf24L01.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="nrf24L01.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="NRF_N64_Basestation.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="spi.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
