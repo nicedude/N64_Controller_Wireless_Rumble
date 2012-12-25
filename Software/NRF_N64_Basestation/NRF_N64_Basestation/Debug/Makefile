@@ -37,7 +37,7 @@ SUBDIRS :=
 C_SRCS +=  \
 ../charlie.c \
 ../nrf24L01.c \
-../NRF_N64_Basestation.c \
+../main.c \
 ../spi.c
 
 
@@ -50,28 +50,28 @@ ASM_SRCS +=
 OBJS +=  \
 charlie.o \
 nrf24L01.o \
-NRF_N64_Basestation.o \
+main.o \
 spi.o
 
 
 OBJS_AS_ARGS +=  \
 charlie.o \
 nrf24L01.o \
-NRF_N64_Basestation.o \
+main.o \
 spi.o
 
 
 C_DEPS +=  \
 charlie.d \
 nrf24L01.d \
-NRF_N64_Basestation.d \
+main.d \
 spi.d
 
 
 C_DEPS_AS_ARGS +=  \
 charlie.d \
 nrf24L01.d \
-NRF_N64_Basestation.d \
+main.d \
 spi.d
 
 

@@ -156,9 +156,9 @@ void nrf_reset_status(){
     nrf_conf.status_addr = NRF_STATUS;        // 0x07 (address).
     nrf_conf.status      = NRF_STAT_CLEAR;    // 01110000b. 
 	  nrf_send_config(4);
-      if (aux);
+      if (aux)
       //nrf_ce = true;                          // returns as receiver.  
-	  NRF_CE_high();
+	    NRF_CE_high();
   return;	
 }
 //

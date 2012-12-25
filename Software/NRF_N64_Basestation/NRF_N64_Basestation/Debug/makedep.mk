@@ -6,7 +6,7 @@ charlie.c
 
 nrf24L01.c
 
-NRF_N64_Basestation.c
+main.c
 
 spi.c
 

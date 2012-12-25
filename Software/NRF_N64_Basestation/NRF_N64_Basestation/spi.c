@@ -166,7 +166,7 @@ unsigned char spi_Read_Write(unsigned char byte)
 {
   //sspbuf = byte;
   SPDR = byte;
-  while(!(SPSR & (1<<SPIF))); //wait for empty transmit buffer
+  while(!(SPSR & (1<<SPIF))); //wait for empty transmit buffer <- probably what causes the shitty halting. :/
   //while (!test_bit (sspstat,0));                                      // waits for byte sent.
   spi_pointer++;
   spi_counter--;

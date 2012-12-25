@@ -34,7 +34,7 @@ Linker script and memory map
 LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/../../../../avr/lib/avr4/crtm8.o
 LOAD charlie.o
 LOAD nrf24L01.o
-LOAD NRF_N64_Basestation.o
+LOAD main.o
 LOAD spi.o
 START GROUP
 LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/../../../../avr/lib/avr4\libm.a
@@ -133,7 +133,7 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x6fa
+.text           0x00000000      0x710
  *(.vectors)
  .vectors       0x00000000       0x26 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/../../../../avr/lib/avr4/crtm8.o
                 0x00000000                __vector_default
@@ -216,41 +216,41 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
                 0x0000019a                set_charlie
                 0x0000025e                roll_charlie
                 0x00000282                charlie_blink
- .text          0x000002b0      0x2fa nrf24L01.o
+ .text          0x000002b0      0x300 nrf24L01.o
                 0x000002b0                nrf_send_config
                 0x0000040a                nrf_reset_status
-                0x00000422                nrf_tx_mode
-                0x00000444                nrf_rx_mode
-                0x0000046a                nrf_basic_config
-                0x0000051e                nrf_init
-                0x00000534                nrf_read_fifo
-                0x00000564                nrf_get_byte
-                0x00000568                nrf_put_byte
-                0x00000594                send_byte
-                0x000005a2                nrf_irq_jack
- .text          0x000005aa        0x8 NRF_N64_Basestation.o
-                0x000005aa                main
- .text          0x000005b2      0x144 spi.o
-                0x000005b2                spi_init
-                0x000005ca                spi_init_buffer
-                0x000005d0                spi_load_byte
-                0x000005e6                spi_Read_Write
-                0x00000604                spi_exchange
-                0x000006a0                spi_get_byte
-                0x000006b0                spi_read_reg
- .text          0x000006f6        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
- .text          0x000006f6        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
- .text          0x000006f6        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
-                0x000006f6                . = ALIGN (0x2)
+                0x00000428                nrf_tx_mode
+                0x0000044a                nrf_rx_mode
+                0x00000470                nrf_basic_config
+                0x00000524                nrf_init
+                0x0000053a                nrf_read_fifo
+                0x0000056a                nrf_get_byte
+                0x0000056e                nrf_put_byte
+                0x0000059a                send_byte
+                0x000005a8                nrf_irq_jack
+ .text          0x000005b0       0x18 main.o
+                0x000005b0                main
+ .text          0x000005c8      0x144 spi.o
+                0x000005c8                spi_init
+                0x000005e0                spi_init_buffer
+                0x000005e6                spi_load_byte
+                0x000005fc                spi_Read_Write
+                0x0000061a                spi_exchange
+                0x000006b6                spi_get_byte
+                0x000006c6                spi_read_reg
+ .text          0x0000070c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
+ .text          0x0000070c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
+ .text          0x0000070c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
+                0x0000070c                . = ALIGN (0x2)
  *(.text.*)
- .text.libgcc   0x000006f6        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
- .text.libgcc   0x000006f6        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
- .text.libgcc   0x000006f6        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
-                0x000006f6                . = ALIGN (0x2)
+ .text.libgcc   0x0000070c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
+ .text.libgcc   0x0000070c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000070c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
+                0x0000070c                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x000006f6        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
-                0x000006f6                _exit
-                0x000006f6                exit
+ .fini9         0x0000070c        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
+                0x0000070c                _exit
+                0x0000070c                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -269,17 +269,17 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x000006f6        0x4 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
+ .fini0         0x0000070c        0x4 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
  *(.fini0)
-                0x000006fa                _etext = .
+                0x00000710                _etext = .
 
-.data           0x00800060        0x0 load address 0x000006fa
+.data           0x00800060        0x0 load address 0x00000710
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/../../../../avr/lib/avr4/crtm8.o
  .data          0x00800060        0x0 charlie.o
  .data          0x00800060        0x0 nrf24L01.o
- .data          0x00800060        0x0 NRF_N64_Basestation.o
+ .data          0x00800060        0x0 main.o
  .data          0x00800060        0x0 spi.o
  .data          0x00800060        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
  .data          0x00800060        0x0 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
@@ -300,7 +300,7 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
                 0x00800060                charlie_counter
                 0x00800061                ovf_count
  .bss           0x00800062        0x0 nrf24L01.o
- .bss           0x00800062        0x0 NRF_N64_Basestation.o
+ .bss           0x00800062        0x0 main.o
  .bss           0x00800062        0x2 spi.o
                 0x00800062                spi_counter
                 0x00800063                spi_pointer
@@ -320,8 +320,8 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
                 0x008000b6                spi_data_buffer
                 0x008000d8                data
                 0x008000fa                PROVIDE (__bss_end, .)
-                0x000006fa                __data_load_start = LOADADDR (.data)
-                0x000006fa                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x00000710                __data_load_start = LOADADDR (.data)
+                0x00000710                __data_load_end = (__data_load_start + SIZEOF (.data))
 
 .noinit         0x008000fa        0x0
                 0x008000fa                PROVIDE (__noinit_start, .)
@@ -388,7 +388,7 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
  .debug_aranges
                 0x00000020       0x20 nrf24L01.o
  .debug_aranges
-                0x00000040       0x20 NRF_N64_Basestation.o
+                0x00000040       0x20 main.o
  .debug_aranges
                 0x00000060       0x20 spi.o
  .debug_aranges
@@ -401,60 +401,60 @@ LOAD c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x10fe
+.debug_info     0x00000000     0x1109
  *(.debug_info)
  .debug_info    0x00000000      0x30f charlie.o
- .debug_info    0x0000030f      0x777 nrf24L01.o
- .debug_info    0x00000a86       0x77 NRF_N64_Basestation.o
- .debug_info    0x00000afd      0x36a spi.o
- .debug_info    0x00000e67       0xdd c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
- .debug_info    0x00000f44       0xdd c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
- .debug_info    0x00001021       0xdd c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
+ .debug_info    0x0000030f      0x77b nrf24L01.o
+ .debug_info    0x00000a8a       0x7e main.o
+ .debug_info    0x00000b08      0x36a spi.o
+ .debug_info    0x00000e72       0xdd c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
+ .debug_info    0x00000f4f       0xdd c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
+ .debug_info    0x0000102c       0xdd c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev   0x00000000      0x5b6
+.debug_abbrev   0x00000000      0x5cd
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x18b charlie.o
- .debug_abbrev  0x0000018b      0x1f5 nrf24L01.o
- .debug_abbrev  0x00000380       0x41 NRF_N64_Basestation.o
- .debug_abbrev  0x000003c1      0x1b9 spi.o
- .debug_abbrev  0x0000057a       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
- .debug_abbrev  0x0000058e       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
- .debug_abbrev  0x000005a2       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
+ .debug_abbrev  0x0000018b      0x20c nrf24L01.o
+ .debug_abbrev  0x00000397       0x41 main.o
+ .debug_abbrev  0x000003d8      0x1b9 spi.o
+ .debug_abbrev  0x00000591       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
+ .debug_abbrev  0x000005a5       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
+ .debug_abbrev  0x000005b9       0x14 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
 
-.debug_line     0x00000000      0x825
+.debug_line     0x00000000      0x81e
  *(.debug_line)
  .debug_line    0x00000000      0x1ec charlie.o
- .debug_line    0x000001ec      0x257 nrf24L01.o
- .debug_line    0x00000443       0x4e NRF_N64_Basestation.o
- .debug_line    0x00000491      0x1ed spi.o
- .debug_line    0x0000067e       0x88 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
- .debug_line    0x00000706       0x91 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
- .debug_line    0x00000797       0x8e c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
+ .debug_line    0x000001ec      0x258 nrf24L01.o
+ .debug_line    0x00000444       0x46 main.o
+ .debug_line    0x0000048a      0x1ed spi.o
+ .debug_line    0x00000677       0x88 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_exit.o)
+ .debug_line    0x000006ff       0x91 c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_copy_data.o)
+ .debug_line    0x00000790       0x8e c:/program files (x86)/atmel/atmel studio 6.0/extensions/atmel/avrgcc/3.4.0.65/avrtoolchain/bin/../lib/gcc/avr/4.6.2/avr4\libgcc.a(_clear_bss.o)
 
-.debug_frame    0x00000000      0x264
+.debug_frame    0x00000000      0x26c
  *(.debug_frame)
  .debug_frame   0x00000000       0xb8 charlie.o
- .debug_frame   0x000000b8       0xd0 nrf24L01.o
- .debug_frame   0x00000188       0x24 NRF_N64_Basestation.o
- .debug_frame   0x000001ac       0xb8 spi.o
+ .debug_frame   0x000000b8       0xd8 nrf24L01.o
+ .debug_frame   0x00000190       0x24 main.o
+ .debug_frame   0x000001b4       0xb8 spi.o
 
-.debug_str      0x00000000      0x5f5
+.debug_str      0x00000000      0x5e6
  *(.debug_str)
  .debug_str     0x00000000      0x1cd charlie.o
                                 0x218 (size before relaxing)
  .debug_str     0x000001cd      0x35a nrf24L01.o
                                 0x4d7 (size before relaxing)
- .debug_str     0x00000527       0x20 NRF_N64_Basestation.o
-                                0x104 (size before relaxing)
- .debug_str     0x00000547       0xae spi.o
+ .debug_str     0x00000527       0x11 main.o
+                                 0xfa (size before relaxing)
+ .debug_str     0x00000538       0xae spi.o
                                 0x202 (size before relaxing)
 
-.debug_loc      0x00000000      0x443
+.debug_loc      0x00000000      0x47d
  *(.debug_loc)
  .debug_loc     0x00000000      0x189 charlie.o
- .debug_loc     0x00000189       0xe5 nrf24L01.o
- .debug_loc     0x0000026e      0x1d5 spi.o
+ .debug_loc     0x00000189      0x11f nrf24L01.o
+ .debug_loc     0x000002a8      0x1d5 spi.o
 
 .debug_macinfo
  *(.debug_macinfo)
