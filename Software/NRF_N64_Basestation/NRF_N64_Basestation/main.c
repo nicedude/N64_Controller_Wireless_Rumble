@@ -6,7 +6,7 @@
  */ 
 
 #ifndef F_CPU
-#define F_CPU 8000000UL
+#define F_CPU 12000000UL
 #endif
 
 //#include <avr/io.h>
@@ -19,25 +19,37 @@
 
 int main(void)
 	{
-	setup_charlie();
-	
-	nrf_init();
-	
-	nrf_tx_mode();
-	
-	nrf_reset_status();
-
 	
 	
 	sei(); //global interrupt enable
+	
+	
+	spi_init();
+	nrf_init();
+	nrf_tx_mode();
+	nrf_reset_status();
+
+	
+	setup_charlie();
+	
+	
+	
+	roll_charlie();
+	
+	
 	while (1)
 		{
-		roll_charlie();
-		
+			//spi_load_byte(load_byte = 'a'); //
+			//spi_load_byte(load_byte = 'b'); //
+			//spi_load_byte(load_byte = 'c'); //
 		      nrf_put_byte();                       // send data wireless with nRF24L01.
-		      while (nrf_irq_jack());             // waits until data has been sent.
+		      if (nrf_irq_jack()) set_charlie(12);             // waits until data has been sent.
+			  _delay_ms(1500);
 		      nrf_reset_status();
-		
+			  if (nrf_irq_jack()) set_charlie(11);             // waits until data has been sent.
+			  _delay_ms(1500);
+			  //else 
+			  //roll_charlie();
 		}	
 	}
 

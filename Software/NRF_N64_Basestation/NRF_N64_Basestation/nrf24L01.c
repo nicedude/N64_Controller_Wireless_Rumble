@@ -8,7 +8,7 @@
 ********************************************************************/
 
 #ifndef F_CPU
-#define F_CPU 8000000UL
+#define F_CPU 12000000UL
 #endif
 
 #include "nrf24L01.h"
@@ -248,7 +248,7 @@ void nrf_read_fifo(){
     nrf_conf.w_rx_payload = R_RX_PAYLOAD;           // loads 0x61, payload address.   
     nrf_conf.incoming = 0x00;                       // send 0x00 te get byte from rxpayload.  
     spi_load_byte(nrf_conf.w_rx_payload);           // addr: 0xA0.
-	  spi_load_byte(nrf_conf.incoming);               // dummy bytes.
+	spi_load_byte(nrf_conf.incoming);               // dummy bytes.
     spi_load_byte(nrf_conf.incoming);               // dummy bytes.
     spi_load_byte(nrf_conf.incoming);               // dummy bytes.   
 
@@ -288,9 +288,9 @@ void nrf_put_byte(){
 	  spi_init_buffer();                          // pointer to 0;
 
       spi_load_byte(nrf_conf.w_tx_payload);     // addr: 0xA0.
-	  spi_load_byte(load_byte = 'A'); // 
-      spi_load_byte(load_byte = 'B'); // 
-      spi_load_byte(load_byte = 'C'); // 
+	  spi_load_byte(load_byte = 1); // 
+      spi_load_byte(load_byte = 2); // 
+      spi_load_byte(load_byte = 3); // 
 
     spi_exchange(flag);                         // send configuration bytes.
     flag = 0;

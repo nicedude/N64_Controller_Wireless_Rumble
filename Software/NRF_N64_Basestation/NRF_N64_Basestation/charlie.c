@@ -2,7 +2,7 @@
 //contains functions for charlieplexing the LED bargraph on the N64 basestation unit
 
 #ifndef F_CPU
-#define F_CPU 8000000UL
+#define F_CPU 12000000UL
 #endif
 
 #include <avr/io.h>
@@ -170,14 +170,23 @@ void roll_charlie(void) //scroll the LED's (during reload)
 		set_charlie(i);
 		_delay_ms(100);
 	}
+	for (i=10;i>0;i--)
+	{
+		set_charlie(i);
+		_delay_ms(100);
+	}
 }
 
-void charlie_blink(void) //Blink the LED's
+void charlie_blink(unsigned char repetitions) //Blink the LED's
 {
-	set_charlie(11);
-	//LED_PATTERN=0xAAA;
-	_delay_ms(50);
-	//LED_PATTERN=0x555;
-	set_charlie(12);
-	_delay_ms(50);
+	while(repetitions)
+		{
+		set_charlie(11);
+		//LED_PATTERN=0xAAA;
+		_delay_ms(100);
+		//LED_PATTERN=0x555;
+		set_charlie(12);
+		_delay_ms(100);
+		repetitions--;
+		}
 }

@@ -3,27 +3,27 @@ NRF_TEST.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000494  00000000  00000000  00000074  2**1
+  0 .text         00000496  00000000  00000000  00000074  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .bss          00000025  00800060  00800060  00000508  2**0
+  1 .bss          00000025  00800060  00800060  0000050a  2**0
                   ALLOC
-  2 .stab         000006cc  00000000  00000000  00000508  2**2
+  2 .stab         000006cc  00000000  00000000  0000050c  2**2
                   CONTENTS, READONLY, DEBUGGING
-  3 .stabstr      00000085  00000000  00000000  00000bd4  2**0
+  3 .stabstr      00000085  00000000  00000000  00000bd8  2**0
                   CONTENTS, READONLY, DEBUGGING
   4 .debug_aranges 000000c0  00000000  00000000  00000c60  2**3
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   000009a8  00000000  00000000  00000d20  2**0
+  5 .debug_info   000009b3  00000000  00000000  00000d20  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 0000039f  00000000  00000000  000016c8  2**0
+  6 .debug_abbrev 000003ce  00000000  00000000  000016d3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000005d5  00000000  00000000  00001a67  2**0
+  7 .debug_line   000005d1  00000000  00000000  00001aa1  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  0000025c  00000000  00000000  0000203c  2**2
+  8 .debug_frame  0000025c  00000000  00000000  00002074  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    000002c3  00000000  00000000  00002298  2**0
+  9 .debug_str    000002c3  00000000  00000000  000022d0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    000005ae  00000000  00000000  0000255b  2**0
+ 10 .debug_loc    0000059a  00000000  00000000  00002593  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -48,18 +48,18 @@ Disassembly of section .text:
   20:	29 c0       	rjmp	.+82     	; 0x74 <__bad_interrupt>
   22:	28 c0       	rjmp	.+80     	; 0x74 <__bad_interrupt>
   24:	27 c0       	rjmp	.+78     	; 0x74 <__bad_interrupt>
-  26:	e8 c1       	rjmp	.+976    	; 0x3f8 <set_charlie+0xac>
-  28:	e0 c1       	rjmp	.+960    	; 0x3ea <set_charlie+0x9e>
-  2a:	d8 c1       	rjmp	.+944    	; 0x3dc <set_charlie+0x90>
-  2c:	d0 c1       	rjmp	.+928    	; 0x3ce <set_charlie+0x82>
-  2e:	c8 c1       	rjmp	.+912    	; 0x3c0 <set_charlie+0x74>
-  30:	c0 c1       	rjmp	.+896    	; 0x3b2 <set_charlie+0x66>
-  32:	b8 c1       	rjmp	.+880    	; 0x3a4 <set_charlie+0x58>
-  34:	b0 c1       	rjmp	.+864    	; 0x396 <set_charlie+0x4a>
-  36:	a8 c1       	rjmp	.+848    	; 0x388 <set_charlie+0x3c>
-  38:	a0 c1       	rjmp	.+832    	; 0x37a <set_charlie+0x2e>
-  3a:	98 c1       	rjmp	.+816    	; 0x36c <set_charlie+0x20>
-  3c:	90 c1       	rjmp	.+800    	; 0x35e <set_charlie+0x12>
+  26:	e9 c1       	rjmp	.+978    	; 0x3fa <set_charlie+0xac>
+  28:	e1 c1       	rjmp	.+962    	; 0x3ec <set_charlie+0x9e>
+  2a:	d9 c1       	rjmp	.+946    	; 0x3de <set_charlie+0x90>
+  2c:	d1 c1       	rjmp	.+930    	; 0x3d0 <set_charlie+0x82>
+  2e:	c9 c1       	rjmp	.+914    	; 0x3c2 <set_charlie+0x74>
+  30:	c1 c1       	rjmp	.+898    	; 0x3b4 <set_charlie+0x66>
+  32:	b9 c1       	rjmp	.+882    	; 0x3a6 <set_charlie+0x58>
+  34:	b1 c1       	rjmp	.+866    	; 0x398 <set_charlie+0x4a>
+  36:	a9 c1       	rjmp	.+850    	; 0x38a <set_charlie+0x3c>
+  38:	a1 c1       	rjmp	.+834    	; 0x37c <set_charlie+0x2e>
+  3a:	99 c1       	rjmp	.+818    	; 0x36e <set_charlie+0x20>
+  3c:	91 c1       	rjmp	.+802    	; 0x360 <set_charlie+0x12>
 
 0000003e <__ctors_end>:
   3e:	11 24       	eor	r1, r1
@@ -73,7 +73,7 @@ Disassembly of section .text:
   4a:	10 e0       	ldi	r17, 0x00	; 0
   4c:	a0 e6       	ldi	r26, 0x60	; 96
   4e:	b0 e0       	ldi	r27, 0x00	; 0
-  50:	e4 e9       	ldi	r30, 0x94	; 148
+  50:	e6 e9       	ldi	r30, 0x96	; 150
   52:	f4 e0       	ldi	r31, 0x04	; 4
   54:	02 c0       	rjmp	.+4      	; 0x5a <__do_copy_data+0x10>
   56:	05 90       	lpm	r0, Z+
@@ -96,7 +96,7 @@ Disassembly of section .text:
   6c:	b1 07       	cpc	r27, r17
   6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
   70:	55 d1       	rcall	.+682    	; 0x31c <main>
-  72:	0e c2       	rjmp	.+1052   	; 0x490 <_exit>
+  72:	0f c2       	rjmp	.+1054   	; 0x492 <_exit>
 
 00000074 <__bad_interrupt>:
   74:	c5 cf       	rjmp	.-118    	; 0x0 <__vectors>
@@ -130,7 +130,7 @@ void mirf_init()
 
     // Initialize spi module
     spi_init();
-  88:	d5 d1       	rcall	.+938    	; 0x434 <spi_init>
+  88:	d6 d1       	rcall	.+940    	; 0x436 <spi_init>
 }
   8a:	08 95       	ret
 
@@ -150,7 +150,7 @@ extern uint8_t mirf_data_ready()
   94:	94 98       	cbi	0x12, 4	; 18
     status = spi_fast_shift(NOP);               // Read status register
   96:	8f ef       	ldi	r24, 0xFF	; 255
-  98:	f6 d1       	rcall	.+1004   	; 0x486 <spi_fast_shift>
+  98:	f7 d1       	rcall	.+1006   	; 0x488 <spi_fast_shift>
     mirf_CSN_hi;                                // Pull up chip select
   9a:	94 9a       	sbi	0x12, 4	; 18
     return status & (1<<RX_DR);
@@ -185,10 +185,10 @@ void mirf_config_register(uint8_t reg, uint8_t value)
     spi_fast_shift(W_REGISTER | (REGISTER_MASK & reg));
   aa:	8f 71       	andi	r24, 0x1F	; 31
   ac:	80 62       	ori	r24, 0x20	; 32
-  ae:	eb d1       	rcall	.+982    	; 0x486 <spi_fast_shift>
+  ae:	ec d1       	rcall	.+984    	; 0x488 <spi_fast_shift>
     spi_fast_shift(value);
   b0:	8c 2f       	mov	r24, r28
-  b2:	e9 d1       	rcall	.+978    	; 0x486 <spi_fast_shift>
+  b2:	ea d1       	rcall	.+980    	; 0x488 <spi_fast_shift>
     mirf_CSN_hi;
   b4:	94 9a       	sbi	0x12, 4	; 18
 }
@@ -209,12 +209,12 @@ extern void mirf_get_data(uint8_t * data)
   c0:	94 98       	cbi	0x12, 4	; 18
     spi_fast_shift( R_RX_PAYLOAD );            // Send cmd to read rx payload
   c2:	81 e6       	ldi	r24, 0x61	; 97
-  c4:	e0 d1       	rcall	.+960    	; 0x486 <spi_fast_shift>
+  c4:	e1 d1       	rcall	.+962    	; 0x488 <spi_fast_shift>
     spi_transfer_sync(data,data,mirf_PAYLOAD); // Read payload
   c6:	ce 01       	movw	r24, r28
   c8:	be 01       	movw	r22, r28
   ca:	40 e1       	ldi	r20, 0x10	; 16
-  cc:	be d1       	rcall	.+892    	; 0x44a <spi_transfer_sync>
+  cc:	bf d1       	rcall	.+894    	; 0x44c <spi_transfer_sync>
     mirf_CSN_hi;                               // Pull up chip select
   ce:	94 9a       	sbi	0x12, 4	; 18
     mirf_config_register(STATUS,(1<<RX_DR));   // Reset status register
@@ -262,7 +262,7 @@ SIGNAL(SIG_PIN_CHANGE2)
  106:	94 98       	cbi	0x12, 4	; 18
         status = spi_fast_shift(NOP);               // Read status register
  108:	8f ef       	ldi	r24, 0xFF	; 255
- 10a:	bd d1       	rcall	.+890    	; 0x486 <spi_fast_shift>
+ 10a:	be d1       	rcall	.+892    	; 0x488 <spi_fast_shift>
         mirf_CSN_hi;                                // Pull up chip select
  10c:	94 9a       	sbi	0x12, 4	; 18
 
@@ -347,12 +347,12 @@ void mirf_read_register(uint8_t reg, uint8_t * value, uint8_t len)
  168:	94 98       	cbi	0x12, 4	; 18
     spi_fast_shift(R_REGISTER | (REGISTER_MASK & reg));
  16a:	8f 71       	andi	r24, 0x1F	; 31
- 16c:	8c d1       	rcall	.+792    	; 0x486 <spi_fast_shift>
+ 16c:	8d d1       	rcall	.+794    	; 0x488 <spi_fast_shift>
     spi_transfer_sync(value,value,len);
  16e:	ce 01       	movw	r24, r28
  170:	be 01       	movw	r22, r28
  172:	41 2f       	mov	r20, r17
- 174:	6a d1       	rcall	.+724    	; 0x44a <spi_transfer_sync>
+ 174:	6b d1       	rcall	.+726    	; 0x44c <spi_transfer_sync>
     mirf_CSN_hi;
  176:	94 9a       	sbi	0x12, 4	; 18
 }
@@ -376,11 +376,11 @@ void mirf_write_register(uint8_t reg, uint8_t * value, uint8_t len)
     spi_fast_shift(W_REGISTER | (REGISTER_MASK & reg));
  18c:	8f 71       	andi	r24, 0x1F	; 31
  18e:	80 62       	ori	r24, 0x20	; 32
- 190:	7a d1       	rcall	.+756    	; 0x486 <spi_fast_shift>
+ 190:	7b d1       	rcall	.+758    	; 0x488 <spi_fast_shift>
     spi_transmit_sync(value,len);
  192:	ce 01       	movw	r24, r28
  194:	61 2f       	mov	r22, r17
- 196:	6a d1       	rcall	.+724    	; 0x46c <spi_transmit_sync>
+ 196:	6b d1       	rcall	.+726    	; 0x46e <spi_transmit_sync>
     mirf_CSN_hi;
  198:	94 9a       	sbi	0x12, 4	; 18
 }
@@ -455,7 +455,7 @@ void mirf_send(uint8_t * value, uint8_t len)
  1da:	94 98       	cbi	0x12, 4	; 18
     spi_fast_shift( FLUSH_TX );     // Write cmd to flush tx fifo
  1dc:	81 ee       	ldi	r24, 0xE1	; 225
- 1de:	53 d1       	rcall	.+678    	; 0x486 <spi_fast_shift>
+ 1de:	54 d1       	rcall	.+680    	; 0x488 <spi_fast_shift>
     mirf_CSN_hi;                    // Pull up chip select
  1e0:	94 9a       	sbi	0x12, 4	; 18
     
@@ -463,11 +463,11 @@ void mirf_send(uint8_t * value, uint8_t len)
  1e2:	94 98       	cbi	0x12, 4	; 18
     spi_fast_shift( W_TX_PAYLOAD ); // Write cmd to write payload
  1e4:	80 ea       	ldi	r24, 0xA0	; 160
- 1e6:	4f d1       	rcall	.+670    	; 0x486 <spi_fast_shift>
+ 1e6:	50 d1       	rcall	.+672    	; 0x488 <spi_fast_shift>
     spi_transmit_sync(value,len);   // Write payload
  1e8:	ce 01       	movw	r24, r28
  1ea:	61 2f       	mov	r22, r17
- 1ec:	3f d1       	rcall	.+638    	; 0x46c <spi_transmit_sync>
+ 1ec:	40 d1       	rcall	.+640    	; 0x46e <spi_transmit_sync>
     mirf_CSN_hi;                    // Pull up chip select
  1ee:	94 9a       	sbi	0x12, 4	; 18
     
@@ -683,6 +683,7 @@ int main(void)
 	setup_hw();
  31e:	6d df       	rcall	.-294    	; 0x1fa <setup_hw>
 	
+	//for(uint16_t a=0;a<=buffer_length;a++) buffer[a]=0; //clear buffer
 	
 	// Initialize AVR for use with mirf
 	mirf_init();
@@ -717,306 +718,301 @@ int main(void)
  338:	78 94       	sei
 	
 	roll_charlie();
- 33a:	6a d0       	rcall	.+212    	; 0x410 <roll_charlie>
-	}
-	*/
-	
-	while (!mirf_data_ready());
-	
-	mirf_get_data(buffer);
- 33c:	c9 e7       	ldi	r28, 0x79	; 121
- 33e:	d0 e0       	ldi	r29, 0x00	; 0
+ 33a:	6b d0       	rcall	.+214    	; 0x412 <roll_charlie>
 	mirf_send(&i,1);	
 	_delay_ms(1000);
 	}
 	*/
 	
-	while (!mirf_data_ready());
- 340:	a5 de       	rcall	.-694    	; 0x8c <mirf_data_ready>
- 342:	88 23       	and	r24, r24
- 344:	e9 f3       	breq	.-6      	; 0x340 <main+0x24>
+	uint8_t status = mirf_data_ready();
+ 33c:	a7 de       	rcall	.-690    	; 0x8c <mirf_data_ready>
+	while (!status);
+ 33e:	88 23       	and	r24, r24
+ 340:	29 f0       	breq	.+10     	; 0x34c <main+0x30>
+	LED_PATTERN=status;
+ 342:	80 93 77 00 	sts	0x0077, r24
+ 346:	10 92 78 00 	sts	0x0078, r1
+	//mirf_get_data(*buffer);
 	
-	mirf_get_data(buffer);
- 346:	ce 01       	movw	r24, r28
- 348:	b8 de       	rcall	.-656    	; 0xba <mirf_get_data>
 	
 	//set_charlie(buffer[i]);
-	i++;
+	//i++;
     }
- 34a:	fa cf       	rjmp	.-12     	; 0x340 <main+0x24>
+ 34a:	f8 cf       	rjmp	.-16     	; 0x33c <main+0x20>
+ 34c:	ff cf       	rjmp	.-2      	; 0x34c <main+0x30>
 
-0000034c <set_charlie>:
+0000034e <set_charlie>:
 	
 }
 
 void set_charlie(uint8_t charlieVal)
 {
 	switch (charlieVal)
- 34c:	e8 2f       	mov	r30, r24
- 34e:	f0 e0       	ldi	r31, 0x00	; 0
- 350:	ec 30       	cpi	r30, 0x0C	; 12
- 352:	f1 05       	cpc	r31, r1
- 354:	08 f0       	brcs	.+2      	; 0x358 <set_charlie+0xc>
- 356:	55 c0       	rjmp	.+170    	; 0x402 <set_charlie+0xb6>
- 358:	ed 5e       	subi	r30, 0xED	; 237
- 35a:	ff 4f       	sbci	r31, 0xFF	; 255
- 35c:	09 94       	ijmp
+ 34e:	e8 2f       	mov	r30, r24
+ 350:	f0 e0       	ldi	r31, 0x00	; 0
+ 352:	ec 30       	cpi	r30, 0x0C	; 12
+ 354:	f1 05       	cpc	r31, r1
+ 356:	08 f0       	brcs	.+2      	; 0x35a <set_charlie+0xc>
+ 358:	55 c0       	rjmp	.+170    	; 0x404 <set_charlie+0xb6>
+ 35a:	ed 5e       	subi	r30, 0xED	; 237
+ 35c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 35e:	09 94       	ijmp
 	{
 		case 11: //one louder.
 		LED_PATTERN = 0xAAA;
- 35e:	8a ea       	ldi	r24, 0xAA	; 170
- 360:	9a e0       	ldi	r25, 0x0A	; 10
- 362:	90 93 78 00 	sts	0x0078, r25
- 366:	80 93 77 00 	sts	0x0077, r24
+ 360:	8a ea       	ldi	r24, 0xAA	; 170
+ 362:	9a e0       	ldi	r25, 0x0A	; 10
+ 364:	90 93 78 00 	sts	0x0078, r25
+ 368:	80 93 77 00 	sts	0x0077, r24
 		break;
- 36a:	08 95       	ret
+ 36c:	08 95       	ret
 		case 10:
 		LED_PATTERN = 0b1111111111;
- 36c:	8f ef       	ldi	r24, 0xFF	; 255
- 36e:	93 e0       	ldi	r25, 0x03	; 3
- 370:	90 93 78 00 	sts	0x0078, r25
- 374:	80 93 77 00 	sts	0x0077, r24
+ 36e:	8f ef       	ldi	r24, 0xFF	; 255
+ 370:	93 e0       	ldi	r25, 0x03	; 3
+ 372:	90 93 78 00 	sts	0x0078, r25
+ 376:	80 93 77 00 	sts	0x0077, r24
 		break;
- 378:	08 95       	ret
+ 37a:	08 95       	ret
 		case 9:
 		LED_PATTERN = 0b0111111111;
- 37a:	8f ef       	ldi	r24, 0xFF	; 255
- 37c:	91 e0       	ldi	r25, 0x01	; 1
- 37e:	90 93 78 00 	sts	0x0078, r25
- 382:	80 93 77 00 	sts	0x0077, r24
+ 37c:	8f ef       	ldi	r24, 0xFF	; 255
+ 37e:	91 e0       	ldi	r25, 0x01	; 1
+ 380:	90 93 78 00 	sts	0x0078, r25
+ 384:	80 93 77 00 	sts	0x0077, r24
 		break;
- 386:	08 95       	ret
+ 388:	08 95       	ret
 		case 8:
 		LED_PATTERN = 0b0011111111;
- 388:	8f ef       	ldi	r24, 0xFF	; 255
- 38a:	90 e0       	ldi	r25, 0x00	; 0
- 38c:	90 93 78 00 	sts	0x0078, r25
- 390:	80 93 77 00 	sts	0x0077, r24
+ 38a:	8f ef       	ldi	r24, 0xFF	; 255
+ 38c:	90 e0       	ldi	r25, 0x00	; 0
+ 38e:	90 93 78 00 	sts	0x0078, r25
+ 392:	80 93 77 00 	sts	0x0077, r24
 		break;
- 394:	08 95       	ret
+ 396:	08 95       	ret
 		case 7:
 		LED_PATTERN = 0b0001111111;
- 396:	8f e7       	ldi	r24, 0x7F	; 127
- 398:	90 e0       	ldi	r25, 0x00	; 0
- 39a:	90 93 78 00 	sts	0x0078, r25
- 39e:	80 93 77 00 	sts	0x0077, r24
+ 398:	8f e7       	ldi	r24, 0x7F	; 127
+ 39a:	90 e0       	ldi	r25, 0x00	; 0
+ 39c:	90 93 78 00 	sts	0x0078, r25
+ 3a0:	80 93 77 00 	sts	0x0077, r24
 		break;
- 3a2:	08 95       	ret
+ 3a4:	08 95       	ret
 		case 6:
 		LED_PATTERN = 0b0000111111;
- 3a4:	8f e3       	ldi	r24, 0x3F	; 63
- 3a6:	90 e0       	ldi	r25, 0x00	; 0
- 3a8:	90 93 78 00 	sts	0x0078, r25
- 3ac:	80 93 77 00 	sts	0x0077, r24
+ 3a6:	8f e3       	ldi	r24, 0x3F	; 63
+ 3a8:	90 e0       	ldi	r25, 0x00	; 0
+ 3aa:	90 93 78 00 	sts	0x0078, r25
+ 3ae:	80 93 77 00 	sts	0x0077, r24
 		break;
- 3b0:	08 95       	ret
+ 3b2:	08 95       	ret
 		case 5:
 		LED_PATTERN = 0b0000011111;
- 3b2:	8f e1       	ldi	r24, 0x1F	; 31
- 3b4:	90 e0       	ldi	r25, 0x00	; 0
- 3b6:	90 93 78 00 	sts	0x0078, r25
- 3ba:	80 93 77 00 	sts	0x0077, r24
+ 3b4:	8f e1       	ldi	r24, 0x1F	; 31
+ 3b6:	90 e0       	ldi	r25, 0x00	; 0
+ 3b8:	90 93 78 00 	sts	0x0078, r25
+ 3bc:	80 93 77 00 	sts	0x0077, r24
 		break;
- 3be:	08 95       	ret
+ 3c0:	08 95       	ret
 		case 4:
 		LED_PATTERN = 0b0000001111;
- 3c0:	8f e0       	ldi	r24, 0x0F	; 15
- 3c2:	90 e0       	ldi	r25, 0x00	; 0
- 3c4:	90 93 78 00 	sts	0x0078, r25
- 3c8:	80 93 77 00 	sts	0x0077, r24
+ 3c2:	8f e0       	ldi	r24, 0x0F	; 15
+ 3c4:	90 e0       	ldi	r25, 0x00	; 0
+ 3c6:	90 93 78 00 	sts	0x0078, r25
+ 3ca:	80 93 77 00 	sts	0x0077, r24
 		break;
- 3cc:	08 95       	ret
+ 3ce:	08 95       	ret
 		case 3:
 		LED_PATTERN = 0b0000000111;
- 3ce:	87 e0       	ldi	r24, 0x07	; 7
- 3d0:	90 e0       	ldi	r25, 0x00	; 0
- 3d2:	90 93 78 00 	sts	0x0078, r25
- 3d6:	80 93 77 00 	sts	0x0077, r24
+ 3d0:	87 e0       	ldi	r24, 0x07	; 7
+ 3d2:	90 e0       	ldi	r25, 0x00	; 0
+ 3d4:	90 93 78 00 	sts	0x0078, r25
+ 3d8:	80 93 77 00 	sts	0x0077, r24
 		break;
- 3da:	08 95       	ret
+ 3dc:	08 95       	ret
 		case 2:
 		LED_PATTERN = 0b0000000011;
- 3dc:	83 e0       	ldi	r24, 0x03	; 3
- 3de:	90 e0       	ldi	r25, 0x00	; 0
- 3e0:	90 93 78 00 	sts	0x0078, r25
- 3e4:	80 93 77 00 	sts	0x0077, r24
+ 3de:	83 e0       	ldi	r24, 0x03	; 3
+ 3e0:	90 e0       	ldi	r25, 0x00	; 0
+ 3e2:	90 93 78 00 	sts	0x0078, r25
+ 3e6:	80 93 77 00 	sts	0x0077, r24
 		break;
- 3e8:	08 95       	ret
+ 3ea:	08 95       	ret
 		case 1:
 		LED_PATTERN = 0b0000000001;
- 3ea:	81 e0       	ldi	r24, 0x01	; 1
- 3ec:	90 e0       	ldi	r25, 0x00	; 0
- 3ee:	90 93 78 00 	sts	0x0078, r25
- 3f2:	80 93 77 00 	sts	0x0077, r24
+ 3ec:	81 e0       	ldi	r24, 0x01	; 1
+ 3ee:	90 e0       	ldi	r25, 0x00	; 0
+ 3f0:	90 93 78 00 	sts	0x0078, r25
+ 3f4:	80 93 77 00 	sts	0x0077, r24
 		break;
- 3f6:	08 95       	ret
+ 3f8:	08 95       	ret
 		case 0:
 		LED_PATTERN = 0b0000000000;
- 3f8:	10 92 78 00 	sts	0x0078, r1
- 3fc:	10 92 77 00 	sts	0x0077, r1
+ 3fa:	10 92 78 00 	sts	0x0078, r1
+ 3fe:	10 92 77 00 	sts	0x0077, r1
 		break;
- 400:	08 95       	ret
+ 402:	08 95       	ret
 		default:
 		LED_PATTERN = 0b0101010101;
- 402:	85 e5       	ldi	r24, 0x55	; 85
- 404:	91 e0       	ldi	r25, 0x01	; 1
- 406:	90 93 78 00 	sts	0x0078, r25
- 40a:	80 93 77 00 	sts	0x0077, r24
- 40e:	08 95       	ret
+ 404:	85 e5       	ldi	r24, 0x55	; 85
+ 406:	91 e0       	ldi	r25, 0x01	; 1
+ 408:	90 93 78 00 	sts	0x0078, r25
+ 40c:	80 93 77 00 	sts	0x0077, r24
+ 410:	08 95       	ret
 
-00000410 <roll_charlie>:
+00000412 <roll_charlie>:
 		break;
 	}
 }
 
 void roll_charlie(void) //scroll the LED's (during reload)
 {
- 410:	cf 93       	push	r28
+ 412:	cf 93       	push	r28
 	uint8_t i;
 	for (i=0;i<=10;i++)
- 412:	c0 e0       	ldi	r28, 0x00	; 0
+ 414:	c0 e0       	ldi	r28, 0x00	; 0
 	{
 		set_charlie(i);
- 414:	8c 2f       	mov	r24, r28
- 416:	9a df       	rcall	.-204    	; 0x34c <set_charlie>
- 418:	8f ef       	ldi	r24, 0xFF	; 255
- 41a:	90 e7       	ldi	r25, 0x70	; 112
- 41c:	a2 e0       	ldi	r26, 0x02	; 2
- 41e:	81 50       	subi	r24, 0x01	; 1
- 420:	90 40       	sbci	r25, 0x00	; 0
- 422:	a0 40       	sbci	r26, 0x00	; 0
- 424:	e1 f7       	brne	.-8      	; 0x41e <roll_charlie+0xe>
- 426:	00 c0       	rjmp	.+0      	; 0x428 <roll_charlie+0x18>
- 428:	00 00       	nop
+ 416:	8c 2f       	mov	r24, r28
+ 418:	9a df       	rcall	.-204    	; 0x34e <set_charlie>
+ 41a:	8f ef       	ldi	r24, 0xFF	; 255
+ 41c:	90 e7       	ldi	r25, 0x70	; 112
+ 41e:	a2 e0       	ldi	r26, 0x02	; 2
+ 420:	81 50       	subi	r24, 0x01	; 1
+ 422:	90 40       	sbci	r25, 0x00	; 0
+ 424:	a0 40       	sbci	r26, 0x00	; 0
+ 426:	e1 f7       	brne	.-8      	; 0x420 <roll_charlie+0xe>
+ 428:	00 c0       	rjmp	.+0      	; 0x42a <roll_charlie+0x18>
+ 42a:	00 00       	nop
 }
 
 void roll_charlie(void) //scroll the LED's (during reload)
 {
 	uint8_t i;
 	for (i=0;i<=10;i++)
- 42a:	cf 5f       	subi	r28, 0xFF	; 255
- 42c:	cb 30       	cpi	r28, 0x0B	; 11
- 42e:	91 f7       	brne	.-28     	; 0x414 <roll_charlie+0x4>
+ 42c:	cf 5f       	subi	r28, 0xFF	; 255
+ 42e:	cb 30       	cpi	r28, 0x0B	; 11
+ 430:	91 f7       	brne	.-28     	; 0x416 <roll_charlie+0x4>
 	{
 		set_charlie(i);
 		_delay_ms(100);
 	}
- 430:	cf 91       	pop	r28
- 432:	08 95       	ret
+ 432:	cf 91       	pop	r28
+ 434:	08 95       	ret
 
-00000434 <spi_init>:
+00000436 <spi_init>:
 
 
 void spi_init()
 // Initialize pins for spi communication
 {
     DDR_SPI &= ~((1<<DD_MOSI)|(1<<DD_MISO)|(1<<DD_SS)|(1<<DD_SCK));
- 434:	87 b3       	in	r24, 0x17	; 23
- 436:	83 7c       	andi	r24, 0xC3	; 195
- 438:	87 bb       	out	0x17, r24	; 23
+ 436:	87 b3       	in	r24, 0x17	; 23
+ 438:	83 7c       	andi	r24, 0xC3	; 195
+ 43a:	87 bb       	out	0x17, r24	; 23
     // Define the following pins as output
     DDR_SPI |= ((1<<DD_MOSI)|(1<<DD_SS)|(1<<DD_SCK));
- 43a:	87 b3       	in	r24, 0x17	; 23
- 43c:	8c 62       	ori	r24, 0x2C	; 44
- 43e:	87 bb       	out	0x17, r24	; 23
+ 43c:	87 b3       	in	r24, 0x17	; 23
+ 43e:	8c 62       	ori	r24, 0x2C	; 44
+ 440:	87 bb       	out	0x17, r24	; 23
 
     
     SPCR = ((1<<SPE)|               // SPI Enable
- 440:	81 e5       	ldi	r24, 0x51	; 81
- 442:	8d b9       	out	0x0d, r24	; 13
+ 442:	81 e5       	ldi	r24, 0x51	; 81
+ 444:	8d b9       	out	0x0d, r24	; 13
             (1<<MSTR)|              // Master/Slave select   
             (0<<SPR1)|(1<<SPR0)|    // SPI Clock Rate
             (0<<CPOL)|              // Clock Polarity (0:SCK low / 1:SCK hi when idle)
             (0<<CPHA));             // Clock Phase (0:leading / 1:trailing edge sampling)
 
     SPSR = (1<<SPI2X);              // Double Clock Rate
- 444:	81 e0       	ldi	r24, 0x01	; 1
- 446:	8e b9       	out	0x0e, r24	; 14
+ 446:	81 e0       	ldi	r24, 0x01	; 1
+ 448:	8e b9       	out	0x0e, r24	; 14
     
 }
- 448:	08 95       	ret
+ 44a:	08 95       	ret
 
-0000044a <spi_transfer_sync>:
+0000044c <spi_transfer_sync>:
 
 void spi_transfer_sync (uint8_t * dataout, uint8_t * datain, uint8_t len)
 // Shift full array through target device
 {
        uint8_t i;      
        for (i = 0; i < len; i++) {
- 44a:	44 23       	and	r20, r20
- 44c:	71 f0       	breq	.+28     	; 0x46a <__stack+0xb>
- 44e:	a8 2f       	mov	r26, r24
- 450:	b9 2f       	mov	r27, r25
- 452:	e6 2f       	mov	r30, r22
- 454:	f7 2f       	mov	r31, r23
- 456:	80 e0       	ldi	r24, 0x00	; 0
+ 44c:	44 23       	and	r20, r20
+ 44e:	71 f0       	breq	.+28     	; 0x46c <__stack+0xd>
+ 450:	a8 2f       	mov	r26, r24
+ 452:	b9 2f       	mov	r27, r25
+ 454:	e6 2f       	mov	r30, r22
+ 456:	f7 2f       	mov	r31, r23
+ 458:	80 e0       	ldi	r24, 0x00	; 0
              SPDR = dataout[i];
- 458:	9d 91       	ld	r25, X+
- 45a:	9f b9       	out	0x0f, r25	; 15
+ 45a:	9d 91       	ld	r25, X+
+ 45c:	9f b9       	out	0x0f, r25	; 15
              while((SPSR & (1<<SPIF))==0);
- 45c:	77 9b       	sbis	0x0e, 7	; 14
- 45e:	fe cf       	rjmp	.-4      	; 0x45c <spi_transfer_sync+0x12>
+ 45e:	77 9b       	sbis	0x0e, 7	; 14
+ 460:	fe cf       	rjmp	.-4      	; 0x45e <spi_transfer_sync+0x12>
              datain[i] = SPDR;
- 460:	9f b1       	in	r25, 0x0f	; 15
- 462:	91 93       	st	Z+, r25
+ 462:	9f b1       	in	r25, 0x0f	; 15
+ 464:	91 93       	st	Z+, r25
 
 void spi_transfer_sync (uint8_t * dataout, uint8_t * datain, uint8_t len)
 // Shift full array through target device
 {
        uint8_t i;      
        for (i = 0; i < len; i++) {
- 464:	8f 5f       	subi	r24, 0xFF	; 255
- 466:	84 17       	cp	r24, r20
- 468:	b9 f7       	brne	.-18     	; 0x458 <spi_transfer_sync+0xe>
- 46a:	08 95       	ret
+ 466:	8f 5f       	subi	r24, 0xFF	; 255
+ 468:	84 17       	cp	r24, r20
+ 46a:	b9 f7       	brne	.-18     	; 0x45a <spi_transfer_sync+0xe>
+ 46c:	08 95       	ret
 
-0000046c <spi_transmit_sync>:
+0000046e <spi_transmit_sync>:
 
 void spi_transmit_sync (uint8_t * dataout, uint8_t len)
 // Shift full array to target device without receiving any byte
 {
        uint8_t i;      
        for (i = 0; i < len; i++) {
- 46c:	66 23       	and	r22, r22
- 46e:	51 f0       	breq	.+20     	; 0x484 <spi_transmit_sync+0x18>
- 470:	e8 2f       	mov	r30, r24
- 472:	f9 2f       	mov	r31, r25
- 474:	80 e0       	ldi	r24, 0x00	; 0
+ 46e:	66 23       	and	r22, r22
+ 470:	51 f0       	breq	.+20     	; 0x486 <spi_transmit_sync+0x18>
+ 472:	e8 2f       	mov	r30, r24
+ 474:	f9 2f       	mov	r31, r25
+ 476:	80 e0       	ldi	r24, 0x00	; 0
              SPDR = dataout[i];
- 476:	91 91       	ld	r25, Z+
- 478:	9f b9       	out	0x0f, r25	; 15
+ 478:	91 91       	ld	r25, Z+
+ 47a:	9f b9       	out	0x0f, r25	; 15
              while((SPSR & (1<<SPIF))==0);
- 47a:	77 9b       	sbis	0x0e, 7	; 14
- 47c:	fe cf       	rjmp	.-4      	; 0x47a <spi_transmit_sync+0xe>
+ 47c:	77 9b       	sbis	0x0e, 7	; 14
+ 47e:	fe cf       	rjmp	.-4      	; 0x47c <spi_transmit_sync+0xe>
 
 void spi_transmit_sync (uint8_t * dataout, uint8_t len)
 // Shift full array to target device without receiving any byte
 {
        uint8_t i;      
        for (i = 0; i < len; i++) {
- 47e:	8f 5f       	subi	r24, 0xFF	; 255
- 480:	86 17       	cp	r24, r22
- 482:	c9 f7       	brne	.-14     	; 0x476 <spi_transmit_sync+0xa>
- 484:	08 95       	ret
+ 480:	8f 5f       	subi	r24, 0xFF	; 255
+ 482:	86 17       	cp	r24, r22
+ 484:	c9 f7       	brne	.-14     	; 0x478 <spi_transmit_sync+0xa>
+ 486:	08 95       	ret
 
-00000486 <spi_fast_shift>:
+00000488 <spi_fast_shift>:
 }
 
 uint8_t spi_fast_shift (uint8_t data)
 // Clocks only one byte to target device and returns the received one
 {
     SPDR = data;
- 486:	8f b9       	out	0x0f, r24	; 15
+ 488:	8f b9       	out	0x0f, r24	; 15
     while((SPSR & (1<<SPIF))==0);
- 488:	77 9b       	sbis	0x0e, 7	; 14
- 48a:	fe cf       	rjmp	.-4      	; 0x488 <spi_fast_shift+0x2>
+ 48a:	77 9b       	sbis	0x0e, 7	; 14
+ 48c:	fe cf       	rjmp	.-4      	; 0x48a <spi_fast_shift+0x2>
     return SPDR;
- 48c:	8f b1       	in	r24, 0x0f	; 15
+ 48e:	8f b1       	in	r24, 0x0f	; 15
 }
- 48e:	08 95       	ret
+ 490:	08 95       	ret
 
-00000490 <_exit>:
- 490:	f8 94       	cli
+00000492 <_exit>:
+ 492:	f8 94       	cli
 
-00000492 <__stop_program>:
- 492:	ff cf       	rjmp	.-2      	; 0x492 <__stop_program>
+00000494 <__stop_program>:
+ 494:	ff cf       	rjmp	.-2      	; 0x494 <__stop_program>
