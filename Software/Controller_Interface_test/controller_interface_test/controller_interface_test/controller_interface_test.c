@@ -7,6 +7,14 @@
 
 
 #include <avr/io.h>
+#include <stdbool.h>
+#include "n64_controller.h"
+
+bool calibration()
+{
+	
+	return true;
+}
 
 int main(void)
 {
@@ -15,3 +23,5 @@ int main(void)
         //TODO:: Please write your application code 
     }
 }
+
+
