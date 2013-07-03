@@ -14,7 +14,8 @@
 
 #include "mirf.h"
 
-uint8_t buffer[12];
+#define buffer_length 12
+uint8_t buffer[buffer_length];
 
 typedef struct
 {
@@ -54,6 +55,7 @@ int main(void)
 	setup_charlie_struct();
 	setup_hw();
 	
+	//for(uint16_t a=0;a<=buffer_length;a++) buffer[a]=0; //clear buffer
 	
 	// Initialize AVR for use with mirf
 	mirf_init();
@@ -80,12 +82,15 @@ int main(void)
 	}
 	*/
 	
-	while (!mirf_data_ready());
+	uint8_t status = mirf_data_ready();
+	while (!status);
+	LED_PATTERN=status;
 	
-	mirf_get_data(buffer);
+	//mirf_get_data(*buffer);
+	
 	
 	//set_charlie(buffer[i]);
-	i++;
+	//i++;
     }
 }
 

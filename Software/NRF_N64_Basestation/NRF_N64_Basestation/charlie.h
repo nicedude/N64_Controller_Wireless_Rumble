@@ -15,7 +15,7 @@ void setup_charlie(void); //set up hardware
 void setup_charlie_struct(void); //instantiate the struct with the proper DDR and PORT values
 void set_charlie(uint8_t charlieVal); //set a value from 0 to 10 (+ special patterns 11 and default)
 void roll_charlie(void); //roll from 0 to 10 in about a second
-void charlie_blink(void);
+void charlie_blink(unsigned char repetitions);
 
 
 #endif /* charlie_H_ */

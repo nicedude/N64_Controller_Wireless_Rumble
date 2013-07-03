@@ -28,6 +28,7 @@ AVR_APP_PATH :=$$$AVR_APP_PATH$$$
 QUOTE := "
 ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:=
+LIB_DEP:=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := 
@@ -53,13 +54,11 @@ nrf24L01.o \
 main.o \
 spi.o
 
-
 OBJS_AS_ARGS +=  \
 charlie.o \
 nrf24L01.o \
 main.o \
 spi.o
-
 
 C_DEPS +=  \
 charlie.d \
@@ -67,13 +66,11 @@ nrf24L01.d \
 main.d \
 spi.d
 
-
 C_DEPS_AS_ARGS +=  \
 charlie.d \
 nrf24L01.d \
 main.d \
 spi.d
-
 
 OUTPUT_FILE_PATH +=NRF_N64_Basestation.elf
 
@@ -82,6 +79,8 @@ OUTPUT_FILE_PATH_AS_ARGS +=NRF_N64_Basestation.elf
 ADDITIONAL_DEPENDENCIES:=
 
 OUTPUT_FILE_DEP:= ./makedep.mk
+
+LIB_DEP+= 
 
 # AVR32/GNU C Compiler
 
@@ -95,9 +94,10 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 
 ./%.o: .././%.c
 	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : (AVR_8_bit_GNU_Toolchain_3.4.0_663) 4.6.2
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-gcc.exe$(QUOTE) -funsigned-char -funsigned-bitfields -O1 -fpack-struct -fshort-enums -g2 -Wall -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mmcu=atmega8   -o"$@" "$<" 
+	@echo Invoking: AVR/GNU C Compiler : 3.4.2
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.2.939\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega8 -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<"
 	@echo Finished building: $<
+	
 
 
 
@@ -121,15 +121,17 @@ endif
 # All Target
 all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 
-$(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP)
+$(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP) $(LIB_DEP)
 	@echo Building target: $@
-	@echo Invoking: AVR/GNU Linker : (AVR_8_bit_GNU_Toolchain_3.4.0_663) 4.6.2
-	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="NRF_N64_Basestation.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group  -mmcu=atmega8  
+	@echo Invoking: AVR/GNU Linker : 3.4.2
+	$(QUOTE)C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.2.939\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="NRF_N64_Basestation.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega8 
 	@echo Finished building target: $@
-	"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "NRF_N64_Basestation.elf" "NRF_N64_Basestation.hex"
-	"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "NRF_N64_Basestation.elf" "NRF_N64_Basestation.eep" || exit 0
-	"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-objdump.exe" -h -S "NRF_N64_Basestation.elf" > "NRF_N64_Basestation.lss"
-	"C:\Program Files (x86)\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-size.exe" "NRF_N64_Basestation.elf"
+	"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.2.939\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "NRF_N64_Basestation.elf" "NRF_N64_Basestation.hex"
+	"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.2.939\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "NRF_N64_Basestation.elf" "NRF_N64_Basestation.eep" || exit 0
+	"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.2.939\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "NRF_N64_Basestation.elf" > "NRF_N64_Basestation.lss"
+	"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.2.939\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature  "NRF_N64_Basestation.elf" "NRF_N64_Basestation.srec"
+	"C:\Program Files (x86)\Atmel\Atmel Toolchain\AVR8 GCC\Native\3.4.2.939\avr8-gnu-toolchain\bin\avr-size.exe" "NRF_N64_Basestation.elf"
+	
 	
 
 
@@ -138,6 +140,7 @@ $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP)
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS_AS_ARGS)$(C_DEPS_AS_ARGS) $(EXECUTABLES) 
-	rm -rf "NRF_N64_Basestation.elf" "NRF_N64_Basestation.a" "NRF_N64_Basestation.hex" "NRF_N64_Basestation.lss" "NRF_N64_Basestation.eep" "NRF_N64_Basestation.map"
+	-$(RM) $(OBJS_AS_ARGS) $(EXECUTABLES)  
+	-$(RM) $(C_DEPS_AS_ARGS)   
+	rm -rf "NRF_N64_Basestation.elf" "NRF_N64_Basestation.a" "NRF_N64_Basestation.hex" "NRF_N64_Basestation.lss" "NRF_N64_Basestation.eep" "NRF_N64_Basestation.map" "NRF_N64_Basestation.srec"
 	
