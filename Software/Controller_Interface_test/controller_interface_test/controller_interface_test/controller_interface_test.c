@@ -18,6 +18,8 @@ bool calibration()
 
 int main(void)
 {
+	
+	dommy();
     while(1)
     {
         //TODO:: Please write your application code 

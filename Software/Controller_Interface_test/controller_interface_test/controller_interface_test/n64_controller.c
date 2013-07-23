@@ -6,6 +6,7 @@
  */ 
 #include "n64_controller.h"
 
+#define NOP2()	asm volatile("brtc rdn_lbl%=\n rdn_lbl%=:\n" ::);
 
 void n64_init(void){
 	N64_PORT	&= ~N64_POS;  //Set pin low
@@ -13,25 +14,33 @@ void n64_init(void){
 }
 
 static inline __attribute__((always_inline)) void n64_sendbyte(unsigned char d){
+	asm volatile("nop");
+
+	NOP2();
+	NOP2();
+	NOP2();
+	
+
+
 	asm volatile(
-	"ldi __tmp_reg__, [bit]\n"	//1
-	"out gpr, r1\n"				//1
-	"ldi r1, ~[bit]\n"			//1
+//	"ldi __tmp_reg__, [bit]\n"	//1
+//	"out gpr, r1\n"				//1
+//	"ldi r1, ~[bit]\n"			//1
 	"clt\n"
 	
 	
 	//Assume __tmp_reg__ = ddr | (n64_pos), r1 = ddr & ~n64_pos, Tflag=0
-	"out [drp], __tmp__reg__\n"	//1  
-	"lsl [dat]\n"			//1
-	"brcc lbl_sb0\n"		//seq 2
-	"out [drp], r1\n"
-	"lbl_sb0:\n"
+//	"out [drp], __tmp__reg__\n"	//1  
+//	"lsl [dat]\n"			//1
+///	"brcc lbl_sb0\n"		//seq 2
+//	"out [drp], r1\n"
+//	"lbl_sb0:\n"
 	"brtc 0\n"
 	"brtc 0\n"
 	"brtc 0\n"
 	"nop\n"					//1
-	"out [drp], r1\n"
-	"lbl_sb0:\n"
+//	"out [drp], r1\n"
+//	"lbl_sb0:\n"
 	
 	
 	::
@@ -40,6 +49,9 @@ static inline __attribute__((always_inline)) void n64_sendbyte(unsigned char d){
 	);
 }
 
+void dommy(void){
+	n64_sendbyte(0x00);
+}
 
 void n64_ctrl_init(void){
 	n64_sendbyte(0x00);

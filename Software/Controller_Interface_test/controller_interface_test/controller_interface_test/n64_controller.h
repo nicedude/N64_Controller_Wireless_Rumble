@@ -25,5 +25,6 @@
 #define CMD_RETURN_BUT		0x01
 #define CMD_ 0x00
 
+void dommy(void);
 
 #endif /* N64_CONTROLLER_H_ */
